@@ -1,0 +1,208 @@
+h3 {
+    display: inline-block;
+    padding: 10px;
+    background: #B9121B;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.full-screen {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.flexcontainer {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 99%;
+    padding: 1.8rem;}
+
+.container{width: 1000px; background-color: ghostwhite; border-radius: 10px; padding: 40px;}
+
+.obit{  padding: 30px; border-radius:10px;}
+
+.biohead{background-color: #e0e0e0; height:300px; padding: 30px; margin: 20px;
+    font-size: 1.8rem; line-height: 4.5rem; border-radius: 20px; border: 1px black solid;
+}
+
+.sciencereview{font-size: 2rem; padding: 20px; background-color: ghostwhite; line-height: 4rem;}
+
+.sciencenotes{font-size: 1.5rem; padding: 10px; padding-left: 20px; padding-right: 20px; background-color: ghostwhite;}
+
+.topNavBar{background-color: #F5DEB3; z-index: 900 !important ;  opacity: 1.0 !important; }
+
+.p {font-size: 1.5rem; font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif;  }
+
+.item{background-color: black; height: 90%; /*width: 100%;*/ margin: 0 auto;}
+
+.sculpt2{width: 100%; margin: 0 auto;}
+
+.littlequotes{ font-size: 18px; color: yellow;}
+
+#biography{background-color: lightgrey; padding-top: 75px;
+    font-size: 1.5rem; font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.sectionheader{background-color:grey; padding:20px; color: white; font-size:2rem;}
+
+.mainimage{width: 400px; height:460px; margin: 20px; background-color: darkgrey; background-image: url("/images/Paul Hochstein in White Hat800pix.jpg"); background-size:contain; float:right;}
+
+.title{padding-left: 40px; color: white; padding-top: 20px; text-align: center; background-color: grey;}
+
+.art-title{padding-left: 40px; color: white; padding-top: 10px; padding-bottom: 10px; ;  text-align: center; background-color: grey;}
+
+.mycard{border: 1px solid black; padding:10px; margin: 20px;  border-radius: 10px; background-color: lightgray;}
+
+.cardtitle{background-color: whitesmoke; font-size: 1.5rem; padding: 5px; margin: 20px; text-align: left; border-radius: 5px;  border: 1px solid slategrey;}
+
+.bigtitle{font-size: 3rem; text-align:left;}
+
+
+#illustrated{   text-align: center; background-color: darkslategrey;  padding-top:  0px;
+    font-size: 2rem; font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif;
+}
+
+#art{height: 1100px; background-color: darkgray; padding-top: 0px;
+    font-size: 2rem; font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif;
+}
+
+#science {  background-color: slategray; margin-top: 0px; padding-top:  200px;
+    font-size: 2rem; font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif;
+}
+
+#contact{height: 800px;  background-color: black; padding-top:  50px;
+    font-size: 21rem; font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif;
+}
+
+#footerOverride {height: 50px;  background-color: darkslategray; padding-top:  0px;  font-size: 4rem; font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif; color: yellow;
+}
+
+
+.image0a{ width: 280px; height:440px; margin: 20px; background-color: darkgrey;  background-size:contain;
+           background-image: url("/images/RasheGitteIsaacsoHochsteinGrandmotherOfPaulHochsteinBayonneNJ.jpg");
+       }
+
+.image0b{ width: 330px; height:440px; margin: 20px; background-color: darkgrey;  background-size:contain;
+    background-image: url("/images/YosheHochsteinGrandfatherPaulHochsteinBayonneNJ.jpg");
+}
+
+.image0c{ width: 700px; height:582px; margin: 20px; background-color: darkgrey;  background-size:contain;
+    background-image: url("/images/LeshanskyFamilyGrandparentsMotherOfPaulHochstein1910.jpg");
+}
+
+.image1{ width: 200px; height:390px; margin: 20px; background-color: darkgrey;  background-size:contain;
+    background-image: url("/images/1938PaulHochsteinPinholeCamera.jpg");
+    }
+
+.image2{width: 580px; height:400px; margin: 20px; background-color: darkgrey;  background-size:contain;
+    background-image: url("/images/1944PaulBeforeBattle114-148.jpg");
+    }
+
+.image3{width: 420px; height:455px; margin: 20px; background-color: darkgrey;  background-size:contain;
+    background-image: url("/images/PaulHochsteinAndFatherSamHochteinCirca1938.jpg");
+     }
+
+.image3a{width: 303px; height:455px; margin: 20px; background-color: darkgrey;  background-size:contain;
+    background-image: url("/images/IdaLeshanHochstein1940sBronxNY.jpg");
+}
+
+
+.image4{width: 400px; height: 485px;  margin: 20px; background-color: darkgrey;  background-size:contain;
+    background-image: url("/images/1945MachineGunSquadPaulHochstein.jpg");
+     }
+
+.image4a{width: 700px; height:495px; margin: 20px; background-color: darkgrey;  background-size:contain;
+    background-image: url("/images/PaulHochsteinCigarette1946.jpg");
+     }
+
+.image6{width: 302px; height:400px; margin: 20px; background-color: darkgrey;  background-size:contain;
+    background-image: url("/images/1977PaulInLabSmoking.jpg");
+    float:right;}
+
+.image5{width: 420px; height:300px; margin: 20px; background-color: darkgrey;  background-size:contain;
+    background-image: url("/images/1984PHochsteinBdayPartyLab.jpg");
+    float:left;}
+
+
+.image7{width: 205px; height:300px; margin: 20px; background-color: darkgrey;  background-size:contain;
+               background-image: url("/images/1961PHochsteinBenchScientist.jpg");
+                }
+
+.image8{width: 400px; height:380px; margin: 20px; background-color: darkgrey;  background-size:contain;
+    background-image: url("/images/PaulGiannaCambria1998.jpg");
+    }
+
+.image9{width: 595px; height:600px; margin: 20px; background-color: darkgrey;  background-size:contain;
+    background-image: url("/images/PaulHochsteinAndGiannaSmithOnWeddingDay1956WashDC.jpg");
+   }
+
+.image10{width: 205px; height:300px; margin: 20px; background-color: darkgrey;  background-size:contain;
+    background-image: url(" ");
+    }
+
+.image11{width: 205px; height:300px; margin: 20px; background-color: darkgrey;  background-size:contain;
+    background-image: url(" ");
+    }
+
+.image44{width: 600px; height:518px; margin: 20px; background-color: darkgrey;  background-size:contain;
+    background-image: url("/images/PaulHochsteinAndGiannaHochstein1980sLosAngeles.jpg");
+}
+
+.image45{width: 600px; height:420px; margin: 20px; background-color: darkgrey;  background-size:contain;
+           background-image: url("/images/PaulHochsteinMemorialJuly25-2010.jpg");
+       }
+
+.image46{width: 560px; height:420px; margin: 20px; background-color: darkgrey;  background-size:contain;
+    background-image: url("/images/GiannaHochsteinAtPaulHMemorial2010.jpg");
+}
+
+
+.image47{width: 600px; height:401px; margin: 20px; background-color: darkgrey;  background-size:contain;
+    background-image: url("/images/BobHochsteinAndPaulHochstein.jpg");
+}
+
+.image48{width: 495px; height:420px; margin: 20px; background-color: darkgrey;  background-size:contain;
+    background-image: url("/images/ElenoreLesterAndPaul1950s.jpg");
+}
+
+.image49{width: 400px; height:346px; margin: 20px; background-color: darkgrey;  background-size:contain;  background-image: url("/images/PaulGiannaCambria1998.jpg");}
+
+
+.image50{width: 590px; height:600px; margin: 20px; background-color: darkgrey;  background-size:contain;  background-image: url("/images/PaulHochstein1975rocksouttoledzepplin.jpg");  }
+
+
+.image52{width: 800px; height:578px; margin: 20px; background-color: darkgrey;  background-size:contain;  background-image: url("/images/PaulHochsteinManagerBronxHSofScienceTrackTeam1943.jpg");  }
+
+
+.image53{width: 286px; height:500px; margin: 20px; background-color: darkgrey;  background-size:contain;  background-image: url("/images/BobAndPaul1935ish.jpg");  }
+
+
+.image54{width: 645px; height:400px; margin: 20px; background-color: darkgrey;  background-size:contain;  background-image: url("/images/1980sPaulAndColleaguesToxicologyInstitute.jpg");  }
+
+.image55{width: 485px; height:400px; margin: 20px; background-color: darkgrey;  background-size:contain;  background-image: url("/images/1986HonoraryDoctorateUniversityStockholmPaulHochstein.jpg");  }
+
+.image56{width:530px; height:400px; margin: 20px; background-color: darkgrey;  background-size:contain;  background-image: url("/images/veteransAtPaulHochsteinMemorialJuly25-2010.jpg");  }
+
+.image57{width:600px; height:391px; margin: 20px; background-color: darkgrey;  background-size:contain;  background-image: url("/images/PaintingPaulHochstein.jpg");  }
+
+.image59{width:588px; height:400px; margin: 20px; background-color: darkgrey;  background-size:contain;  background-image: url("/images/ElenoreLester1980s.jpg");  }
+
+.image60{width:533px; height:400px; margin: 20px; background-color: darkgrey;  background-size:contain;  background-image: url("/images/2010 guests paul hochstein memorial service.jpg");  }
+
+.image61{width:720px; height:540px; margin: 20px; background-color: darkgrey;  background-size:contain;  background-image: url("/images/2010 paul gianna living room.jpg");  }
+
+.image62{width:600px; height:600px; margin: 20px; background-color: darkgrey;  background-size:contain;  background-image: url("/images/2011 Paul Gianna ashes cremation.jpg");  }
+
+.image63{width:600px; height:600px; margin: 20px; background-color: darkgrey;  background-size:contain;  background-image: url("/images/2011 paul gianna ashes distribute ocean.jpg");  }
+
+.image64{width:550px; height:500px; margin: 20px; background-color: darkgrey;  background-size:contain;  background-image: url("/images/1986 gianna and paul.jpg");  }
+
+.image70{width:560px; height:400px; margin: 20px; background-color: darkgrey;  background-size:contain;  background-image: url("/images/1966PaulReadsToChildren.jpg");  }
+
+.image71{width:300px; height:425px; margin: 20px; background-color: darkgrey;  background-size:contain;  background-image: url("/images/1957ishPaulMastersDegree.jpg");  }
+
+.image72{width:500px; height:497px; margin: 20px; background-color: darkgrey;  background-size:contain;  background-image: url("/images/PaulAtBertchesgarten1945.jpg");  }

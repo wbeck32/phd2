@@ -1,0 +1,52 @@
+html p {
+font-size: 12px;
+color: #981811;
+line-height: 4px;
+
+
+}
+body {
+padding-top: 70px;
+}
+nav.navbar.navbar-default.navbar-fixed-bottom > div {
+  background-color: #F5DEB3;
+  margin: 0;
+  padding: 18px;
+  width: 100%;
+  border-radius: 0;
+
+}
+
+nav.navbar.navbar-default.navbar-fixed-bottom {
+  height: 90px;
+}
+
+.footerTxt {
+  display: inline-block;
+  margin-right: 15px;
+
+}
+
+div.container-fluid.topNavBar {
+  background-color: #F5DEB3;
+  z-index:900!important;
+  opacity:1!important;
+}
+
+.logoSpace {
+  height: 40vh;
+  text-align: center;
+}
+
+.logoSpace img {
+  width: 125px;
+  height: 125px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 55px;
+}
+
+.center {
+  margin: 0 auto;
+
+}
