@@ -1,4 +1,8 @@
+var contact = angular.module ('contact', ['ngRoute', function() {
 
+'use strict';
+
+contact.controller('formController', ['$scope', function($scope) {
 
   console.log("starting formController at startup...............");
   this.testing = "testing";
@@ -17,9 +21,9 @@
 
   this.reset();
 
-  this.dosomething = function () {
-      console.log("doing something in formcontroller.... ");
-  };
+  // this.dosomething = function () {
+  //     console.log("doing something in formcontroller.... ");
+  // };
 
     }])
 contact.service('formService2', ['$http', function ($http) {
@@ -41,4 +45,4 @@ this.update = function(user) {
       });
 }
 }])
-//}])
+}])
