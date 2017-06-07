@@ -1,4 +1,8 @@
+//var contact = angular.module('contact', ['ngRoute', function(){
 
+'use strict';
+
+contact.controller('formController', ['$scope', function($scope) {
 
   console.log("starting formController at startup...............");
   this.testing = "testing";

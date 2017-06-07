@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app="contact">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Miles Hochstein">
+
+
+
 
     <title>Personal History Design</title>
 
@@ -46,8 +49,44 @@
 </head>
 
 
-<body id="page-top" data-ng-controller="formController as Form">
+<body id="page-top">
+  <div ng-controller="formController">
+      Hello {{greetMe}}!
+    </div>
+    <script src="https://code.angularjs.org/snapshot/angular.js"></script>
+  <script>
+    angular.module('contact')
+      .controller('formController', ['$scope','formService2', function ($scope) {
+        // $scope.greetMe = 'World';
 
+          console.log("starting formController at startup...............");
+          this.testing = "testing";
+          this.master = {};
+
+          this.update = function (user) {
+              $scope.master = angular.copy(user);
+              console.log('update function in formcontroller');
+              console.log('user values are: ', user,  user.name,  user.email,  user.phone,  user.text);
+              // formService2.update(user);
+          };
+
+          this.reset = function () {
+              $scope.user = angular.copy($scope.master);
+          };
+
+          this.reset();
+
+          this.dosomething = function () {
+              console.log("doing something in formcontroller.... ");
+          };
+
+
+      }]);
+
+    angular.element(function() {
+      angular.bootstrap(document, ['contact']);
+    });
+  </script>
 
 
 
@@ -434,9 +473,9 @@ Leora’s career as a librarian and a writer serves her well in creating persona
 <!-- For Contact Form -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqBootstrapValidation/1.3.7/jqBootstrapValidation.min.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script> -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.js"></script> -->
 
  <script src="js/main.js"></script>
 
