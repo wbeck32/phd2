@@ -4,6 +4,11 @@ color: #981811;
 line-height: 2px;
 
 }
+
+#bs-example-navbar-collapse-1 > ul > li {
+color: blue;
+
+}
 body {
 padding-top: 70px;
 }
