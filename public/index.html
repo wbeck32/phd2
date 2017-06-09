@@ -8,7 +8,7 @@
     <meta name="author" content="Miles Hochstein">
 
 
-    <title>Books and Voices</title>
+    <title>Books & Voices</title>
 
     <!-- Custom Fonts -->
     <!-- <link href='https://fonts.googleapis.com/css?family=Josefin+Slab|Roboto:400,100,300' rel='stylesheet'
@@ -119,6 +119,27 @@ Menu</a>
                   </li>
 
                   <li>
+                      <div class="dropdown">
+                          <a id="dLabel"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                              More!
+                              <span class="caret"></span>
+                          </a>
+
+                          <ul class="dropdown-menu" aria-labelledby="dLabel">
+                              <li>
+                                  <a class="page-scroll" href="#aboutUs">About Us</a>
+                              </li>
+                              <li>
+                                  <a  href="something else">Something Else</a>
+
+                              </li>
+                              <li>z</li>
+                          </ul>
+                      </div>
+
+                   </li>
+
+                  <li>
                       <a class="page-scroll" href="#contact">Contact</a>
                   </li>
 
@@ -136,26 +157,43 @@ Menu</a>
 
 <div class="row">
   <div class="col-xs-4">
+
+      <a class="page-scroll" href="#product3">
+
       In-depth Personal History Books
       <img alt="" src="images/book image 782x blank.jpg" class="img-responsive center-block">
+
+      </a>
   </div>
 
-  <div class="col-xs-4">  Reminiscence Books
+  <div class="col-xs-4">
+
+      <a class="page-scroll" href="#product2">
+
+      Reminiscence Books
       <img alt="" src="images/gettyfrontportch.jpg" class="img-responsive center-block">
+      </a>
   </div>
 
-    <div class="col-xs-4">    Voice Recordings
+    <div class="col-xs-4">
+        <a class="page-scroll" href="#product1">
+
+        Voice Recordings
         <img alt="" src="images/microphone657x360.png" class="img-responsive center-block">
+        <a>
     </div>
 
 </div>
+
+
 
 
 <section id="products">
 
     <div class="title">Products and Services</div>
 
-    <div class="sectionheader">Voice Recordings</div>
+    <div id="product1" class="sectionheader">Voice Recordings <a class="page-scroll" href="#product2">(next)</a>
+    </div>
     <div class="flexcontainer">
         <div class="mycard">
 
@@ -171,7 +209,8 @@ Menu</a>
 
 
 
-    <div class="sectionheader">Reminiscence Books</div>
+    <div  id="product2" class="sectionheader">Reminiscence Books <a class="page-scroll" href="#product3">(next)</a>
+    </div>
     <div class="flexcontainer">
 
         <div class="mycard">
@@ -186,13 +225,15 @@ Medium Size Project<br>
       </div>
 
 
-    <div class="sectionheader">In-depth Histories</div>
+    <div  id="product3" class="sectionheader">In-depth Histories <a class="page-scroll" href="#product4">(next)</a>
+
+    </div>
 
     <div class="flexcontainer">
 
         <div class="mycard">
-<span>In-Depth Histories
-Larger Size Project
+<span>In-Depth Histories <br>
+    Larger Size Project
 <br>
 Long form books can take several months to more than year to complete, but they are worth the time and investment. These complex histories trace a family’s roots and give current and future generations a detailed portrait of decades and generations past. They tell the story of lives worth remembering.</span>
 <span><img alt="" src="images/book image 782x blank.jpg" class="img-responsive"></span>
@@ -201,7 +242,10 @@ Long form books can take several months to more than year to complete, but they 
       </div>
 
 
-    <div class="sectionheader">&Agrave; La Carte Services</div>
+    <div id="product4" class="sectionheader">&Agrave; La Carte Services <a class="page-scroll" href="#value">(next)</a>
+
+
+    </div>
     <div class="flexcontainer">
 
         <div class="mycard">
@@ -399,9 +443,6 @@ Leora’s career as a librarian and a writer serves her well in creating persona
             </div>
          </div>
  </footer> -->
-
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.js"></script>
 
 <!-- jQuery -->
   <script
