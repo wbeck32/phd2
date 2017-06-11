@@ -130,18 +130,18 @@ aside {
     }
 
     .navbar-default .navbar-header .navbar-brand {
-        color: white;
+        color: dimgray;
     }
 
     .navbar-default .navbar-header .navbar-brand:hover,
     .navbar-default .navbar-header .navbar-brand:focus {
-        color: gray;
+        color: dimgray;
 
     }
 
     .navbar-default .nav > li>a,
     .navbar-default .nav>li>a:focus {
-        color: white;
+        color: dimgray;
     }
 
     .navbar-default .nav > li>a:hover,
@@ -219,7 +219,7 @@ header .header-content .header-content-inner p {
     background-color: rgba(0, 0, 0, .45);
     padding: 20px 30px 30px 30px;
     font-weight: 500;
-    color: #fff;
+    color: #0000ff;
 }
 
 @media(min-width:768px) {

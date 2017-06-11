@@ -119,6 +119,7 @@ Menu</a>
 
                   <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More! <span class="caret"></span></a>
+
                       <ul class="dropdown-menu">
                           <li><a href="#hiddenpage1">How to Write Your Own</a></li>
                           <li><a href="#hiddenpage2">Begin Today</a></li>
@@ -142,11 +143,11 @@ Menu</a>
 
 
 
-
 <div class="logoSpace"><img alt="" src="images/booksandvoices.png"></div>
 
 
 <div id="mainpage">
+    <!--This div is selector to hide show entire main page except nav, logo and footer-->
 
 
 <div class="row">
@@ -416,31 +417,71 @@ Leora’s career as a librarian and a writer serves her well in creating persona
 </section>
 
 
-</div> <!-- close main page id-->
+</div> <!-- close main page id for hide show of this section-->
 
 
+<div class="container">
+    <pre>
+    <a class="show_hide" href="#" rel="#slidingDiv">View</a>
+    </pre>
+        <div id="slidingDiv" class="toggleDiv" style="display: none;">
 
-<div class="flexcontainer" id="hiddenpage1">
-    <p>HIDDEN PAGE 1</p>
+        Hidden page 1 Hidden page 1 Hidden page 1 Hidden page 1
+
+        </div>
+<pre>
+
+    <a class="show_hide" href="#" rel="#slidingDiv_2">View</a></pre>
+    <div id="slidingDiv_2" class="toggleDiv" style="display: none;">
+
+        Hidden page 2 Hidden page 2 Hidden page 2 Hidden page 2 Hidden page 2
+        <br>
+        Hidden page 2 Hidden page 2 Hidden page 2 Hidden page 2 Hidden page 2
+        Hidden page 2 Hidden page 2 Hidden page 2 Hidden page 2 Hidden page 2
+
+    </div>
+
+</div>
+
+
+<div class="container" id="hiddenpage1">
+    <p>HIDDEN PAGE 1</p><br>
+    <p>HIDDEN PAGE 1</p><br>
+    <p>HIDDEN PAGE 1</p><br>
+    <p>HIDDEN PAGE 1</p><br>
+    <p>HIDDEN PAGE 1</p><br>
+    <p>HIDDEN PAGE 1</p><br>
+
+</div>
+
+<br>
+
+<div class="container" id="hiddenpage2">
+    <p>HIDDEN PAGE 2</p><br>
+    <p>HIDDEN PAGE 2</p><br>
+    <p>HIDDEN PAGE 2</p><br>
+    <p>HIDDEN PAGE 2</p><br>
+    <p>HIDDEN PAGE 2</p><br>
 
 </div>
 
 
 
-<div class="flexcontainer" id="hiddenpage2">
-    <p>HIDDEN PAGE 2</p>
-
+<div class="container" id="hiddenpage3">
+    <p>HIDDEN PAGE 3</p><br>
+    <p>HIDDEN PAGE 3</p><br>
+    <p>HIDDEN PAGE 3</p><br>
+    <p>HIDDEN PAGE 3</p><br>
+    <p>HIDDEN PAGE 3</p><br>
 </div>
 
-
-
-<div class="flexcontainer" id="hiddenpage3">
-    <p>HIDDEN PAGE 3</p>
-
-</div>
-
-<div class="flexcontainer" id="hiddenpage4">
-    <p>HIDDEN PAGE 4</p>
+<div class="container" id="hiddenpage4">
+    <p>HIDDEN PAGE 4</p><br>
+    <p>HIDDEN PAGE 4</p><br>
+    <p>HIDDEN PAGE 4</p><br>
+    <p>HIDDEN PAGE 4</p><br>
+    <p>HIDDEN PAGE 4</p><br>
+    <p>HIDDEN PAGE 4</p><br>
 
 </div>
 
@@ -512,6 +553,68 @@ Leora’s career as a librarian and a writer serves her well in creating persona
     ga('send', 'pageview');
 
 </script>
+
+
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+
+
+
+<script>
+    (function ($) {
+        $.fn.showHide = function (options) {
+
+//default vars for the plugin
+            var defaults = {
+                speed: 1000,
+                easing: '',
+                changeText: 0,
+                showText: 'Show',
+                hideText: 'Hide'
+
+            };
+            var options = $.extend(defaults, options);
+
+            $(this).click(function () {
+// optionally add the class .toggleDiv to each div you want to automatically close
+                $('.toggleDiv').slideUp(options.speed, options.easing);
+// this var stores which button you've clicked
+                var toggleClick = $(this);
+// this reads the rel attribute of the button to determine which div id to toggle
+                var toggleDiv = $(this).attr('rel');
+// here we toggle show/hide the correct div at the right speed and using which easing effect
+                $(toggleDiv).slideToggle(options.speed, options.easing, function() {
+// this only fires once the animation is completed
+                    if(options.changeText==1){
+                        $(toggleDiv).is(":visible") ? toggleClick.text(options.hideText) : toggleClick.text(options.showText);
+                    }
+                });
+
+                return false;
+
+            });
+
+        };
+    })(jQuery);
+
+
+
+    $(document).ready(function(){
+
+        $('.show_hide').showHide({
+            speed: 300, // speed you want the toggle to happen
+            easing: '', // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
+            changeText: 1, // if you dont want the button text to change, set this to 0
+            showText: 'View',// the button text to show when a div is closed
+            hideText: 'Close' // the button text to show when a div is open
+
+        });
+
+    });
+
+</script>
+
+
 
 </body>
 </html>
