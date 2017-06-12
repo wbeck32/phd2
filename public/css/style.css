@@ -32,9 +32,6 @@ h3 {
 .sculpt2{width: 100%; margin: 0 auto;}
 
 
-#biography{background-color: lightgrey; padding-top: 75px;
-    font-size: 1.5rem; font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif;
-}
 
 .sectionheader{background-color:grey; padding:20px; color: white; font-size:2rem;}
 
@@ -49,17 +46,6 @@ h3 {
 .bigtitle{font-size: 3rem; text-align:left;}
 
 
-#illustrated{   text-align: center; background-color: darkslategrey;  padding-top:  0px;
-    font-size: 2rem; font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif;
-}
-
-#art{height: 1100px; background-color: darkgray; padding-top: 0px;
-    font-size: 2rem; font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif;
-}
-
-#science {  background-color: slategray; margin-top: 0px; padding-top:  200px;
-    font-size: 2rem; font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif;
-}
 
 #contact{height: 800px;  background-color: black; padding-top:  50px;
     font-size: 21rem; font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif;
@@ -67,3 +53,15 @@ h3 {
 
 #footerOverride {height: 50px;  background-color: darkslategray; padding-top:  0px;  font-size: 4rem; font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif; color: yellow;
 }
+
+
+/*//show hide functions IMPORTANT*/
+#hp0 {display: inline;}
+#hp1 {display: none;}
+#hp2 {display: none;}
+#hp3 {display: none;}
+#hp4 {display: none;}
+
+a{ display: inline; padding: 0 10px}
+
+.link {color: red; background-color: none;}
