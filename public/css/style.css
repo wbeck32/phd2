@@ -21,7 +21,13 @@ h3 {
     width: 99%;
     padding: 1.8rem;}
 
-.container{width: 1000px; background-color: ghostwhite; border-radius: 10px; padding: 40px;}
+.allsections {
+    background-color: antiquewhite;
+    padding-bottom: 300px;
+
+}
+
+.container{width: 1600px; background-color: lightgoldenrodyellow; border-radius: 10px; padding: 40px; padding-top: 0;}
 
 .topNavBar{background-color: #F5DEB3; z-index: 900 !important ;  opacity: 1.0 !important; }
 
@@ -31,12 +37,9 @@ h3 {
 
 .sculpt2{width: 100%; margin: 0 auto;}
 
+.sectionheader{background-color:maroon; padding:20px; color: white; font-size:2rem;}
 
-
-.sectionheader{background-color:grey; padding:20px; color: white; font-size:2rem;}
-
-
-.title{padding-left: 40px; color: white; padding-top: 20px; text-align: center; background-color: grey;}
+.title{padding-left: 40px; color: white; padding-top: 30px; text-align: center; background-color: grey;}
 
 
 .mycard{border: 1px solid black; padding:10px; margin: 20px;  border-radius: 10px; background-color: lightgoldenrodyellow;}
