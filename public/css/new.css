@@ -9,6 +9,8 @@ line-height: 2px;
 
 }
 
+
+
 #bs-example-navbar-collapse-1 > ul > li {
 color: blue;
 
@@ -48,21 +50,20 @@ div.container-fluid.topNavBar {
   opacity:1!important;
 }
 
-.logoSpace {
-  height: 30vh;
-  text-align: center;
-}
 
 .row {
   margin-bottom: 20px;
 }
 
+.logoSpace {
+    text-align: center;
+}
+
 .logoSpace img {
-  width: 125px;
-  height: 125px;
+  width: 400px;
   margin: 0 auto;
   text-align: center;
-  margin-top: 55px;
+  margin-top: 5px;
 }
 
 section {
