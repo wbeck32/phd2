@@ -3,5 +3,4 @@ data
 serverPH.js
 .DS_Store
 deploy.sh
-package.json
 node_modules
