@@ -27,6 +27,14 @@
     <!-- Custom CSS -->
     <!-- <link rel="stylesheet" href="css/creative.css" type="text/css"> -->
 
+    <link rel="import" href="hiddenpage1.html">
+    <link rel="import" href="hiddenpage2.html">
+    <link rel="import" href="hiddenpage3.html">
+    <link rel="import" href="hiddenpage4.html">
+
+
+
+
     <!-- Jquery Impromptu CSS -->
     <!--<link rel="stylesheet" href="css/jquery-impromptu.css" type="text/css">-->
 
@@ -54,7 +62,7 @@
 
   <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand page-scroll" href="#page-top">Artisan Memoirs</a>
+            <a class="navbar-brand page-scroll" href="#page-top">Artisan Memoir</a>
         </div>
 
 
@@ -97,24 +105,22 @@ Menu</a>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
                   <li>
-                      <a class="link page-scroll" href="#page-top"  id="hp5-link" rel="hp0" >Home</a>
+                      <a class="link page-scroll" href="#page-top" id="hp0-link" rel="hp0" >Home</a>
                   </li>
                   <li>
-                      <a class="link page-scroll" href="#products" id="hp5-link" rel="hp0">Products</a>
-                  </li>
-
-                  <li>
-                      <a class="link page-scroll" href="#value" id="hp5-link" rel="hp0">Value</a>
-                  </li>
-
-                  <li>
-                      <a class="link page-scroll" href="#process" id="hp5-link" rel="hp0">Process</a>
+                      <a class="link page-scroll" href="#products" id="hp0-link" rel="hp0">Products</a>
                   </li>
                   <li>
-                      <a class="link page-scroll" href="#pricing"id="hp5-link" rel="hp0">Pricing</a>
+                      <a class="link page-scroll" href="#value"    id="hp0-link"   rel="hp0">Value</a>
                   </li>
                   <li>
-                      <a class="link page-scroll" href="#aboutUs" id="hp5-link" rel="hp0">About Us</a>
+                      <a class="link page-scroll" href="#process"  id="hp0-link"  rel="hp0">Process</a>
+                  </li>
+                  <li>
+                      <a class="link page-scroll" href="#pricing"  id="hp0-link"  rel="hp0">Pricing</a>
+                  </li>
+                  <li>
+                      <a class="link page-scroll" href="#aboutUs"  id="hp0-link"  rel="hp0">About Us</a>
                   </li>
 
                   <li class="dropdown">
@@ -195,7 +201,8 @@ Menu</a>
     <div class="flexcontainer">
         <div class="mycard">
 
-<span class="sidebyside"><img alt="" src="images/microphone657x360.png" class="img-responsive"></span>
+ <span class="sidebyside"><img alt=""  class="img-responsive"  src="images/microphone657x360.png" ></span>
+
 
                 <span >Smaller Size Project
                 <br>
@@ -217,7 +224,7 @@ Menu</a>
 Medium Size Project<br>
 
             Our signature product is the mid-length reminiscence book for downsizers.  It is geared towards those who are letting go of a beloved home or some of their belongings. Our interview team comes to your home to create a photographic record of cherished items and to record the stories behind each one, which are then combined into a beautifully designed book.</span>
-<span>  <img alt="" src="images/gettyfrontportch.jpg"class="img-responsive"></span>
+<span>  <img alt="" src="images/gettyfrontportch.jpg" class="img-responsive"></span>
 
         </div>
       </div>
@@ -387,7 +394,7 @@ Leora’s brings her skills as research librarian and a writer to create persona
 <br>
 
 
-<div class="container" id="hp1">
+<div class="hpcontainer" id="hp1">
     <p>How to Write Your Own Story</p><br>
     <p></p><br>
     <p>Sometimes the best way to get started on writing your story is to sit down in your kitchen with a pad of paper and begin at the beginning.</p><br>
@@ -397,7 +404,7 @@ Leora’s brings her skills as research librarian and a writer to create persona
 
 </div>
 
-<div class="container" id="hp2">
+<div class="hpcontainer" id="hp2">
     <p>Begin Today - There is no day like today to begin to talk to the one you love about their stories, or to write your story down.</p><br>
     <p>HIDDEN PAGE 2</p><br>
     <p>HIDDEN PAGE 2</p><br>
@@ -407,7 +414,7 @@ Leora’s brings her skills as research librarian and a writer to create persona
 </div>
 
 
-<div class="container" id="hp3">
+<div class="hpcontainer" id="hp3">
     <p>The Journey of Writing </p><br>
     <p>HIDDEN PAGE 3</p><br>
     <p>HIDDEN PAGE 3</p><br>
@@ -416,7 +423,7 @@ Leora’s brings her skills as research librarian and a writer to create persona
 </div>
 
 
-<div class="container" id="hp4">
+<div class="hpcontainer" id="hp4">
     <p>The Way Pets Affect Our Lives</p><br>
     <p>HIDDEN PAGE 4</p><br>
     <p>HIDDEN PAGE 4</p><br>
@@ -432,13 +439,13 @@ Leora’s brings her skills as research librarian and a writer to create persona
 <nav class="navbar navbar-default navbar-fixed-bottom">
   <div class="container">
 <span class="footerTxt">
-  <p>Personal History Design
-  <p>2000 NE 42nd Ave., #147
+  <p>Artisan Memoirs</p>
+  <p>2000 NE 42nd Ave., #147</p>
   <p>Portland, OR 97213</p>
 </span>
 <span class="footerTxt">
-  <p>info@personalhistorydesign.com
-<p>personalhistorydesign.com
+  <p>info@personalhistorydesign.com</p>
+<p>personalhistorydesign.com</p>
 <p>Tel: 503.753.2793</p>
 </span>
   </div>
@@ -504,12 +511,13 @@ Leora’s brings her skills as research librarian and a writer to create persona
 
         if (id == "hp0") {
             console.log ('id is :', id);
-            $('#hp0').show();
+            $('#' + id).show();
             $('#hp1').hide();
             $('#hp2').hide();
             $('#hp3').hide();
             $('#hp4').hide();
          }
+
 
         else if (id == 'hp1') {
             $('#' + id).show();
