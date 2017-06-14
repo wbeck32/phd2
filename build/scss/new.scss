@@ -1,14 +1,43 @@
-html{
-    height:101%;
-    }
+// @import "bootstrap";
 
-html p {
-font-size: 12px;
-color: #981811;
-line-height: 2px;
+// @grid-float-breakpoint = 1000px;
+
+@media (max-width: 915px) {
+
+  .collapsed {
+    display: inline;
+  }
+
+  ul.nav.navbar-nav.navbar-right {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+div.container-fluid.topNavBar {
+width : 100%;
 
 }
 
+
+}
+
+
+html{
+    height:101%;
+    #contact {
+      padding-top: 0;
+
+    }
+
+
+    p {
+      font-size: 12px;
+      color: #981811;
+      line-height: 2px;
+    }
+}
 
 
 #bs-example-navbar-collapse-1 > ul > li {
@@ -85,4 +114,14 @@ section {
     height: 100%;
     padding: 0;
     margin-left: 37px;
+}
+
+form.form-horizontal {
+  padding: 20px 10px;
+
+}
+
+#contact > form > div > label {
+  color: #981811;
+
 }
