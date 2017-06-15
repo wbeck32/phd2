@@ -1,0 +1,86 @@
+///////
+//lighttodark five colors of earth sea scheme
+//#F7F4D7  light yellow
+//#C2EDEA  thin air light blue
+//#86BFBB  slightly darker blue
+//#8D956C  light brown
+//#936B1E  dark brown
+
+$textbackground: #C2EDEA;
+$sectionbackground: #F7F4D7;
+$navbar: #936B1E;
+$sectionmarker: #936B1E;
+$subsectionmarker: #8D956C;
+
+
+h3 {
+  display: inline-block;
+  padding: 10px;
+  background: #B9121B;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.flexcontainer {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 99%;
+  padding: 1.8rem;}
+
+.allsections {
+  background-color: whitesmoke;
+  padding-bottom: 300px;
+}
+
+.container{width: 1600px; background-color: lightgoldenrodyellow; border-radius: 10px; padding: 40px; padding-top: 0;}
+
+.hpcontainer{width: 70% ; background-color: tan; border-radius: 10px; margin: 30px; padding: 40px; padding-top: 10;}
+
+.topNavBar{background-color: #F5DEB3; z-index: 900 !important ;  opacity: 1.0 !important; }
+
+.p {font-size: 1.5rem; font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif;  }
+
+.item{background-color: black; height: 90%; /*width: 100%;*/ margin: 0 auto;}
+
+.sculpt2{width: 100%; margin: 0 auto;}
+
+.sectionheader{background-color: $subsectionmarker; padding:20px; color: white; font-size:2rem; padding:20px; color: white; font-size:2rem;}
+
+.title{padding-left: 40px; color: white; padding-top: 30px; text-align: center; background-color: $sectionmarker;}
+
+
+.mycard{border: 1px solid black; padding:10px; margin: 20px;  border-radius: 10px; background-color: $textbackground;}
+
+.cardtitle{background-color: $sectionbackground ; font-size: 1.5rem; padding: 5px; margin: 20px; text-align: left; border-radius: 5px;  border: 1px solid slategrey;}
+
+.bigtitle{font-size: 3rem; text-align:left;}
+
+
+
+#contact{height: 800px;  background-color: black; padding-top:  50px;
+  font-size: 21rem; font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif;
+}
+
+#footerOverride {height: 50px;  background-color: darkslategray; padding-top:  0px;  font-size: 4rem; font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif; color: yellow;
+}
+
+
+/*//show hide functions IMPORTANT*/
+#hp0 {display: inline;}
+#hp1 {display: none;}
+#hp2 {display: none;}
+#hp3 {display: none;}
+#hp4 {display: none;}
+
+a{ display: inline; padding: 0 10px}
+
+.link {color: red; text-decoration: wavy;  background-color: none;}
