@@ -2,6 +2,20 @@
 
 // @grid-float-breakpoint = 1000px;
 
+//lighttodark five colors of earth sea scheme
+//#F7F4D7  light yellow
+//#C2EDEA  thin air light blue
+//#86BFBB  slightly darker blue
+//#8D956C  light brown
+//#936B1E  dark brown//$primary-color: #333;
+
+$textbackground: #F7F4D7;
+$navbar: #936B1E;
+$sectionmarker: #F7F4D7;
+$subsectionmarker: #F7F4D7;
+
+
+
 @media (max-width: 915px) {
 
   .collapsed {
@@ -35,13 +49,14 @@ html{
     p {
       font-size: 12px;
       color: #981811;
+      color: white;
       line-height: 2px;
     }
 }
 
 
 #bs-example-navbar-collapse-1 > ul > li {
-color: blue;
+color: white;
 
 }
 body {
@@ -55,7 +70,7 @@ a {
 #dLabel {color: blue;}
 
 nav.navbar.navbar-default.navbar-fixed-bottom > div {
-  background-color: #F5DEB3;
+  background-color: $navbar;
   margin: 0;
   padding: 18px;
   width: 100%;
@@ -74,7 +89,8 @@ nav.navbar.navbar-default.navbar-fixed-bottom {
 }
 
 div.container-fluid.topNavBar {
-  background-color: #F5DEB3;
+  //background-color: #F5DEB3;
+  background-color: $navbar;
   z-index:900!important;
   opacity:1!important;
 }
@@ -123,5 +139,7 @@ form.form-horizontal {
 
 #contact > form > div > label {
   color: #981811;
+
+
 
 }

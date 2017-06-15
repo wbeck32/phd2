@@ -123,7 +123,6 @@ aside {
     background-color: transparent;
 }
 
-
 @media(min-width:920px) {
     .navbar-default {
         border-color: rgba(255,255,255,.3);
@@ -223,7 +222,7 @@ header .header-content .header-content-inner p {
     color: #0000ff;
 }
 
-@media(min-width:920px) {
+@media(min-width:768px) {
     header {
         min-height: 100%;
     }
@@ -323,7 +322,7 @@ header .header-content .header-content-inner p {
     opacity: 1;
 }
 
-@media(min-width:920px) {
+@media(min-width:768px) {
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
         font-size: 16px;
     }
