@@ -149,3 +149,12 @@ form.form-horizontal {
 .joeyTest {
 border: 1px solid red;
 }
+
+.visible {
+    visibility:visible;
+}
+
+.invisible {
+  visibility:collapse;
+  height: 0;
+}
