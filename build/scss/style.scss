@@ -6,6 +6,7 @@ $subsectionmarker: #8D956C;
 $linkcolor: #000;
 $linkhover: red;
 $titlebackground: #936b1e;
+$sectionheader: #27b6c4;
 
 @media (max-width:915px) {
 	.collapsed {
@@ -55,9 +56,23 @@ html {
     }
 
     section {
-    	padding: 100px 0;
+    	padding: 0;
     }
 
+		.headerArea {
+
+			.responsiveHeader {
+
+				div.logoSpace {
+					border: 1px solid red;
+				}
+
+				div.row {
+					border: 1px solid purple;
+
+				}
+			}
+		}
     .row {
     	margin-bottom: 20px;
     }
@@ -69,7 +84,6 @@ html {
     	width: 400px;
     	margin: 0 auto;
     	text-align: center;
-    	margin-top: 5px;
     }
 
     .flexcontainer {
@@ -96,14 +110,12 @@ html {
     }
 
     .sectionheader {
-    	background-color: #8d956c;
-    	padding: 20px;
-    	color: #fff;
-    	font-size: 2rem;
+    	background-color: $sectionheader;
     	padding: 20px;
     	color: #fff;
     	font-size: 2rem;
     }
+
     .title {
     	color: #fff;
     	text-align: center;
@@ -127,6 +139,11 @@ html {
     	padding: 40px;
     	padding-top: 0;
     }
+		.form-horizontal {
+			margin-bottom: 30px;
+			padding: 35px 65px 35px 35px;
+		}
+
     .footerTxt {
     	display: inline-block;
       margin: 0 15px 0 10px;

@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Miles Hochstein">
-
+    <meta property="og:url"                content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+    <meta property="og:type" content="business.business" />
+    <meta property="og:title" content="Artisan Memoirs" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="business:contact_data:street_address" content="2000 NE 42nd Ave., #147" />
+    <meta property="business:contact_data:locality" content="Portland, OR" />
+    <meta property="business:contact_data:postal_code" content="97213" />
+    <meta property="business:contact_data:country_name" content="United States" />
 
     <title>Artisan Memoirs</title>
 
@@ -20,10 +28,8 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- Bootstrap CSS -->
-    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-
 
 </head>
 
@@ -122,10 +128,10 @@ Menu</a>
   </nav>
 
 
-<div class="pageBody">
+<div class="pageBody" id="responsive">
     <!--This div is selector to hide show entire main page except nav and footer-->
 
-
+<div class="headerArea">
 <div class="logoSpace"><img alt="" src="images/artisanmemoirslargewithsub.png" class="img-responsive center-block"></div>
 
 
@@ -159,6 +165,8 @@ Menu</a>
         <img alt="" src="images/microphone657x360.png" class="img-responsive center-block">
         </a>
     </div>
+
+</div>
 
 </div>
 <!-- End of row of photos -->
@@ -421,7 +429,7 @@ Leora’s brings her skills as research librarian and a writer to create persona
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Submit</button>
+      <button type="submit" class="btn btn-default" onclick="sendContactEmail()">Submit</button>
     </div>
   </div>
 </form>
@@ -459,26 +467,13 @@ Leora’s brings her skills as research librarian and a writer to create persona
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
 
-<!-- jQuery UI -->
-  <script
-    src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-    crossorigin="anonymous"></script>
-
-<!-- jQuery easing -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js">
-</script>
-
 <!-- Latest compiled and minified Bootstrap -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="js/creative.js"></script>
+<!-- Menu javascript -->
 <script src="js/menu.js"></script>
-<!-- For Contact Form -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqBootstrapValidation/1.3.7/jqBootstrapValidation.min.js"></script>
+<script src="js/contactForm.js"></script>
+
 
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -490,64 +485,6 @@ Leora’s brings her skills as research librarian and a writer to create persona
     ga('send', 'pageview');
 
 </script>
-
-
-
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-
-
-<!-- <script>
-    $('.link').click(function(){
-        var id = $(this).attr("rel");
-
-        console.log ('id is', id );
-
-        if (id == "hp0") {
-            console.log ('id is :', id);
-            $('#' + id).show();
-            $('#hp1').hide();
-            $('#hp2').hide();
-            $('#hp3').hide();
-            $('#hp4').hide();
-         }
-
-
-        else if (id == 'hp1') {
-            $('#' + id).show();
-            $('#hp0').hide();
-            $('#hp2').hide();
-            $('#hp3').hide();
-            $('#hp4').hide();
-         }
-
-        else if (id == 'hp2') {
-            $('#' + id).show();
-            $('#hp0').hide();
-            $('#hp1').hide();
-            $('#hp3').hide();
-            $('#hp4').hide();
-         }
-
-        else if (id == 'hp3') {
-            $('#' + id).show();
-            $('#hp0').hide();
-            $('#hp1').hide();
-            $('#hp2').hide();
-            $('#hp4').hide();
-         }
-
-        else if (id == 'hp4') {
-            $('#' + id).show();
-            $('#hp0').hide();
-            $('#hp1').hide();
-            $('#hp2').hide();
-            $('#hp3').hide();
-        }
-
-    });
-</script> -->
-
-
 
 </body>
 </html>
