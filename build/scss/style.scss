@@ -202,9 +202,21 @@ html {
 
     .navbar-fixed-bottom {
       .container {
+
         padding: 10px;
 				background-color: $light-grey;
 				border-radius: 0;
+
+		  #shareRoundIcons{
+
+			  display:inline-flex;
+			  .jssocials-share-link.span {
+				  border-radius: 50%;
+				  display: inline;
+			  }
+
+
+		  }
       }
     }
   }
