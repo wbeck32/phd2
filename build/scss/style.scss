@@ -14,6 +14,9 @@ $light-grey: #bcd2ee;
 $burnt-orange: #e3630c;
 $white: #fff;
 $black: #000;
+$base-font-size: 14px;
+$bold-font-size: 16px;
+$bolder-font-size: 18px;
 
 
 @media (max-width:915px) {
@@ -40,13 +43,13 @@ $black: #000;
 html {
   padding: 70px 25px 0 25px;
 	font-family: 'Helvetica Neue',Arial,sans-serif;
-  height: 101%;
+	height: 100vh;
 	background-image: url(../../public/images/paperBackground.jpg);
 	background-repeat: repeat repeat;
 
 
   body {
-
+				font-size: $base-font-size;
     a {
     	display: inline;
     	padding: 0 10px;
@@ -62,7 +65,6 @@ html {
     	color: $black;
       line-height: 2px;
       margin-bottom: 8px;
-      font-size: 14px;
       line-height: 1;
     }
 
@@ -133,6 +135,12 @@ html {
 			div#boldText {
 				font-weight: bold;
 				margin-bottom: 5px;
+				font-size: $bold-font-size;
+			}
+			div#bolderText {
+				font-weight: bold;
+				margin-bottom: 10px 0 5px 0;
+				font-size: $bolder-font-size;
 			}
 			span {
 				display: inline-block;
