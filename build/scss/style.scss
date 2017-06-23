@@ -195,28 +195,24 @@ html {
 			padding: 35px 65px 35px 35px;
 		}
 
-    .footerTxt {
-    	display: inline-block;
-      margin: 0 15px 0 10px;
-    }
+
 
     .navbar-fixed-bottom {
       .container {
-
-        padding: 10px;
-				background-color: $light-grey;
-				border-radius: 0;
-
-		  #shareRoundIcons{
-
-			  display:inline-flex;
-			  .jssocials-share-link.span {
-				  border-radius: 50%;
-				  display: inline;
-			  }
-
-
+		  padding: 10px;
+		  background-color: $light-grey;
+		  border-radius: 0;
+		  .footerTxt {
+			  display: inline-block;
+			  margin: 0 15px 0 10px;
 		  }
+
+		  .jssocials {
+			  .jssocials-share {
+				  display: inline-flex;
+			  }
+		  }
+
       }
     }
   }
