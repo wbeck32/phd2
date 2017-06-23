@@ -89,7 +89,14 @@ html {
 
 		}
 
+		.pageBody {
+			height: auto;
+			overflow: hidden;
+			clear: both;
+		}
+
 		.headerArea {
+
 
 			.responsiveHeader {
 
@@ -197,6 +204,7 @@ html {
 
 
 
+
     .navbar-fixed-bottom {
       .container {
 		  padding: 10px;
@@ -214,6 +222,8 @@ html {
 		  }
 
       }
-    }
+
+     }
   }
+
 }
