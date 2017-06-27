@@ -96,16 +96,17 @@ html {
 		}
 
 		.headerArea {
-
+			//visibility: hidden;
+			//height: 10px;
 
 			.responsiveHeader {
 
 				div.logoSpace {
-					border: 1px solid red;
+					border: 3px solid red;
 				}
 
 				div.row {
-					border: 1px solid purple;
+					border: 3px solid purple;
 
 				}
 			}
