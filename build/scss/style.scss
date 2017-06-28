@@ -18,25 +18,26 @@ $base-font-size: 16px;
 $bold-font-size: 18px;
 $bolder-font-size: 20px;
 
-
 @media (max-width:915px) {
-	// .collapsed {
-	// 	display: inline;
-	// }
-	// ul.nav.navbar-nav.navbar-right {
-	// 	display: none;
-	// }
+	 .collapsed {
+	 	display: inline;
+	 }
+	 ul.nav.navbar-nav.navbar-right {
+	 	display: none;
+	 }
 }
 
-@media (max-width:768px) {
-font-size: 10px;
-}
 
-@media (min-width:768px) {
-}
+//@media (max-width:768px) {
+//	html body .container-fluid .topNavBar
+//	 {
+//	 	width: 100%;
+//		 background-color: black;
+//
+// 	 }
+//}
 
-@media (min-width:992px) {
-}
+
 
 html {
   padding: 70px 25px 0 25px;
@@ -73,18 +74,39 @@ html {
 		.container-fluid .topNavBar {
 			background-color: $light-grey;
 
-		}
+			@media (max-width: 768px) {
+				width: 100%;
+				background-color: lightgray;
 
-		.navbar-header .navbar-brand {
-			color: $black;
-		}
+			}
+			@media (min-width: 768px) {
+				background-color: lightgreen;
+			}
+			ul.nav.navbar-nav.navbar-right {
+				@media (max-width: 768px) {
+					font-size: 6px;
 
-		#bs-example-navbar-collapse-1 > ul > li > a {
-			color: $black;
-			&:hover,&:focus {
-				color: $dark-grey;
+				}
+
 			}
 
+			.navbar-header .navbar-brand {
+				//color: $black;
+				color: white;
+				//width: 30%;
+				font-size: 20px;
+			}
+
+			.collapse .navbar-collapse {
+				color: $black;
+				&:hover, &:focus {
+					color: $dark-grey;
+				}
+				@media (max-width: 768px) {
+					background-color: #7b519d;
+				}
+
+			}
 		}
 
 		.pageBody {
@@ -99,6 +121,7 @@ html {
 				margin-bottom: 20px;
 
 
+
 				.col-xs-3 {
 					font-size: 14px;
 
@@ -106,19 +129,19 @@ html {
 
 				.col-md-12 {
 					text-align: center;
-
 				}
-			}
+				div.logoSpace {
+					border: 3px solid red;
+				}
 
-			.logoSpace {
-			}
-			.logoSpace img {
-				width: 400px;
-				margin: 0 auto;
-				text-align: center;
-				float: none;
-			}
+				.logoSpace img {
+					width: 400px;
+					margin: 0 auto;
+					text-align: center;
+					float: none;
+				}
 		}
+	}
 
 
 		.responsiveHeader {
@@ -218,6 +241,7 @@ html {
     	background-color: $burnt-orange;
       font-size: 21px;
       padding: 10px 0;
+		width: 200px;
     }
 
     .visible {
