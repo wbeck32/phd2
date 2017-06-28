@@ -40,7 +40,6 @@ $bolder-font-size: 20px;
 
 
 html {
-  padding: 70px 25px 0 25px;
 	font-family: 'Helvetica Neue',Arial,sans-serif;
 	height: 100vh;
 	background-image: url(../../public/images/paperBackground.jpg);
@@ -48,7 +47,16 @@ html {
 
 
   body {
+
+
 				font-size: $base-font-size;
+		.wrapper {
+			font-family: 'Helvetica Neue',Arial,sans-serif;
+			height: 100vh;
+			background-image: url(../../public/images/paperBackground.jpg);
+			background-repeat: repeat repeat;
+
+
     a {
     	display: inline;
     	padding: 0 10px;
@@ -70,6 +78,9 @@ html {
     section {
     	padding: 0;
     }
+
+		.container-fluid {
+			margin: 70px 25px 0 25px;
 
 		.container-fluid .topNavBar {
 			background-color: $light-grey;
@@ -241,7 +252,7 @@ html {
     	background-color: $burnt-orange;
       font-size: 21px;
       padding: 10px 0;
-		width: 200px;
+		// width: 200px;
     }
 
     .visible {
@@ -282,4 +293,6 @@ html {
 			}
 		}
   }
+}
+}
 }
