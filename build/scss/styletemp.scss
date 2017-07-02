@@ -43,7 +43,7 @@ $bolder-font-size: 20px;
 html {
 	font-family: 'Helvetica Neue', Arial, sans-serif;
 	height: 100vh;
-	background-image: url("../../public/images/paperBackground.jpg");
+	background-image: url(../../public/images/paperBackground.jpg);
 	background-repeat: repeat repeat;
 
 	body {
@@ -51,7 +51,7 @@ html {
 		.wrapper {
 			font-family: 'Helvetica Neue', Arial, sans-serif;
 			height: 100vh;
-			background-image: url("../../public/images/paperBackground.jpg");
+			background-image: url(../../public/images/paperBackground.jpg);
 			background-repeat: repeat repeat;
 
 			a {
@@ -151,6 +151,7 @@ html {
 				}
 
 				.responsiveHeader {
+					background-color: yellow;
 
 					div.logoSpace {
 						border: 1px solid red;
@@ -187,7 +188,7 @@ html {
 				}
 
 				.flexcontainer {
- 					justify-content: center;
+					justify-content: center;
 					display: flex;
 					flex-direction: row;
 					flex-wrap: wrap;
@@ -277,13 +278,11 @@ html {
 				.navbar-fixed-bottom {
 
 					.container {
-						height: 30px;
 						padding: 10px;
 						background-color: $light-grey;
 						border-radius: 0;
 
 						.footerTxt {
-							background-color: yellow;
 							display: inline-block;
 							margin: 0 15px 0 10px;
 						}
