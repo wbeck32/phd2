@@ -18,26 +18,6 @@ $base-font-size: 16px;
 $bold-font-size: 18px;
 $bolder-font-size: 20px;
 
-//@media (max-width:915px) {
-//	 .collapsed {
-//	 	display: inline;
-//	 }
-//	 ul.nav.navbar-nav.navbar-right {
-//	 	display: none;
-//	 }
-//}
-
-
-
-//@media (max-width:768px) {
-//	html body .container-fluid .topNavBar
-//	 {
-//	 	width: 100%;
-//		 background-color: black;
-//
-// 	 }
-//}
-
 html {
 	font-family: 'Helvetica Neue', Arial, sans-serif;
 	height: 100vh;
@@ -51,20 +31,16 @@ html {
 		background-image: url(../../public/images/paperBackground.jpg);
 		background-repeat: repeat repeat;
 
-				&:focus, &:hover {
+		a {
+			&:focus, &:hover {
 					color: $light-grey;
 				}
 			}
-
 			p {
 				color: $black;
 				line-height: 2px;
 				margin-bottom: 8px;
 				line-height: 1;
-			}
-
-			section {
-				padding: 0;
 			}
 
 		nav.navbar.navbar-fixed-top {
@@ -113,9 +89,6 @@ html {
 				}
 			}
 
-
-// .container-fluid {
-
 div.pageBody {
 	margin: 70px 25px 0 25px;
 	height: auto;
@@ -162,17 +135,13 @@ div.pageBody {
 			}
 
 			.sectionheader {
-				background-color: $dark-grey;
-				padding: 20px;
-				color: #fff;
-				font-size: 2rem;
-				a {
-
-				.sectionheader {
 					background-color: $dark-grey;
 					padding: 20px;
 					color: #fff;
 					font-size: 2rem;
+					a {
+
+					}
 				}
 
 			.flexcontainer {
@@ -221,6 +190,7 @@ div.pageBody {
 			}
 		}
 	}
+
 		nav.navbar-fixed-bottom {
 			height: 95px;
 			padding: 10px;
@@ -244,7 +214,6 @@ div.pageBody {
 									i.jssocials-share-logo {
 										font-size: 1em;
 									}
-
 								}
 							}
 						}
