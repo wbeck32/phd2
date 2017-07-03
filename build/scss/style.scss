@@ -18,6 +18,7 @@ $base-font-size: 16px;
 $bold-font-size: 18px;
 $bolder-font-size: 20px;
 
+
 html {
 	font-family: 'Helvetica Neue', Arial, sans-serif;
 	height: 100vh;
@@ -25,6 +26,9 @@ html {
 	background-repeat: repeat repeat;
 
   body {
+
+
+
 		font-size: $base-font-size;
 		font-family: 'Helvetica Neue',Arial,sans-serif;
 		height: 100vh;
@@ -123,6 +127,29 @@ div.pageBody {
 	section.allsections {
 		background-color: $peach;
 		padding-bottom: 0;
+
+
+		.invisible {
+			visibility: hidden;
+			opacity: 0;
+			transition: visibility 0s linear 300ms, opacity 300ms;
+
+			height: 0;
+			overflow: hidden;
+			background-color: #dedede;
+			-moz-transition: height 1s ease;
+			-webkit-transition: height 1s ease;
+			-o-transition: height 1s ease;
+			transition: height 5s ease;
+		}
+
+		.visible {
+			visibility: visible;
+			opacity: 1;
+			transition: visibility 0s linear 0s, opacity 300ms;
+
+		}
+
 			&#contact {
 			padding-bottom: 38px;
 			}
