@@ -22,7 +22,7 @@ gulp.task('sass', function () {
     .pipe(sass())
     .pipe(postcss([ autoprefixer({ browsers: ['last 2 version'] }) ]))
     .pipe(sourcemaps.write())
-    .pipe(minifycss())
+    //.pipe(minifycss())
     .pipe(gulp.dest('public/css'))
     .pipe(livereload());
 });
