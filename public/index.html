@@ -42,56 +42,57 @@
   <nav class="navbar navbar-fixed-top">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
+
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsedMenu" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+
       <a class="navbar-brand" href="#">
-       <img class="responsive-img" alt="Brand" src="">
+       <img class="responsive-img" alt="Artisan Memoirs" src="">
      </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="collapsedMenu">
+    <div class="collapse navbar-collapse navbar-right" id="collapsedMenu">
+
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
+
+        <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
+
+          <!--<li><a href="#">Link</a></li>-->
+
+          <li><a href="#" class="link" id="home">Home</a></li>
+          <li><a href="#" class="link" id="products">Products</a></li>
+          <li><a href="#" class="link" id="value">Value</a></li>
+          <li><a href="#" class="link" id="process">Process</a></li>
+          <li><a href="#" class="link" id="pricing">Pricing</a></li>
+          <li><a href="#" class="link" id="aboutus">About Us</a></li>
+          <li href="#" class="dropdown" id="moretop">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                      <li><a href="#" class="link" id="page01">Write Your Own</a></li>
+                      <li><a href="#" class="link" id="page02">Begin Today</a></li>
+                      <li><a href="#" class="link" id="page03">The Journey</a></li>
+                      <li><a href="#" class="link" id="page04">Story of Pets</a></li>
+                      <li><a href="#" class="link" id="page05">Another</a></li>
+              </ul>
+          </li>
+          <!--</ul>-->
+        <!--</li>-->
+        <li><a href="#" class="link" id="contact">Contact</a></li>
       </ul>
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
+      <!--<form class="navbar-form navbar-left">-->
+        <!--<div class="form-group">-->
+          <!--<input type="text" class="form-control" placeholder="Search">-->
+        <!--</div>-->
+        <!--<button type="submit" class="btn btn-default">Submit</button>-->
+      <!--</form>-->
     </div><!-- /.navbar-collapse -->
   </nav>
+
 
 <div class="pageBody" href="#page-top">
 <div class="responsiveHeader">
@@ -124,7 +125,7 @@
 <!-- End of row of photos -->
 
 <!-- Beginning of products section -->
-<section id="products" class="allsections">
+<section id="products" class="allsections visible>
     <div class="title"> Products and Services</div>
 
       <div id="product1" class="sectionheader">
@@ -197,7 +198,7 @@
 <!-- End of products section -->
 
 
-<section id="value" class="allsections">
+<section id="value" class="allsections invisible">
   <div class="title">Why create your personal history?</div>
 
         <div class="flexcontainer">
