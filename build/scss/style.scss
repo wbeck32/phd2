@@ -148,30 +148,30 @@ div.pageBody {
 					a {
 
 					}
-				}
-
-
-			.invisible {
-				visibility: invisible;
-				opacity: 1;
-				//transition: visibility 0s linear 300ms, opacity 300ms;
-                //
-				//max-height: 0;
-				max-height: 0%;
-				//overflow: hidden;
-				//background-color: #dedede;
-				//-moz-transition: height 1s ease;
-				//-webkit-transition: height 1s ease;
-				//-o-transition: height 1s ease;
-				//transition: height 5s ease;
 			}
 
-			.visible {
-				visibility: visible;
-				opacity: 1;
-				//transition: visibility 0s linear 0s, opacity 300ms;
-				max-height: auto;
-				max-height: 100%;
+
+		.invisible {
+			visibility: collapse;
+			opacity: 1;
+			height: 0;
+			//transition: visibility 0s linear 300ms, opacity 300ms;
+			//max-height: 0;
+			//overflow: hidden;
+			//background-color: #dedede;
+			//-moz-transition: height 1s ease;
+			//-webkit-transition: height 1s ease;
+			//-o-transition: height 1s ease;
+			//transition: height 5s ease;
+		}
+
+		.visible {
+			visibility: visible;
+			opacity: 1;
+			text-decoration-line: overline;
+			//transition: visibility 0s linear 0s, opacity 300ms;
+			//	max-height: auto;
+			//	max-height: 100%;
 			}
 
 			.flexcontainer {
