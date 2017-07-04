@@ -128,28 +128,6 @@ div.pageBody {
 		background-color: $peach;
 		padding-bottom: 0;
 
-
-		.invisible {
-			visibility: hidden;
-			opacity: 0;
-			transition: visibility 0s linear 300ms, opacity 300ms;
-
-			height: 0;
-			overflow: hidden;
-			background-color: #dedede;
-			-moz-transition: height 1s ease;
-			-webkit-transition: height 1s ease;
-			-o-transition: height 1s ease;
-			transition: height 5s ease;
-		}
-
-		.visible {
-			visibility: visible;
-			opacity: 1;
-			transition: visibility 0s linear 0s, opacity 300ms;
-
-		}
-
 			&#contact {
 			padding-bottom: 38px;
 			}
@@ -171,6 +149,30 @@ div.pageBody {
 
 					}
 				}
+
+
+			.invisible {
+				visibility: invisible;
+				opacity: 1;
+				//transition: visibility 0s linear 300ms, opacity 300ms;
+                //
+				//max-height: 0;
+				max-height: 0%;
+				//overflow: hidden;
+				//background-color: #dedede;
+				//-moz-transition: height 1s ease;
+				//-webkit-transition: height 1s ease;
+				//-o-transition: height 1s ease;
+				//transition: height 5s ease;
+			}
+
+			.visible {
+				visibility: visible;
+				opacity: 1;
+				//transition: visibility 0s linear 0s, opacity 300ms;
+				max-height: auto;
+				max-height: 100%;
+			}
 
 			.flexcontainer {
 				justify-content: center;
