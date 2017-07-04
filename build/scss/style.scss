@@ -133,13 +133,13 @@ div.pageBody {
 	section.visible {
 		display: inline-block;
 		//opacity: 1;
-		text-decoration-line: overline;
-	}
+		height: 100%;
+ 	}
 
 
 	section.allsections {
 		background-color: $peach;
-		padding-bottom: 0;
+		padding-bottom: 100px;
 
 			&#contact {
 			padding-bottom: 38px;
