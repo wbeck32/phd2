@@ -31,8 +31,10 @@ gulp.task('sass', function () {
 gulp.task('build-less', function(){
     return gulp.src('build/less/*.less')
         .pipe(less())
-        .pipe(gulp.dest('public/css'));
+        .pipe(gulp.dest('public/css'))
+        .pipe(livereload());
 });
+
 
 gulp.task('start',['sass', 'build-less'],function(){
   livereload.listen();
