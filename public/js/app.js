@@ -1,9 +1,18 @@
 $('ul li a.link').on('click', function() {
   var m = $(this).attr('id');
   var sectionId = '#' + m;
-  $('div.headerArea').addClass('responsiveHeader');
   $('section.allsections').removeClass('visible').addClass('invisible');
   $('section' + sectionId).removeClass('invisible').addClass('visible');
+});
+
+
+
+$('.col-xs-3.col-md-4 a.link').click(function(){
+  var productTarget = $(this).attr('href');
+  console.log(productTarget);
+  window.location.href = '#'+productTarget;
+  $('.responsiveHeader').css('visibility', 'hidden');
+  $('section.products').css('visibility', 'visible');
 });
 
 

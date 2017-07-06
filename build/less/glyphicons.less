@@ -6,7 +6,7 @@
 // inline element with the appropriate classes, like so:
 //
 // <a href="#"><span class="glyphicon glyphicon-star"></span> Star</a>
-
+@icon-font-name : "glyphicons-halflings-regular";
 // Import the fonts
 @font-face {
   font-family: 'Glyphicons Halflings';
@@ -17,6 +17,7 @@
        url('@{icon-font-path}@{icon-font-name}.ttf') format('truetype'),
        url('@{icon-font-path}@{icon-font-name}.svg#@{icon-font-svg-id}') format('svg');
 }
+
 
 // Catchall baseclass
 .glyphicon {
