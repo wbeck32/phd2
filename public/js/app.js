@@ -9,8 +9,8 @@ $('ul li a.link').on('click', function() {
 
 $("#shareRoundIcons").jsSocials(
   {
-    shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "pocket", "whatsapp", "messenger", "vkontakte", "telegram", "line"],
-    url: "http://url.to.share",
+    shares: ["email", "twitter", "facebook", "linkedin", "pinterest", "stumbleupon", "whatsapp", "messenger" ],
+    url: "http://artisanmemoirs.com",
     text: "text to share",
     showLabel: false,
     showCount: false,

@@ -26,10 +26,7 @@ html {
 	background-repeat: repeat repeat;
 
   body {
-
-
-
-		font-size: $base-font-size;
+	  	font-size: $base-font-size;
 		font-family: 'Helvetica Neue',Arial,sans-serif;
 		height: 100vh;
 		background-image: url(../../public/images/paperBackground.jpg);
@@ -136,6 +133,9 @@ div.pageBody {
 		height: 100%;
  	}
 
+	section.homeDifferent {
+		background-color: $white;
+	}
 
 	section.allsections {
 		background-color: $peach;
