@@ -29,13 +29,13 @@ gulp.task('sass', function () {
 
 // Compiles LESS > CSS
 gulp.task('build-less', function(){
-    return gulp.src('build/less/bootstrap.less')
+    return gulp.src('build/less/*.less')
         .pipe(less())
         .pipe(gulp.dest('public/css'));
 });
 
 gulp.task('start',['sass', 'build-less'],function(){
   livereload.listen();
-  gulp.watch('build/less/*.less', ['sass']);
-  gulp.watch('build/scss/*.scss', ['sass']);
+  gulp.watch('build/less/*.less', ['sass', 'build-less']);
+  gulp.watch('build/scss/*.scss', ['sass', 'build-less']);
 });

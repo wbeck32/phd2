@@ -133,13 +133,16 @@ div.pageBody {
 		height: 100%;
  	}
 
-	section.homeDifferent {
-		background-color: $white;
-	}
+
 
 	section.allsections {
 		background-color: $peach;
 		padding-bottom: 100px;
+
+
+		.homeDifferent {
+			background-color: $white;
+		}
 
 			&#contact {
 			padding-bottom: 38px;
