@@ -7,16 +7,17 @@ $linkcolor: #000;
 $linkhover: red;
 $titlebackground: #936b1e;
 $sectionheader: #27b6c4;
-// palette
+ // palette
 $peach: #ffdab9;
 $dark-grey: #7a8b8b;
-$light-grey: #bcd2ee;
+$light-grey: #EEEEEE;
 $burnt-orange: #e3630c;
 $white: #fff;
 $black: #000;
 $base-font-size: 16px;
 $bold-font-size: 18px;
 $bolder-font-size: 20px;
+
 
 
 html {
@@ -26,6 +27,7 @@ html {
 	background-repeat: repeat repeat;
 
   body {
+	  	min-width: 320px;
 	  	font-size: $base-font-size;
 		font-family: 'Helvetica Neue',Arial,sans-serif;
 		height: 100vh;
@@ -33,8 +35,29 @@ html {
 		background-repeat: repeat repeat;
 
 		a {
+
+			//.sliding-middle-out {
+			//	display: inline-block;
+			//	position: relative;
+			//	padding-bottom: 3px;
+			//}
+			//.sliding-middle-out:after {
+			//	content: '';
+			//	display: block;
+			//	margin: auto;
+			//	height: 3px;
+			//	width: 0px;
+			//	background: transparent;
+			//	transition: width .5s ease, background-color .5s ease;
+			//}
+			//.sliding-middle-out:hover:after {
+			//	width: 100%;
+			//	background: blue;
+			//}
+
+
 			&:focus, &:hover {
-					color: $light-grey;
+					color: $black;
 				}
 			}
 			p {
@@ -45,8 +68,11 @@ html {
 			}
 
 		nav.navbar.navbar-fixed-top {
+			//opacity: 0;
+
 			margin: 0;
 			background-color: $light-grey;
+
 			padding: 0 12px;
 			.link{}
 			.navbar-header {
@@ -54,21 +80,26 @@ html {
 						padding: 0 15px;
 					img {
 
+
 					}
 				}
 			}
 
 			div#collapsedMenu.collapse.navbar-collapse {
 				color: $black;
+
 					&:hover, &:focus {
 						color: $dark-grey;
-					}
+ 					}
 					ul.navbar-nav {
 						li {
-
+							letter-spacing: 2px;
+							font-size: .7em;
 						}
 						ul.dropdown-menu {
 							li {
+								letter-spacing: 2px;
+								font-size: .7em;
 
 							}
 						}
@@ -97,13 +128,16 @@ div.pageBody {
 	clear: both;
 
 	.responsiveHeader {
-		background-color: $white;
+
+ 		background-color: $white;
 		visibility: visible;
 			div.row {
 				margin-bottom: 20px;
+				height: 80%;
 				.col-md-12 {
-					.logoSpace {
-						float: left;
+
+ 					.logoSpace {
+						float:none;
 						img {
 
 						}
@@ -203,6 +237,10 @@ div.pageBody {
 			background-color: $light-grey;
 			border-radius: 0;
 				.footerTxt {
+					padding: 10px 20px 10px 10px;
+					font-size: .7em;
+					color: #5e5e5e;
+					letter-spacing: 2px;
 					display: inline-block;
 					margin: 0 15px 0 10px;
 				}
