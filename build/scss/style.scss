@@ -27,8 +27,9 @@ html {
 	background-repeat: repeat repeat;
 
   body {
-	  	min-width: 320px;
+ 	  	min-width: 320px;
 	  	font-size: $base-font-size;
+
 		font-family: 'Helvetica Neue',Arial,sans-serif;
 		height: 100vh;
 		background-image: url(../../public/images/paperBackground.jpg);
@@ -67,6 +68,11 @@ html {
 				line-height: 1;
 			}
 
+			button.navbar-toggle.collapsed {
+					span.glyphicon {
+							font-size: 30px;
+					}
+			}
 		nav.navbar.navbar-fixed-top {
 			//opacity: 0;
 
@@ -76,6 +82,7 @@ html {
 			padding: 0 12px;
 			.link{}
 			.navbar-header {
+
 					a.navbar-brand {
 						padding: 0 15px;
 					img {
@@ -83,6 +90,7 @@ html {
 
 					}
 				}
+
 			}
 
 			div#collapsedMenu.collapse.navbar-collapse {
