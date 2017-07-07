@@ -251,8 +251,18 @@ div.pageBody {
 					letter-spacing: 2px;
 					display: inline-block;
 					margin: 0 15px 0 10px;
+					&.col-md-4 {
+						border: 1px solid red;
+					}
+					.col-xs-12 {
+
+					}
 				}
-				#shareRoundIcons.jssocials {
+				span#shareRoundIcons .col-md-4 {
+					position: relative;
+					float: right;
+					top: 20%;
+				.jssocials {
 					position: relative;
 					float: right;
 					top: 20%;
@@ -269,7 +279,8 @@ div.pageBody {
 								}
 							}
 						}
+					}
 				}
+			}
 		}
 	}
-}
