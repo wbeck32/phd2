@@ -45,14 +45,13 @@ html {
 			}
 
 		nav.navbar.navbar-fixed-top {
-			border: 1px solid red;
 			margin: 0;
 			background-color: $light-grey;
+			padding: 0 12px;
 			.link{}
 			.navbar-header {
-				color: white;
-				font-size: 20px;
 					a.navbar-brand {
+						padding: 0 15px;
 					img {
 
 					}
@@ -149,12 +148,7 @@ div.pageBody {
 			background-color: $peach;
 			padding-bottom: 100px;
 
-				#home.allsections.homeDifferent {
-					background-color: $white;
-				}
-
-
-				.title {
+				div.title {
 					color: #fff;
 					text-align: center;
 					background-color: $burnt-orange;
