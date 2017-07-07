@@ -45,14 +45,13 @@ html {
 			}
 
 		nav.navbar.navbar-fixed-top {
-			border: 1px solid red;
 			margin: 0;
 			background-color: $light-grey;
+			padding: 0 12px;
 			.link{}
 			.navbar-header {
-				color: white;
-				font-size: 20px;
 					a.navbar-brand {
+						padding: 0 15px;
 					img {
 
 					}
@@ -98,15 +97,12 @@ div.pageBody {
 	clear: both;
 
 	.responsiveHeader {
-		border: 2px solid green;
 		background-color: $white;
 		visibility: visible;
 			div.row {
-				border: 1px solid purple;
 				margin-bottom: 20px;
 				.col-md-12 {
 					.logoSpace {
-						border: 1px solid red;
 						float: left;
 						img {
 
@@ -125,52 +121,34 @@ div.pageBody {
 		}
 	}
 	section {
-		&#products {
-			visibility: hidden;
-		}
+		visibility: hidden;
+
 		&#contact {
-		padding-bottom: 38px;
+			padding-bottom: 38px;
 		}
-
-		.invisible {
-			display: none;
-			//opacity: 1;
-			height: 0;
-		}
-
-		.visible {
-			display: inline-block;
-			//opacity: 1;
-			height: 100%;
-	 	}
-
 
 		.allsections {
 			background-color: $peach;
 			padding-bottom: 100px;
+		}
 
-				#home.allsections.homeDifferent {
-					background-color: $white;
+		.title {
+			color: #fff;
+			text-align: center;
+			background-color: $burnt-orange;
+			font-size: 21px;
+			padding: 10px 0;
+		}
+
+		.sectionheader {
+			background-color: $dark-grey;
+			padding: 20px;
+			color: #fff;
+			font-size: 2rem;
+			a {
+
 				}
-
-
-				.title {
-					color: #fff;
-					text-align: center;
-					background-color: $burnt-orange;
-					font-size: 21px;
-					padding: 10px 0;
-				}
-
-				.sectionheader {
-						background-color: $dark-grey;
-						padding: 20px;
-						color: #fff;
-						font-size: 2rem;
-						a {
-
-						}
-				}
+			}
 
 				.flexcontainer {
 					justify-content: center;
@@ -213,16 +191,12 @@ div.pageBody {
 								}
 							}
 						}
-				}
 				.form-horizontal {
 					margin-bottom: 30px;
 					padding: 35px 65px 35px 35px;
 				}
-			}
-
+		}
 	}
-
-
 		nav.navbar-fixed-bottom {
 			height: 95px;
 			padding: 10px;
@@ -235,7 +209,7 @@ div.pageBody {
 				#shareRoundIcons.jssocials {
 					position: relative;
 					float: right;
-					bottom: 70%;
+					top: 20%;
 						div.jssocials-shares {
 							margin: 0.2em 0.2em 0.2em 0;
 							div.jssocials-share {
