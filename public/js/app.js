@@ -7,8 +7,8 @@ $('ul.nav.navbar-nav li').click(function() {
   }
   $('section').not(m).hide();
   $('.responsiveHeader').hide();
-  $('section'+m).css({'visibility' : 'visible'});
-  window.location.href = m;
+  $('section #'+m).css({'visibility' : 'visible', 'display' : 'inline-block'});
+  window.location.href = m+' .title';
 });
 
 $('.navbar-brand').click(function(){
