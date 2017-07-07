@@ -1,17 +1,30 @@
-$('ul li a.link').click(function() {
-  var m = $(this).attr('id');
+$('ul.nav.navbar-nav li').click(function() {
+  var m = $(this).find('a').attr('href');
   console.log(m);
-  $('section').not('#'+m).css({'visibility' : 'hidden', 'height' : 0});
-  $('section#'+m).css('visibility', 'visible');
-  window.location.href = '#'+m;
+  if (m === '#home') {
+    $('.responsiveHeader').show();
+    window.location.href = m;
+  }
+  $('section').not(m).hide();
+  $('.responsiveHeader').hide();
+  $('section'+m).css({'visibility' : 'visible'});
+  window.location.href = m;
 });
 
-$('.col-xs-3.col-md-4 a.link').click(function(){
-  var productTarget = $(this).attr('id');
-  console.log(productTarget);
-  window.location.href = '#'+productTarget;
-  $('.responsiveHeader').css('visibility', 'hidden');
+$('.navbar-brand').click(function(){
+  $('.responsiveHeader').show();
+  window.location.href = '#home';
+});
+
+$('.col-xs-3.col-md-4').click(function(){
+  var productTarget = $(this).find('a').attr('href');
+  $('.responsiveHeader').hide();
   $('section#products').css('visibility', 'visible');
+  if(productTarget === '#product1') {
+    $('section#products').css('margin-top', '100px')
+    window.location.href = '#products';
+  }
+  window.location.href = productTarget;
 });
 
 
