@@ -2,12 +2,12 @@ $('ul.nav.navbar-nav li').click(function() {
   var m = $(this).find('a').attr('href');
   console.log(m);
   if (m === '#home') {
-    $('.responsiveHeader').show();
+    $('.responsiveHeader').show().css({'visibility' : 'visible', 'display' : 'inline-block'});
     window.location.href = m;
   }
   $('section').not(m).hide();
   $('.responsiveHeader').hide();
-  $('section #'+m).css({'visibility' : 'visible', 'display' : 'inline-block'});
+  $('section'+m+'.allsections').css({'margin-top' : '10vh', 'display': 'inline-block','visibility' : 'visible', 'display' : 'inline-block'});
   window.location.href = m+' .title';
 });
 
