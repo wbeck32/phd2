@@ -29,7 +29,7 @@ gulp.task('sass', function () {
 
 // Compiles LESS > CSS
 gulp.task('build-less', function(){
-    return gulp.src('build/less/*.less')
+    return gulp.src('build/less/bootstrap.less')
         .pipe(less())
         .pipe(gulp.dest('public/css'))
         .pipe(livereload());
