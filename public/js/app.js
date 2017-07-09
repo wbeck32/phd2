@@ -1,8 +1,9 @@
 $('ul.nav.navbar-nav li a').click(function() {
   var m = $(this).attr('href');
+    console.log(m);
   if (m == '#products') {
     scrollToProducts();
-  } else if (m == '#moretop') {
+  } else if (m == '#moretop' || m == '#product1' || m == '#product2' || m == '#product3' || m == '#product4' ) {
       var dropdownChoice = $(this).find('ul li a').attr('href');
       $('section'+dropdownChoice).animate({
         scrollTop : 0
@@ -79,6 +80,10 @@ $('#shareRoundIcons').jsSocials({
     shares: [
       {
         share: 'email', shareIn : 'popup'
+      },
+      {
+        share: 'twitter', shareIn : 'popup'
+
       },
       'twitter', 'facebook', 'linkedin', 'pinterest', 'stumbleupon', 'whatsapp', 'messenger' ],
     url: 'http://artisanmemoirs.com',
