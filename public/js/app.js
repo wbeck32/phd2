@@ -77,20 +77,13 @@ function scrollToProductSection(selector) {
 }
 
 $('#shareRoundIcons').jsSocials({
-    shares: [
-      {
-        share: 'email', shareIn : 'popup'
-      },
-      {
-        share: 'twitter', shareIn : 'popup'
-
-      },
-      'twitter', 'facebook', 'linkedin', 'pinterest', 'stumbleupon', 'whatsapp', 'messenger' ],
+    shares: [ 'email',  'twitter', 'facebook', 'linkedin', 'pinterest', 'stumbleupon', 'whatsapp', 'messenger' ],
     url: 'http://artisanmemoirs.com',
     text: 'text to share',
     showLabel: false,
     showCount: false,
     shareIn: 'popup',
+
     on: {
         click: function(e) {},
         mouseenter: function(e) {},
