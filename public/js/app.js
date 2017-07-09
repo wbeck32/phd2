@@ -12,7 +12,7 @@ $('ul.nav.navbar-nav li a').click(function() {
   } else if (m == '#home') {
       $('#collapsedMenu.in').removeClass('in');
       $('section.allsections').css({'visibility' : 'hidden', 'display' : 'none'});
-      $("html, body").animate({ scrollTop: 0 }, "slow");
+      $('html, body').animate({ scrollTop: 0 }, 'slow');
       $('div.pageBody div.responsiveHeader').css({'visibility' : 'visible', 'display' : 'inline-block'});
   } else {
     $('#collapsedMenu.in').removeClass('in');
@@ -75,13 +75,17 @@ function scrollToProductSection(selector) {
   });
 }
 
-$("#shareRoundIcons").jsSocials({
-    shares: ["email", "twitter", "facebook", "linkedin", "pinterest", "stumbleupon", "whatsapp", "messenger" ],
-    url: "http://artisanmemoirs.com",
-    text: "text to share",
+$('#shareRoundIcons').jsSocials({
+    shares: [
+      {
+        share: 'email', shareIn : 'popup'
+      },
+      'twitter', 'facebook', 'linkedin', 'pinterest', 'stumbleupon', 'whatsapp', 'messenger' ],
+    url: 'http://artisanmemoirs.com',
+    text: 'text to share',
     showLabel: false,
     showCount: false,
-    shareIn: "popup",
+    shareIn: 'popup',
     on: {
         click: function(e) {},
         mouseenter: function(e) {},
