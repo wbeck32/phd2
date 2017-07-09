@@ -30,20 +30,19 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/jssocials.css" >
-    <link rel="stylesheet" href="css/jssocials-theme-plain.css" >
+    <link rel="stylesheet" href="css/jssocials.css" type="text/css">
+    <link rel="stylesheet" href="css/jssocials-theme-plain.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
 </head>
 
-<body>
+<body class="container-fluid">
 
   <nav class="navbar navbar-fixed-top" id="home">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsedMenu" aria-expanded="false"  >
              <span class="glyphicon glyphicon-menu-hamburger"></span>
-
         </button>
 
         <a class="navbar-brand" href="#home">
@@ -69,7 +68,7 @@
           <li><a class="link" href="#aboutus">About</a></li>
 
           <li href="#moretop" class="dropdown" id="moretop">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>
+                  <a href="#moretop" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>
               <ul class="dropdown-menu">
                       <li><a href="#page01" class="link" id="page01">Write Your Own</a></li>
                       <li><a href="#page02" class="link" id="page02">Begin Today</a></li>
@@ -84,7 +83,7 @@
   </nav>
 
     <div class="pageBody">
-    <div class="responsiveHeader">
+    <div class="responsiveHeader container-fluid">
       <div class="row">
 
         <div class="col-xs-3 col-md-12">
@@ -122,8 +121,8 @@
 <section id="products" class="allsections">
 
     <div class="title">Products and Services</div>
-
-    <div id="product1" class="sectionheader">
+    <div class="product" id="product1">
+    <div class="sectionheader">
       In-depth Histories <a href="#product2">(next)</a>
     </div>
     <div class="flexcontainer">
@@ -138,8 +137,9 @@
         </span>
       </div>
     </div>
-
-      <div id="product2" class="sectionheader">
+  </div>
+  <div class="product" id="product2">
+      <div class="sectionheader">
         Reminiscence Books <a href="#product3">(next)</a>
       </div>
       <div class="flexcontainer">
@@ -154,8 +154,9 @@
           </span>
         </div>
       </div>
-
-      <div id="product3" class="sectionheader">
+    </div>
+    <div class="product" id="product3">
+      <div class="sectionheader">
       Voice Recordings <a href="#product4">(next)</a>
       </div>
       <div class="flexcontainer">
@@ -170,9 +171,12 @@
           </span>
         </div>
       </div>
+  </div>
 
-    <div id="product4" class="sectionheader">
-      &Agrave; La Carte Services&nbsp;<a href="#value">(next)</a>
+  <div class="product" id="product4">
+
+    <div class="sectionheader">
+      &Agrave; La Carte Services
     </div>
     <div class="flexcontainer">
       <div class="mycard">
@@ -185,10 +189,9 @@
         </span>
       </div>
     </div>
+</div>
 </section>
 <!-- End of products section -->
-
-
 
 
 <section id="value" class="allsections">

@@ -61,76 +61,83 @@ html {
 					color: $black;
 				}
 			}
+
 			p {
 				color: $black;
 				line-height: 2px;
 				margin-bottom: 8px;
 				line-height: 1;
 			}
-
-			button.navbar-toggle.collapsed {
-					span.glyphicon {
-							font-size: 30px;
-					}
-			}
-		nav.navbar.navbar-fixed-top {
-			//opacity: 0;
-
-			margin: 0;
-			background-color: $light-grey;
-
-			padding: 0 12px;
-			.link{}
-			.navbar-header {
-
-					a.navbar-brand {
-						padding: 0 15px;
-					img {
-
-
-					}
-				}
-
-			}
-
-			div#collapsedMenu.collapse.navbar-collapse {
-				color: $black;
-
-					&:hover, &:focus {
-						color: $dark-grey;
- 					}
-					ul.navbar-nav {
-						li {
-							letter-spacing: 2px;
-							font-size: .7em;
+			nav {
+				&.navbar.navbar-fixed-top {
+					margin: 0;
+					background-color: $light-grey;
+					padding: 0 12px;
+					.link{}
+					.navbar-header {
+						button.navbar-toggle {
+							.collapsed {
+								margin: 0;
+								padding: 6px 0;
+								span.glyphicon {
+										font-size: 30px;
+								}
 						}
-						ul.dropdown-menu {
-							li {
-								letter-spacing: 2px;
-								font-size: .7em;
+}
+							a.navbar-brand {
+								padding: 0 15px;
+							img {
+
 
 							}
 						}
-					}
-					form.navbar-left {
-						.form-group {
 
-						}
 					}
-					ul.navbar-right {
-						li {
-							ul.dropdown-menu {
+
+					.navbar-collapse#collapsedMenu {
+						color: $black;
+
+							&:hover, &:focus {
+								color: $dark-grey;
+							}
+							ul.navbar-nav {
 								li {
+									letter-spacing: 2px;
+									font-size: .7em;
+								}
+								ul.dropdown-menu {
+									li {
+										letter-spacing: 2px;
+										font-size: .7em;
+
+									}
+								}
+							}
+							form.navbar-left {
+								.form-group {
 
 								}
 							}
+							ul.navbar-right {
+								li {
+									ul.dropdown-menu {
+										li {
+
+										}
+									}
+								}
+							}
 						}
+
+
 					}
-				}
+
 			}
 
+
+
 div.pageBody {
-	margin: 70px 25px 0 25px;
+	padding: 10vh 25px 100px 25px;
 	height: auto;
 	overflow: hidden;
 	clear: both;
@@ -162,34 +169,37 @@ div.pageBody {
 			}
 		}
 	}
-	section {
+	section.allsections {
 		visibility: hidden;
+		position: relative;
+		display: none;
+		background-color: $peach;
 
 		&#contact {
-			padding-bottom: 38px;
+			form.form-horizontal {
+				margin-bottom: 0;
+				padding: 35px 65px 15px 35px;
+			}
 		}
 
-		.allsections {
-			background-color: $peach;
-			padding-bottom: 100px;
-		}
+		.product {
+			.sectionheader {
+					background-color: $dark-grey;
+					padding: 20px;
+					color: #fff;
+					font-size: 2rem;
+					a {
 
-		.title {
-			color: #fff;
-			text-align: center;
-			background-color: $burnt-orange;
-			font-size: 21px;
-			padding: 10px 0;
-		}
-
-		.sectionheader {
-			background-color: $dark-grey;
-			padding: 20px;
-			color: #fff;
-			font-size: 2rem;
-			a {
-
+						}
 				}
+		}
+
+			.title {
+				color: #fff;
+				text-align: center;
+				background-color: $burnt-orange;
+				font-size: 21px;
+				padding: 10px 0;
 			}
 
 				.flexcontainer {
@@ -233,10 +243,6 @@ div.pageBody {
 								}
 							}
 						}
-				.form-horizontal {
-					margin-bottom: 30px;
-					padding: 35px 65px 35px 35px;
-				}
 		}
 	}
 		nav.navbar-fixed-bottom {
@@ -245,29 +251,29 @@ div.pageBody {
 			background-color: $light-grey;
 			border-radius: 0;
 				.footerTxt {
-					padding: 10px 20px 10px 10px;
+					padding: 10px;
 					font-size: .7em;
 					color: #5e5e5e;
 					letter-spacing: 2px;
 					display: inline-block;
 					margin: 0 15px 0 10px;
+					font-weight: 500;
 					&.col-md-4 {
-						border: 1px solid red;
+
 					}
 					.col-xs-12 {
 
 					}
 				}
-				span#shareRoundIcons .col-md-4 {
+				span#shareRoundIcons.col-md-4.jssocials {
 					position: relative;
 					float: right;
 					top: 20%;
-				.jssocials {
 					position: relative;
 					float: right;
 					top: 20%;
 						div.jssocials-shares {
-							margin: 0.2em 0.2em 0.2em 0;
+							margin: 1em 0.2em 0.2em 0;
 							div.jssocials-share {
 									width: 15px;
 									margin: 5px 10px;
@@ -279,8 +285,10 @@ div.pageBody {
 								}
 							}
 						}
-					}
+
 				}
 			}
+
+
 		}
 	}
