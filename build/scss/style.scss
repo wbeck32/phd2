@@ -18,7 +18,8 @@ $base-font-size: 16px;
 $bold-font-size: 18px;
 $bolder-font-size: 20px;
 
-
+$sm-breakpoint : 320px; //min 320px max 767px
+$md-breakpoint : 768px; //min 768px
 
 html {
 	font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -36,32 +37,32 @@ html {
 		background-repeat: repeat repeat;
 
 		a {
-
-			//.sliding-middle-out {
-			//	display: inline-block;
-			//	position: relative;
-			//	padding-bottom: 3px;
-			//}
-			//.sliding-middle-out:after {
-			//	content: '';
-			//	display: block;
-			//	margin: auto;
-			//	height: 3px;
-			//	width: 0px;
-			//	background: transparent;
-			//	transition: width .5s ease, background-color .5s ease;
-			//}
-			//.sliding-middle-out:hover:after {
-			//	width: 100%;
-			//	background: blue;
-			//}
-
-
-			&:focus, &:hover {
-					color: $black;
+			//
+			//
+			// &:focus, &:hover {
+			// 		color: $black;
+			// 	}
+				&.sliding-middle-out {
+				// .sliding-middle-out {
+					display: inline-block;
+					position: relative;
+					padding-bottom: 3px;
+				// }
+				&:after {
+					content: '';
+					display: block;
+					margin: auto;
+					height: 3px;
+					width: 0px;
+					background: transparent;
+					transition: width .5s ease, background-color .5s ease;
+				}
+				&:hover:after {
+					width: 100%;
+					background: blue;
 				}
 			}
-
+}
 			p {
 				color: $black;
 				line-height: 2px;
@@ -73,7 +74,10 @@ html {
 					margin: 0;
 					background-color: $light-grey;
 					padding: 0 12px;
-					.link{}
+					.link{
+
+
+}
 					.navbar-header {
 						button.navbar-toggle {
 							.collapsed {
@@ -104,6 +108,10 @@ html {
 								li {
 									letter-spacing: 2px;
 									font-size: .7em;
+									a.sliding-middle-out {
+
+
+									}
 								}
 								ul.dropdown-menu {
 									li {
@@ -160,12 +168,21 @@ div.pageBody {
 			}
 			.col-xs-3 {
 				font-size: 11px;
+				a.link {
+					img{
+						padding-top: 5px;
+
+				}
+
+				}
 			}
 			.col-md-4 {
 				text-align: center;
 			}
 
 			a {
+
+
 			}
 		}
 	}
@@ -174,6 +191,10 @@ div.pageBody {
 		position: relative;
 		display: none;
 		background-color: $peach;
+		@media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+				border: 2px solid red;
+		}
+
 
 		&#contact {
 			form.form-horizontal {
@@ -188,8 +209,7 @@ div.pageBody {
 					padding: 20px;
 					color: #fff;
 					font-size: 2rem;
-					a {
-
+					a	{
 						}
 				}
 		}
@@ -278,7 +298,7 @@ div.pageBody {
 
 						div.jssocials-shares {
 							margin: 1em 0.2em 0.2em 0;
-							@media screen and (min-width: 768px) {
+							@media screen and (min-width: $md-breakpoint) {
 								margin: 0;
 								position: relative;
 								bottom: 50px;
@@ -295,11 +315,18 @@ div.pageBody {
 								}
 							}
 						}
-
+					}
 				}
-	}
-}
-
-
+			}
 		}
 	}
+
+	@media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint)
+		{
+
+		}
+
+	@media (min-width: $md-breakpoint)
+		{
+
+		}
