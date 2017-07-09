@@ -246,14 +246,17 @@ div.pageBody {
 		}
 	}
 		nav.navbar-fixed-bottom {
-			height: 95px;
+			height: 75px;
 			padding: 10px;
 			background-color: $light-grey;
 			border-radius: 0;
+			.row {
+				height: 75px;
+				padding: 0;
+				position: relative;
 				.footerTxt {
-					padding: 10px;
 					font-size: .7em;
-					color: #5e5e5e;
+					color: $black;
 					letter-spacing: 2px;
 					display: inline-block;
 					margin: 0 15px 0 10px;
@@ -261,19 +264,26 @@ div.pageBody {
 					&.col-md-4 {
 
 					}
-					.col-xs-12 {
+					&.col-lg-4 {
 
 					}
 				}
-				span#shareRoundIcons.col-md-4.jssocials {
+				span#shareRoundIcons.jssocials {
 					position: relative;
 					float: right;
 					top: 20%;
 					position: relative;
 					float: right;
 					top: 20%;
+
 						div.jssocials-shares {
 							margin: 1em 0.2em 0.2em 0;
+							@media screen and (min-width: 768px) {
+								margin: 0;
+								position: relative;
+								bottom: 50px;
+								right: 30px;
+ 							}
 							div.jssocials-share {
 									width: 15px;
 									margin: 5px 10px;
@@ -287,7 +297,8 @@ div.pageBody {
 						}
 
 				}
-			}
+	}
+}
 
 
 		}
