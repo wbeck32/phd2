@@ -1,41 +1,81 @@
-$('ul.nav.navbar-nav li').click(function() {
-  var m = $(this).find('a').attr('href');
-  if (m !== '#more' && m!=='#home') {
-    $('section.allsections').not(m).css({'visibility' : 'hidden', 'display' : 'none'});
+$('ul.nav.navbar-nav li a').click(function() {
+  var m = $(this).attr('href');
+  if (m == '#products') {
+    scrollToProducts();
+  } else if (m == '#moretop') {
+      var dropdownChoice = $(this).find('ul li a').attr('href');
+      $('section'+dropdownChoice).animate({
+        scrollTop : 0
+        }, 'slow', function(){
+            // console.log('success!')
+        });
+  } else if (m == '#home') {
+      $('#collapsedMenu.in').removeClass('in');
+      $('section.allsections').css({'visibility' : 'hidden', 'display' : 'none'});
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      $('div.pageBody div.responsiveHeader').css({'visibility' : 'visible', 'display' : 'inline-block'});
+  } else {
+    $('#collapsedMenu.in').removeClass('in');
     $('.responsiveHeader').css({'visibility' : 'hidden', 'display' : 'none'});
-    $('section'+m+'.allsections').css({'display': 'inline-block','visibility' : 'visible'});
-    // window.location.href = m+'.allsections div.title';
-    var dest = m;
-    $('window').scroll(m);
-    // console.log(m+' > div.title')
-    // window.location.href = dest;
-  }
-  if (m == '#home') {
-    $("html, body").animate({ scrollTop: 0 }, "slow");
     $('section.allsections').not(m).css({'visibility' : 'hidden', 'display' : 'none'});
-    $('div.pageBody div.responsiveHeader').css({'visibility' : 'visible', 'display' : 'inline-block'});
+    $('section'+m+'.allsections').css({'display': 'block','visibility' : 'visible'});
+    $('section'+m+'.allsections').animate({
+      scrollTop : 0
+      }, 'slow', function(){
+          // console.log('success!')
+      });
   }
 });
 
 $('.navbar-brand').click(function(){
   $('.responsiveHeader').css({'visibility' : 'visible', 'display' : 'inline-block'});
-  $("html, body").animate({ scrollTop: 0 }, "slow");
+  $('section').css({'visibility' : 'hidden', 'display' : 'none'});
+  $('html, body').animate({
+    scrollTop: 0
+    }, 'slow', function(){
+        // console.log('success!')
+    });
 });
 
 $('.col-xs-3.col-md-4').click(function(){
   var productTarget = $(this).find('a').attr('href');
-  $('.responsiveHeader').hide();
-  $('section#products').css('visibility', 'visible');
-  if(productTarget === '#product1') {
-    $('section#products').css('margin-top', '100px')
-    window.location.href = '#products';
+  $('.responsiveHeader').css({'visibility' : 'hidden', 'display' : 'none'});
+  if(productTarget === '#product1' || productTarget === '#products') {
+    scrollToProducts();
+  } else {
+    scrollToProductSection(productTarget);
   }
-  window.location.href = productTarget;
 });
 
+$('.product .sectionheader a').click(function(){
+  $('#collapsedMenu.in').removeClass('in');
+  scrollToProductSection($(this).attr('href'));
+});
 
-$("#shareRoundIcons").jsSocials(
-  {
+function scrollToProducts () {
+  $('#collapsedMenu.in').removeClass('in');
+  $('.responsiveHeader').css({'visibility' : 'hidden', 'display' : 'none'});
+  $('section#products.allsections').css({'visibility' : 'visible', 'display' : 'block'});
+  $('div .product').css({'visibility' : 'visible', 'display' : 'block'});
+  $('#products').animate({
+    scrollTop : 0
+    }, 'slow', function(){
+      // console.log('success!');
+    });
+}
+
+function scrollToProductSection(selector) {
+  $('section#products.allsections').css({'visibility' : 'visible', 'display' : 'block'});
+  $('div.product').not(selector).css({'visibility' : 'hidden', 'display' : 'none'});
+  $('div.product').filter(selector).css({'visibility' : 'visible', 'display' : 'block'});
+  $('#products').animate({
+      scrollTop: 0
+  },'slow', function(){
+      // console.log('success!')
+  });
+}
+
+$("#shareRoundIcons").jsSocials({
     shares: ["email", "twitter", "facebook", "linkedin", "pinterest", "stumbleupon", "whatsapp", "messenger" ],
     url: "http://artisanmemoirs.com",
     text: "text to share",
@@ -47,5 +87,4 @@ $("#shareRoundIcons").jsSocials(
         mouseenter: function(e) {},
         mouseleave: function(e) {}
     }
-}
-);
+});
