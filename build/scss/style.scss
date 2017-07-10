@@ -24,7 +24,7 @@ $md-breakpoint : 768px; //min 768px
 html {
 	font-family: 'Helvetica Neue', Arial, sans-serif;
 	height: 101vh;
-	background-image: url("../../public/images/paperBackground.jpg");
+	background-image: url("../../public/images/White-Paper-Texture-Background-520x390.jpg");
 	background-repeat: repeat repeat;
 
   body {
@@ -154,6 +154,8 @@ div.pageBody {
 	clear: both;
 
 	.responsiveHeader {
+
+		.labelbox{width: 200px; background-color: yellow; text-align: center;}
 
  		background-color: $white;
 		visibility: visible;
