@@ -48,7 +48,7 @@ html {
 					content: '';
 					display: block;
 					margin: auto;
-					height: 3px;
+					height: 1px;
 					width: 0px;
 					background: transparent;
 					transition: width .5s ease, background-color .5s ease;
@@ -201,11 +201,14 @@ div.pageBody {
 
 		.product {
 			.sectionheader {
-					background-color: $dark-grey;
+					background-color: #94bcd6;
 					padding: 20px;
 					color: #fff;
 					font-size: 2rem;
-					a	{
+					a	{ float: right;
+						text-decoration: none;
+						font-size: .7em;
+						letter-spacing: 2px;
 						}
 				}
 		}
