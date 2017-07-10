@@ -37,17 +37,13 @@ html {
 		background-repeat: repeat repeat;
 
 		a {
-			//
-			//
-			// &:focus, &:hover {
-			// 		color: $black;
-			// 	}
+				//put styles for non-sliding-out a tags here
+				
 				&.sliding-middle-out {
-				// .sliding-middle-out {
 					display: inline-block;
 					position: relative;
 					padding-bottom: 3px;
-				// }
+
 				&:after {
 					content: '';
 					display: block;
