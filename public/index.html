@@ -33,10 +33,13 @@
     <link rel="stylesheet" href="css/jssocials.css" type="text/css">
     <link rel="stylesheet" href="css/jssocials-theme-plain.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-
+    <style type="text/css">
+      span.bkwrd { unicode-bidi:bidi-override; direction: rtl; }
+    </style>
 </head>
 
 <body class="container-fluid">
+  <span class="bkwrd">dlt.niamod@resu</span></p>
 
   <nav class="navbar navbar-fixed-top" id="home">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -407,7 +410,7 @@ Actually williamsburg VHS, tumblr woke snackwave gochujang migas chia cold-press
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default" onclick="sendContactEmail()">Submit</button>
+      <button type="submit" class="btn btn-default contactForm">Submit</button>
     </div>
   </div>
 </form>
@@ -419,7 +422,7 @@ Actually williamsburg VHS, tumblr woke snackwave gochujang migas chia cold-press
   <div class="row">
   <span class="footerTxt col-md-4 col-sm-4">
     <p>Artisan Memoirs</p>
-    <p>info@artisanmemoirs.com</p>
+    <p><a click="hideMail()">info@artisanmemoirs.com</a></p>
     <p>artisanmemoirs.com</p>
   </span>
 
@@ -456,6 +459,10 @@ Actually williamsburg VHS, tumblr woke snackwave gochujang migas chia cold-press
 
     ga('create', 'UA-28632235-2', 'auto');
     ga('send', 'pageview');
+
+</script>
+
+<script language="JavaScript" type="text/javascript">
 
 </script>
 

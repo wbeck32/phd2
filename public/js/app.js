@@ -1,3 +1,30 @@
+function hideMail() {
+console.log('obfuscation')
+var u = "user";
+var arr = "@";
+var d = "domain";
+var dot = ".";
+var t = "tld";
+document.write("<a href=" + "mail" + "to:" + u + arr + d + dot + t
+      + ">" + "Email (concatenation)" + "</a>" + "<br>");
+}
+
+$('.footerTxt.col-md-4.col-sm-3 p').click(function(){
+  console.log('email')
+  $.ajax({
+    url: "https://app.mailgun.com/app/domains/sandbox780dc44ce44a41da8a4266b80ff20b2e.mailgun.org/messages",
+    method: POST,
+    beforeSend: function( xhr ) {
+      xhr.overrideMimeType( "text/plain; charset=x-user-defined" );
+    }
+  })
+    .done(function( data ) {
+      if ( console && console.log ) {
+        console.log( "Sample of data:", data.slice( 0, 100 ) );
+      }
+    });
+});
+
 $('ul.nav.navbar-nav li a').click(function() {
   var m = $(this).attr('href');
     if (m == '#moretop'){
@@ -66,7 +93,7 @@ function scrollToProductSection(selector) {
 }
 
 $('#shareRoundIcons').jsSocials({
-    shares: [ 'email',  'twitter', 'facebook', 'linkedin', 'pinterest', 'stumbleupon', 'whatsapp', 'messenger' ],
+    shares: [ 'email', 'twitter', 'facebook', 'linkedin', 'messenger'],
     url: 'http://artisanmemoirs.com',
     text: 'text to share',
     showLabel: false,
