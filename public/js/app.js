@@ -12,8 +12,12 @@ $('ul.nav.navbar-nav li a').click(function() {
     } else if (m == '#home') {
       $('#collapsedMenu.in').removeClass('in');
       $('section.allsections').css({'visibility' : 'hidden', 'display' : 'none'});
-      $('html, body').animate({ scrollTop: 0 }, 'slow');
-      $('div.pageBody div.responsiveHeader').css({'visibility' : 'visible', 'display' : 'inline-block'});
+      $('div.pageBody div.responsiveHeader').css({'visibility' : 'visible', 'display' : 'block'});
+      $('html, body').animate({
+        scrollTop: 0
+        }, 'slow', function(){
+          // console.log('success!')
+      });
     } else if (m !== undefined) {
       $('#collapsedMenu.in').removeClass('in');
       $('.responsiveHeader').css({'visibility' : 'hidden', 'display' : 'none'});
@@ -39,12 +43,7 @@ $('.navbar-brand').click(function(){
 
 $('.col-xs-3.col-md-4').click(function(){
   var productTarget = $(this).find('a').attr('href');
-  $('.responsiveHeader').css({'visibility' : 'hidden', 'display' : 'none'});
-  if(productTarget === '#product1' || productTarget === '#products') {
-    scrollToProducts();
-  } else {
     scrollToProductSection(productTarget);
-  }
 });
 
 $('.product .sectionheader a').click(function(){
@@ -52,23 +51,13 @@ $('.product .sectionheader a').click(function(){
   scrollToProductSection($(this).attr('href'));
 });
 
-function scrollToProducts () {
-  $('#collapsedMenu.in').removeClass('in');
-  $('.responsiveHeader').css({'visibility' : 'hidden', 'display' : 'none'});
-  $('section#products.allsections').css({'visibility' : 'visible', 'display' : 'block'});
-  $('div .product').css({'visibility' : 'visible', 'display' : 'block'});
-  $('#products').animate({
-    scrollTop : 0
-    }, 'slow', function(){
-      // console.log('success!');
-    });
-}
-
 function scrollToProductSection(selector) {
+  console.log(selector)
   $('.responsiveHeader').css({'visibility' : 'hidden', 'display' : 'none'});
+  $('section.allsections').not(selector).css({'visibility' : 'hidden', 'display' : 'none'});
   $('section#products.allsections').css({'visibility' : 'visible', 'display' : 'block'});
   $('div.product').not(selector).css({'visibility' : 'hidden', 'display' : 'none'});
-  $('div.product').filter(selector).css({'visibility' : 'visible', 'display' : 'block'});
+  $('div'+selector+'.product').css({'visibility' : 'visible', 'display' : 'block'});
   $('#products').animate({
       scrollTop: 0
   },'slow', function(){
