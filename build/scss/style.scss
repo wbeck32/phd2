@@ -23,7 +23,7 @@ $md-breakpoint : 768px; //min 768px
 
 html {
 	font-family: 'Helvetica Neue', Arial, sans-serif;
-	height: 100vh;
+	height: 101vh;
 	background-image: url("../../public/images/paperBackground.jpg");
 	background-repeat: repeat repeat;
 
@@ -36,7 +36,7 @@ html {
 		background-image: url(../../public/images/paperBackground.jpg);
 		background-repeat: repeat repeat;
 
-		a {
+			a {
 				//put styles for non-sliding-out a tags here
 
 				&.sliding-middle-out {
@@ -44,37 +44,45 @@ html {
 					position: relative;
 					padding-bottom: 3px;
 
-				&:after {
-					content: '';
-					display: block;
-					margin: auto;
-					height: 1px;
-					width: 0px;
-					background: transparent;
-					transition: width .5s ease, background-color .5s ease;
-				}
-				&:hover:after {
-					width: 100%;
-					background: blue;
+					&:after {
+						content: '';
+						display: block;
+						margin: auto;
+						height: 1px;
+						width: 0px;
+						background: transparent;
+						transition: width .5s ease, background-color .5s ease;
+					}
+
+					&:hover:after {
+						width: 100%;
+						background: blue;
+					}
 				}
 			}
-}
-			p {
+
+	  		p {
 				color: $black;
 				line-height: 2px;
 				margin-bottom: 8px;
 				line-height: 1;
 			}
+
 			nav {
 				&.navbar.navbar-fixed-top {
 					margin: 0;
-					background-color: $light-grey;
+					//background-color: $light-grey;
 					padding: 0 12px;
+					//transparency: 0.5;
+					//opacity: 0.5;
 					.link{
 
+					}
 
-}
 					.navbar-header {
+
+						.responsive-img{padding-top: 10px;}
+
 						button.navbar-toggle {
 							.collapsed {
 								margin: 0;
@@ -82,8 +90,8 @@ html {
 								span.glyphicon {
 										font-size: 30px;
 								}
+							}
 						}
-}
 							a.navbar-brand {
 								padding: 0 15px;
 							img {
@@ -105,7 +113,6 @@ html {
 									letter-spacing: 2px;
 									font-size: .7em;
 									a.sliding-middle-out {
-
 
 									}
 								}
@@ -187,6 +194,7 @@ div.pageBody {
 		position: relative;
 		display: none;
 		background-color: $peach;
+		opacity: 1;
 		@media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
 				border: 2px solid red;
 		}
@@ -200,6 +208,7 @@ div.pageBody {
 
 		.product {
 			.sectionheader {
+					opacity: 1;
 					background-color: #94bcd6;
 					padding: 20px;
 					color: #fff;
@@ -213,6 +222,7 @@ div.pageBody {
 		}
 
 			.title {
+				opacity: 1;
 				color: #fff;
 				text-align: center;
 				background-color: $burnt-orange;
@@ -221,6 +231,7 @@ div.pageBody {
 			}
 
 				.flexcontainer {
+					opacity: 1;
 					justify-content: center;
 					display: flex;
 					flex-direction: row;
@@ -235,6 +246,7 @@ div.pageBody {
 							margin: 20px;
 							border-radius: 10px;
 							background-color: $light-grey;
+							opacity: 1;
 								div#boldText {
 									font-weight: bold;
 									margin-bottom: 5px;

@@ -4,10 +4,12 @@ var u = "user";
 var arr = "@";
 var d = "domain";
 var dot = ".";
-var t = "tld";
+var t = "tldccc";
 document.write("<a href=" + "mail" + "to:" + u + arr + d + dot + t
       + ">" + "Email (concatenation)" + "</a>" + "<br>");
 }
+
+
 
 $('.footerTxt.col-md-4.col-sm-3 p').click(function(){
   console.log('email')
