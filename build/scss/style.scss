@@ -38,7 +38,7 @@ html {
 
 		a {
 				//put styles for non-sliding-out a tags here
-				
+
 				&.sliding-middle-out {
 					display: inline-block;
 					position: relative;
@@ -191,7 +191,6 @@ div.pageBody {
 				border: 2px solid red;
 		}
 
-
 		&#contact {
 			form.form-horizontal {
 				margin-bottom: 0;
@@ -269,52 +268,80 @@ div.pageBody {
 			padding: 10px;
 			background-color: $light-grey;
 			border-radius: 0;
+			@media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint)
+				{
+					height: 200px;
+
+				}
 			.row {
-				height: 75px;
 				padding: 0;
 				position: relative;
-				.footerTxt {
-					font-size: .7em;
-					color: $black;
-					letter-spacing: 2px;
+				span {
 					display: inline-block;
-					margin: 0 15px 0 10px;
-					font-weight: 500;
-					&.col-md-4 {
+					@media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint)
+						{
+							display:block;
 
-					}
-					&.col-lg-4 {
+						}
+						&.footerTxt {
+							font-size: .7em;
+							color: $black;
+							letter-spacing: 2px;
+							margin: 0 15px 0 10px;
+							font-weight: 500;
+							@media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint)
+								{
+									margin-bottom: 16px;
 
-					}
-				}
-				span#shareRoundIcons.jssocials {
-					position: relative;
-					float: right;
-					top: 20%;
-					position: relative;
-					float: right;
-					top: 20%;
+								}
 
-						div.jssocials-shares {
-							margin: 1em 0.2em 0.2em 0;
-							@media screen and (min-width: $md-breakpoint) {
-								margin: 0;
-								position: relative;
-								bottom: 50px;
-								right: 30px;
- 							}
-							div.jssocials-share {
-									width: 15px;
-									margin: 5px 10px;
-								a.jssocials-share-link {
-									padding: .2em .3em;
-									i.jssocials-share-logo {
-										font-size: 1em;
+
+							&.col-md-4 {
+
+							}
+							&.col-lg-4 {
+
+							}
+						}
+						&#shareRoundIcons.jssocials {
+							position: relative;
+							float: right;
+							bottom: 45px;
+							right: 30px;
+
+							@media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint)
+								{
+									float: left;
+									display: block;
+									bottom: 20px;
+									left: 15px;
+								}
+
+								div.jssocials-shares {
+									margin: 1em 0.2em 0.2em 0;
+									@media screen and (min-width: $md-breakpoint) {
+										margin: 0;
+										position: relative;
+										bottom: 50px;
+										right: 30px;
+		 							}
+									div.jssocials-share {
+											width: 15px;
+											margin: 5px 10px;
+										a.jssocials-share-link {
+											padding: .2em .3em;
+											i.jssocials-share-logo {
+												font-size: 1em;
+											}
+										}
 									}
 								}
 							}
-						}
-					}
+
+
+				}
+
+
 				}
 			}
 		}
