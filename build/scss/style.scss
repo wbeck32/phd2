@@ -192,6 +192,10 @@ div.pageBody {
 		}
 	}
 	section.allsections {
+
+
+		border-radius: 0px 0px 20px 20px;
+
 		visibility: hidden;
 		position: relative;
 		display: none;
@@ -215,7 +219,10 @@ div.pageBody {
 					padding: 20px;
 					color: #fff;
 					font-size: 2rem;
-					a	{ float: right;
+					border-radius: 0px 0px 20px 20px;
+
+
+				a	{ float: right;
 						text-decoration: none;
 						font-size: .7em;
 						letter-spacing: 2px;
@@ -224,6 +231,8 @@ div.pageBody {
 		}
 
 			.title {
+				border-radius: 20px 20px 0px 0px;
+
 				opacity: 1;
 				color: #fff;
 				text-align: center;
@@ -243,6 +252,9 @@ div.pageBody {
 					margin: 0 auto;
 
 						.mycard {
+
+							display:inline-flex;
+
 							border: 1px solid #000;
 							padding: 10px;
 							margin: 20px;
