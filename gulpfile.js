@@ -31,20 +31,21 @@ gulp.task('sass', function () {
 // Compiles LESS > CSS
 gulp.task('build-less', function () {
   return gulp.src('build/less/bootstrap.less')
+    .pipe(sourcemaps.init())
     .pipe(less())
+    .pipe(sourcemaps.write())
+    // .pipe(minifycss())
     .pipe(gulp.dest('public/css'))
     .pipe(livereload());
 });
 
-gulp.task('buildJs', function () {
-  return gulp.src('build/js/app/**/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'))
+gulp.task('buildJs', ['test'], function () {
+  return gulp.src('build/js/*.js')
     .pipe(sourcemaps.init())
     .pipe(concat('main.js'))
     .pipe(uglify())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('public/js'))
+    .pipe(gulp.dest('public/js/.'))
     .pipe(livereload());
 });
 
@@ -53,23 +54,28 @@ gulp.task('updateHTML', function () {
     .pipe(livereload());
 });
 
-gulp.task('test', function () {
-  return gulp.src('tests')
-    .pipe(mocha({
-      reporter: 'spec'
-    }))
-  once('error', function () {
-      process.exit(1);
-    })
-    .once('end', function () {
-      process.exit();
-    });
+// Lint Tasks
+gulp.task('lint', function () {
+  return gulp.src(['build/js/*.js'])
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
 });
 
-gulp.task('start', ['test', 'sass', 'build-less', 'buildJs'], function () {
+gulp.task('test', ['lint'], function () {
+  gulp.src('tests/*.js')
+    .pipe(mocha({
+      reporter: 'spec',
+      clearRequireCache: true,
+      ignoreLeaks: true
+    }));
+});
+
+gulp.task('watch', function () {
   livereload.listen();
+  gulp.watch('build/js/*.js', ['buildJs']);
   gulp.watch('build/less/*.less', ['build-less']);
   gulp.watch('build/scss/*.scss', ['sass']);
-  gulp.watch('build/js/*.js', ['test', 'buildJs']);
   gulp.watch('public/index.html', ['updateHTML']);
 });
+
+gulp.task('start', ['watch'], function () {});
