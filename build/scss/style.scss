@@ -72,6 +72,10 @@ html {
       //line-height: 1.1em;
     }
 
+	img {
+		margin: 0 auto;
+	}
+
     nav {
       //does not work.  Goal to change rollover background
       &.li.a:hover {
@@ -290,21 +294,25 @@ html {
 
             span {
               display: inline-block;
-              width: 45%;
+              width: 47%;
               vertical-align: center;
               text-align: left;
+				background-color: purple;
 
-              img {
-                text-align: center;
-              }
 
-              #left {
+              &.left {
                 float: left;
-              }
+				border: 3px red solid;
+				  margin: 5px;
 
-              #right {
+			  }
+
+              &.right {
                 float: right;
-              }
+				  border: 3px yellow solid;
+				  margin: 5px;
+
+			  }
             }
           }
         }
