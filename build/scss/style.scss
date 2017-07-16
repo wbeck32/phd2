@@ -35,7 +35,7 @@ html {
 
     a {
       //put styles for non-sliding-out a tags here
-      background-color: transparent;
+      background: transparent;
 
       &.sliding-middle-out {
         display: inline-block;
@@ -72,31 +72,28 @@ html {
     }
 
     nav {
-      //does not work.  Goal to change rollover background
-      &.li.a:hover {
-        text-decoration: none;
-        background-color: #d3d;
-      }
-
-      &.navbar.navbar-fixed-top {
+      // does not work.  Goal to change rollover background
+      // &.li.a:hover {
+      //   text-decoration: none;
+      //   background: transparent;
+      // }
+      .navbar.navbar-fixed-top {
         margin: 0;
         //background-color: $light-grey;
         padding: 0 12px;
         //transparency: 0.5;
         //opacity: 0.5;
-        .link {}
-
-        .navbar-header {
+        div.navbar-header {
           .responsive-img {
             padding-top: 10px;
           }
 
-          button.navbar-toggle {
+          .navbar-toggle {
             .collapsed {
               margin: 0;
               padding: 6px 0;
 
-              span.glyphicon {
+              span {
                 font-size: 30px;
               }
             }
@@ -109,31 +106,31 @@ html {
           }
         }
 
-        .navbar-collapse#collapsedMenu {
+        div#collapsedMenu.collapse.navbar-collapse.navbar-right {
           color: $black;
 
-          &:focus,
           &:hover {
             color: $dark-grey;
-
-            a:focus {
-              text-decoration: none;
-              background-color: #d3d;
-            }
           }
 
-          ul.navbar-nav {
+          a:focus {
+            text-decoration: none;
+            background: transparent;
+          }
+
+          ul {
             li {
               letter-spacing: 2px;
               font-size: 0.7em;
-
-              a.sliding-middle-out {}
             }
+          }
 
-            ul.dropdown-menu {
-              li {
-                letter-spacing: 2px;
-                font-size: 0.7em;
+          ul.nav.navbar-nav {
+            border: 1px solid green;
+
+            li {
+              .dropdown.open {
+                border: 1 px solid red;
               }
             }
           }
