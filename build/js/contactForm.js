@@ -1,6 +1,6 @@
 // Code from
 // https://www.sitepoint.com/html5-forms-javascript-constraint-validation-api/
-var form = document.getElementById("contactUs");
+var form = document.getElementById('contactUs');
 form.noValidate = true;
 
 // set handler to validate the form
@@ -22,16 +22,16 @@ function validateForm(event) {
     field = form.elements[f];
 
     // ignore buttons, fieldsets, etc.
-    if (field.nodeName !== "INPUT" && field.nodeName !== "TEXTAREA" && field.nodeName !== "SELECT") continue;
+    if (field.nodeName !== 'INPUT' && field.nodeName !== 'TEXTAREA' && field.nodeName !== 'SELECT') continue;
 
     // is native browser validation available?
-    if (typeof field.willValidate !== "undefined") {
+    if (typeof field.willValidate !== 'undefined') {
 
       // native validation available
-      if (field.nodeName === "INPUT" && field.type !== field.getAttribute("type")) {
+      if (field.nodeName === 'INPUT' && field.type !== field.getAttribute('type')) {
 
         // input type not supported! Use legacy JavaScript validation
-        field.setCustomValidity(LegacyValidation(field) ? "" : "error");
+        field.setCustomValidity(LegacyValidation(field) ? '' : 'error');
 
       }
 
@@ -46,7 +46,7 @@ function validateForm(event) {
       // set to result of validation function
       field.validity.valid = LegacyValidation(field);
 
-      // if "invalid" events are required, trigger it here
+      // if 'invalid' events are required, trigger it here
 
     }
 
@@ -63,7 +63,7 @@ function validateForm(event) {
     }
 
   }
-  console.log(formvalid);
+  // console.log(formvalid);
   // cancel form submit if validation fails
   if (!formvalid) {
     if (event.preventDefault) event.preventDefault();
@@ -77,12 +77,12 @@ function LegacyValidation(field) {
   var
     valid = true,
     val = field.value,
-    type = field.getAttribute("type"),
-    chkbox = (type === "checkbox" || type === "radio"),
-    required = field.getAttribute("required"),
-    minlength = field.getAttribute("minlength"),
-    maxlength = field.getAttribute("maxlength"),
-    pattern = field.getAttribute("pattern");
+    type = field.getAttribute('type'),
+    chkbox = (type === 'checkbox' || type === 'radio'),
+    required = field.getAttribute('required'),
+    minlength = field.getAttribute('minlength'),
+    maxlength = field.getAttribute('maxlength'),
+    pattern = field.getAttribute('pattern');
 
   // disabled fields should not be validated
   if (field.disabled) return valid;
@@ -90,7 +90,7 @@ function LegacyValidation(field) {
   // value required?
   valid = valid && (!required ||
     (chkbox && field.checked) ||
-    (!chkbox && val !== "")
+    (!chkbox && val !== '')
   );
 
   // minlength or maxlength set?
@@ -114,36 +114,37 @@ $(document)
     $('section#contact.allsections')
       .css({ 'visibility': 'visible', 'display': 'block' });
 
-    var mailObject = {};
+    $('form')
+      .on('submit', function (event) {
+        var mailObject = {};
 
-    $.Callbacks()
-      .add($('form')
-        .submit(function () {
-          $('form')
-          event.preventDefault();
-          mailObject = $('form')
-            .serializeArray();
-        }))
-      .fire();
-
-    $.post({
-        url: "https://api.mailgun.net/v3/mg.perfectdaybreak.com",
-        data: {
-          key: "pubkey-228b87725d50c61dd024e21fb2f5758d",
-          from: 'info@artisanmemoirs.com',
-          to: 'webeck@gmail.com',
-          text: mailObject
-        },
-        crossDomain: true,
-        success: function () {
-          console.log('success');
-        },
-        beforeSend: function (xhr) {
-          console.log('beforesend');
-        }
-      })
-      .done(function (data) {
-        console.log('dounzo!');
-
+        $('form')
+        event.preventDefault();
+        mailObject = $('form')
+          .serializeArray();
+        $.post({
+            url: 'https://api.mailgun.net/v3/mg.perfectdaybreak.com/messages',
+            crossDomain: true,
+            username: '',
+            password: '',
+            xhrFields: {
+              withCredentials: true
+            },
+            data: {
+              key: 'pubkey-228b87725d50c61dd024e21fb2f5758d',
+              from: 'info@artisanmemoirs.com',
+              to: 'webeck@gmail.com',
+              text: mailObject
+            }
+          })
+          .done(function (data) {
+            console.log('done: ', data);
+          })
+          .fail(function (err) {
+            console.log('error: ', err);
+          })
+          .always(function () {
+            console.log('finished');
+          });
       });
   });
