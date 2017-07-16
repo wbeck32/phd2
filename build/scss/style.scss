@@ -48,20 +48,16 @@ html {
           display: block;
           margin: auto;
           height: 1px;
-          width: 0;
+          width: 0px;
           background: transparent;
           transition: width 0.5s ease, background-color 0.5s ease;
         }
 
-        &:hover {
+        &:hover:after {
           width: 100%;
           background: transparent;
         }
 
-        &:focus {
-          width: 100%;
-          background: transparent;
-        }
       }
     }
 
@@ -297,8 +293,7 @@ html {
               width: 47%;
               vertical-align: center;
               text-align: left;
-				background-color: purple;
-
+				background-color: lightgoldenrodyellow;
 
               &.left {
                 float: left;
@@ -313,6 +308,14 @@ html {
 				  margin: 5px;
 
 			  }
+
+
+              @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+                background-color: pink;
+                display: block;
+                }
+
+
             }
           }
         }
