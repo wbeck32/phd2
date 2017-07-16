@@ -56,6 +56,11 @@ html {
           width: 100%;
           background: transparent;
         }
+
+        &:focus {
+          width: 100%;
+          background: transparent;
+        }
       }
     }
 
