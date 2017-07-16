@@ -81,7 +81,7 @@ html {
 
       &.navbar.navbar-fixed-top {
         margin: 0;
-        //background-color: $light-grey;
+        background-color: $light-grey;
         padding: 0 12px;
         //transparency: 0.5;
         //opacity: 0.5;
@@ -312,8 +312,8 @@ html {
 
               @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
                 background-color: pink;
-                display: block;
-                }
+                display: inline-table;
+                 }
 
 
             }
