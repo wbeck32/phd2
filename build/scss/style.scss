@@ -208,7 +208,7 @@ html {
       }
 
       section.allsections {
-        border-radius: 0 0 20px 20px;
+        border-radius: 20px 20px 20px 20px;
         visibility: hidden;
         position: relative;
         display: none;
@@ -323,12 +323,13 @@ html {
     }
 
     nav.navbar-fixed-bottom {
-      height: 75px;
+      height: 85px;
       padding: 10px;
       background-color: $light-grey;
       border-radius: 0;
+
       @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-        height: 200px;
+        height: 175px;
       }
 
       .row {
@@ -337,9 +338,10 @@ html {
 
         div {
           display: inline-block;
-          @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-            display: block;
-          }
+          @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint)          {
+            //display: inline-block;
+            //background-color:orange;
+            }
 
           &.footerTxt {
             font-size: 0.7em;
@@ -347,8 +349,10 @@ html {
             letter-spacing: 2px;
             margin: 0 15px 0 10px;
             font-weight: 500;
+
             @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
               margin-bottom: 16px;
+
             }
 
             &.col-md-4 {}
@@ -361,11 +365,16 @@ html {
             float: right;
             bottom: -50px;
             right: 30px;
+
             @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-              float: left;
-              display: block;
-              bottom: 50px;
-              left: 15px;
+              float: right;
+              right: 30px;
+              margin-bottom: 16px;
+
+              //display: block;
+              //bottom: 50px;
+             // left: 15px;
+              //background-color:yellow;
             }
 
             div.jssocials-shares {
@@ -375,6 +384,7 @@ html {
                 position: relative;
                 bottom: 50px;
                 right: 30px;
+                //background-color:purple;
               }
 
               div.jssocials-share {
