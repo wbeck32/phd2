@@ -123,16 +123,9 @@ $(document)
         mailObject = $('form')
           .serializeArray();
         $.post({
-            url: 'https://api.mailgun.net/v3/mg.perfectdaybreak.com/messages',
-            crossDomain: true,
-            username: 'api',
-            key: 'pubkey-228b87725d50c61dd024e21fb2f5758d',
-            text: 'what???',
+            url: "../build/php/mg.php",
             data: {
-              key: 'pubkey-228b87725d50c61dd024e21fb2f5758d',
-              from: 'info@artisanmemoirs.com',
-              to: 'webeck@gmail.com',
-              text: mailObject
+              data: mailObject
             }
           })
           .done(function (data) {
