@@ -23,7 +23,7 @@ html {
   font-family: "Helvetica Neue", Arial, sans-serif;
   height: 101vh;
   //force slide always present
-  background-image: url("../../public/images/White-Paper-Texture-Background-520x390.jpg");
+  //background-image: url("../../public/images/White-Paper-Texture-Background-520x390.jpg");
   //background-repeat: repeat repeat;
   body {
 
@@ -31,7 +31,7 @@ html {
     font-size: $base-font-size;
     font-family: "Helvetica Neue",Arial,sans-serif;
     height: 100vh;
-    background-image: url("../../public/images/paperBackground.jpg");
+    background-image: url("../../public/images/White-Paper-Texture-Background-520x390.jpg");
     background-repeat: repeat repeat;
 
     a {
@@ -335,7 +335,7 @@ html {
         padding: 0;
         position: relative;
 
-        span {
+        div {
           display: inline-block;
           @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
             display: block;
@@ -359,12 +359,12 @@ html {
           &#shareRoundIcons.jssocials {
             position: relative;
             float: right;
-            bottom: 45px;
+            bottom: -50px;
             right: 30px;
             @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
               float: left;
               display: block;
-              bottom: 20px;
+              bottom: 50px;
               left: 15px;
             }
 
