@@ -43,7 +43,7 @@ gulp.task('buildJs', ['test'], function () {
   return gulp.src('build/js/*.js')
     .pipe(sourcemaps.init())
     .pipe(concat('main.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('public/js/.'))
     .pipe(livereload());

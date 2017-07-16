@@ -1,17 +1,17 @@
 function hideMail() {
-  console.log('obfuscation')
+  console.log('obfuscation');
   var u = "user";
   var arr = "@";
   var d = "domain";
   var dot = ".";
   var t = "tldccc";
-  document.write("<a href=" + "mail" + "to:" + u + arr + d + dot + t +
-    ">" + "Email (concatenation)" + "</a>" + "<br>");
+  // document.write("<a href=" + "mail" + "to:" + u + arr + d + dot + t +
+  //   ">" + "Email (concatenation)" + "</a>" + "<br>");
 }
 
 $('.footerTxt.col-md-4.col-sm-3 p')
   .click(function () {
-    console.log('email')
+    console.log('email');
     $.ajax({
         url: "https://app.mailgun.com/app/domains/sandbox780dc44ce44a41da8a4266b80ff20b2e.mailgun.org/messages",
         method: POST,
@@ -105,7 +105,7 @@ $('.product .sectionheader a')
   });
 
 function scrollToProductSection(selector) {
-  console.log(selector)
+  console.log(selector);
   $('.responsiveHeader')
     .css({ 'visibility': 'hidden', 'display': 'none' });
   $('section.allsections')
@@ -126,18 +126,33 @@ function scrollToProductSection(selector) {
     });
 }
 
-$('#shareRoundIcons')
-  .jsSocials({
-    shares: ['email', 'twitter', 'facebook', 'linkedin', 'messenger'],
-    url: 'http://artisanmemoirs.com',
-    text: 'text to share',
-    showLabel: false,
-    showCount: false,
-    shareIn: 'popup',
+function require(script) {
+  $.ajax({
+    url: 'jsSocials.js',
+    dataType: "script",
+    async: false, // <-- This is the key
+    success: function () {
+      // all g  ood...
 
-    on: {
-      click: function (e) {},
-      mouseenter: function (e) {},
-      mouseleave: function (e) {}
+      $('#shareRoundIcons')
+        .jsSocials({
+          shares: ['email', 'twitter', 'facebook', 'linkedin', 'messenger'],
+          url: 'http://artisanmemoirs.com',
+          text: 'text to share',
+          showLabel: false,
+          showCount: false,
+          shareIn: 'popup',
+
+          on: {
+            click: function (e) {},
+            mouseenter: function (e) {},
+            mouseleave: function (e) {}
+          }
+        });
+
+    },
+    error: function () {
+      throw new Error("Could not load script " + script);
     }
   });
+}

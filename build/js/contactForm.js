@@ -1,9 +1,3 @@
-$('.btn.contactForm')
-  .click(function () {
-    console.log('clicky');
-
-  });
-
 // Code from
 // https://www.sitepoint.com/html5-forms-javascript-constraint-validation-api/
 var form = document.getElementById("contactUs");
@@ -69,7 +63,7 @@ function validateForm(event) {
     }
 
   }
-
+  console.log(formvalid);
   // cancel form submit if validation fails
   if (!formvalid) {
     if (event.preventDefault) event.preventDefault();
@@ -110,19 +104,46 @@ function LegacyValidation(field) {
     pattern = new RegExp(pattern);
     valid = pattern.test(val);
   }
-
   return valid;
 }
 
-// $.ajax({
-//     url: "https://app.mailgun.com/app/domains/sandbox780dc44ce44a41da8a4266b80ff20b2e.mailgun.org/messages",
-//     method: POST,
-//     beforeSend: function (xhr) {
-//       xhr.overrideMimeType("text/plain; charset=x-user-defined");
-//     }
-//   })
-//   .done(function (data) {
-//     if (console && console.log) {
-//       console.log("Sample of data:", data.slice(0, 100));
-//     }
-//   });
+$(document)
+  .ready(function () {
+    $('.responsiveHeader')
+      .css({ 'visibility': 'hidden', 'display': 'none' });
+    $('section#contact.allsections')
+      .css({ 'visibility': 'visible', 'display': 'block' });
+
+    var mailObject = {};
+    $('form')
+      .submit(function () {
+        $('form')
+        event.preventDefault();
+        mailObject = $('form')
+          .serializeArray();
+        console.log(mailObject)
+        return mailObject;
+      })
+
+    $.post({
+        url: "https://api.mailgun.net/v3/mg.perfectdaybreak.com",
+        data: {
+          key: "key-a0f4b7894ce6d4a9dd7eedc395e5b1df",
+          from: 'info@artisanmemoirs.com',
+          to: 'webeck@gmail.com',
+          body: mailObject.guestMessage
+
+        },
+        crossDomain: true,
+        success: function () {
+          console.log('success');
+        },
+        beforeSend: function (xhr) {
+          console.log('beforesend');
+        }
+      })
+      .done(function (data) {
+        console.log('dounzo!');
+
+      });
+  });
