@@ -204,7 +204,7 @@ html {
 
       section.center {
         text-align: center;
-        border: 3px solid red;
+        //border: 3px solid red;
       }
 
       section.allsections {
@@ -215,7 +215,7 @@ html {
         background-color: $peach;
         opacity: 1;
         @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-          border: 2px solid red;
+          //border: 2px solid red;
         }
 
         &#contact {
@@ -293,18 +293,18 @@ html {
               width: 47%;
               vertical-align: center;
               text-align: left;
-				background-color: lightgoldenrodyellow;
+				//background-color: lightgoldenrodyellow;
 
               &.left {
                 float: left;
-				border: 3px red solid;
+				//border: 3px red solid;
 				  margin: 5px;
 
 			  }
 
               &.right {
                 float: right;
-				  border: 3px yellow solid;
+				  //border: 3px yellow solid;
 				  margin: 5px;
 
 			  }
