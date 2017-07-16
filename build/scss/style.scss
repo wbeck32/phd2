@@ -26,7 +26,6 @@ html {
   //background-image: url("../../public/images/White-Paper-Texture-Background-520x390.jpg");
   //background-repeat: repeat repeat;
   body {
-
     min-width: 320px;
     font-size: $base-font-size;
     font-family: "Helvetica Neue",Arial,sans-serif;
@@ -48,7 +47,7 @@ html {
           display: block;
           margin: auto;
           height: 1px;
-          width: 0px;
+          width: 0;
           background: transparent;
           transition: width 0.5s ease, background-color 0.5s ease;
         }
@@ -57,7 +56,6 @@ html {
           width: 100%;
           background: transparent;
         }
-
       }
     }
 
@@ -68,19 +66,9 @@ html {
       //line-height: 1.1em;
     }
 
-	img {
-		margin: 0 auto;
-	}
-<<<<<<< HEAD
-=======
-
-    nav {
-      //does not work.  Goal to change rollover background
-      &.li.a:hover {
-        text-decoration: none;
-        background-color: #d3d;
-      }
->>>>>>> f7a89026dc4afd87b7fd7eb333bd6386830a5b9d
+    img {
+      margin: 0 auto;
+    }
 
     nav {
       // does not work.  Goal to change rollover background
@@ -167,8 +155,8 @@ html {
       overflow: hidden;
       clear: both;
       font-size: 0.8em;
-      letter-spacing: 0em;
-	  line-height: 180%;
+      letter-spacing: 0;
+      line-height: 180%;
 
       .responsiveHeader {
         .labelbox {
@@ -239,7 +227,7 @@ html {
             padding: 20px;
             color: #fff;
             font-size: 2rem;
-            letter-spacing: .4em;
+            letter-spacing: 0.4em;
             border-radius: 0 0 20px 20px;
 
             a {
@@ -283,16 +271,15 @@ html {
             div#boldText {
               font-weight: bold;
               margin-bottom: 5px;
-				padding-bottom: 10px;
+              padding-bottom: 10px;
               font-size: $bold-font-size;
             }
 
             div#bolderText {
               font-weight: bold;
               margin-bottom: 10px 0 5px 0;
-			  padding-bottom: 20px;
+              padding-bottom: 20px;
               font-size: $bolder-font-size;
-
             }
 
             span {
@@ -300,35 +287,23 @@ html {
               width: 47%;
               vertical-align: center;
               text-align: left;
-				background-color: lightgoldenrodyellow;
+              background-color: lightgoldenrodyellow;
 
               &.left {
                 float: left;
-				border: 3px red solid;
-				  margin: 5px;
-<<<<<<< HEAD
+                border: 3px red solid;
+                margin: 5px;
+              }
 
-			  }
-
-=======
-
-			  }
-
->>>>>>> f7a89026dc4afd87b7fd7eb333bd6386830a5b9d
               &.right {
                 float: right;
-				  border: 3px yellow solid;
-				  margin: 5px;
-
-			  }
-
-
+                border: 3px yellow solid;
+                margin: 5px;
+              }
               @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
                 background-color: pink;
                 display: inline-table;
-                 }
-
-
+              }
             }
           }
         }
@@ -340,7 +315,6 @@ html {
       padding: 10px;
       background-color: $light-grey;
       border-radius: 0;
-
       @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
         height: 175px;
       }
@@ -351,10 +325,10 @@ html {
 
         div {
           display: inline-block;
-          @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint)          {
+          @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
             //display: inline-block;
             //background-color:orange;
-            }
+          }
 
           &.footerTxt {
             font-size: 0.7em;
@@ -362,10 +336,8 @@ html {
             letter-spacing: 2px;
             margin: 0 15px 0 10px;
             font-weight: 500;
-
             @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
               margin-bottom: 16px;
-
             }
 
             &.col-md-4 {}
@@ -378,15 +350,13 @@ html {
             float: right;
             bottom: -50px;
             right: 30px;
-
             @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
               float: right;
               right: 30px;
               margin-bottom: 16px;
-
               //display: block;
               //bottom: 50px;
-             // left: 15px;
+              // left: 15px;
               //background-color:yellow;
             }
 
