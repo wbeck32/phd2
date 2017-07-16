@@ -23,7 +23,7 @@ html {
   font-family: "Helvetica Neue", Arial, sans-serif;
   height: 101vh;
   //force slide always present
-  background-image: url("../../public/images/White-Paper-Texture-Background-520x390.jpg");
+  //background-image: url("../../public/images/White-Paper-Texture-Background-520x390.jpg");
   //background-repeat: repeat repeat;
   body {
 
@@ -31,7 +31,7 @@ html {
     font-size: $base-font-size;
     font-family: "Helvetica Neue",Arial,sans-serif;
     height: 100vh;
-    background-image: url("../../public/images/paperBackground.jpg");
+    background-image: url("../../public/images/White-Paper-Texture-Background-520x390.jpg");
     background-repeat: repeat repeat;
 
     a {
@@ -71,6 +71,16 @@ html {
 	img {
 		margin: 0 auto;
 	}
+<<<<<<< HEAD
+=======
+
+    nav {
+      //does not work.  Goal to change rollover background
+      &.li.a:hover {
+        text-decoration: none;
+        background-color: #d3d;
+      }
+>>>>>>> f7a89026dc4afd87b7fd7eb333bd6386830a5b9d
 
     nav {
       // does not work.  Goal to change rollover background
@@ -205,7 +215,7 @@ html {
       }
 
       section.allsections {
-        border-radius: 0 0 20px 20px;
+        border-radius: 20px 20px 20px 20px;
         visibility: hidden;
         position: relative;
         display: none;
@@ -296,9 +306,15 @@ html {
                 float: left;
 				border: 3px red solid;
 				  margin: 5px;
+<<<<<<< HEAD
 
 			  }
 
+=======
+
+			  }
+
+>>>>>>> f7a89026dc4afd87b7fd7eb333bd6386830a5b9d
               &.right {
                 float: right;
 				  border: 3px yellow solid;
@@ -320,23 +336,25 @@ html {
     }
 
     nav.navbar-fixed-bottom {
-      height: 75px;
+      height: 85px;
       padding: 10px;
       background-color: $light-grey;
       border-radius: 0;
+
       @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-        height: 200px;
+        height: 175px;
       }
 
       .row {
         padding: 0;
         position: relative;
 
-        span {
+        div {
           display: inline-block;
-          @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-            display: block;
-          }
+          @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint)          {
+            //display: inline-block;
+            //background-color:orange;
+            }
 
           &.footerTxt {
             font-size: 0.7em;
@@ -344,8 +362,10 @@ html {
             letter-spacing: 2px;
             margin: 0 15px 0 10px;
             font-weight: 500;
+
             @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
               margin-bottom: 16px;
+
             }
 
             &.col-md-4 {}
@@ -356,13 +376,18 @@ html {
           &#shareRoundIcons.jssocials {
             position: relative;
             float: right;
-            bottom: 45px;
+            bottom: -50px;
             right: 30px;
+
             @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-              float: left;
-              display: block;
-              bottom: 20px;
-              left: 15px;
+              float: right;
+              right: 30px;
+              margin-bottom: 16px;
+
+              //display: block;
+              //bottom: 50px;
+             // left: 15px;
+              //background-color:yellow;
             }
 
             div.jssocials-shares {
@@ -372,6 +397,7 @@ html {
                 position: relative;
                 bottom: 50px;
                 right: 30px;
+                //background-color:purple;
               }
 
               div.jssocials-share {
