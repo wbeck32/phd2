@@ -125,11 +125,9 @@ $(document)
         $.post({
             url: 'https://api.mailgun.net/v3/mg.perfectdaybreak.com/messages',
             crossDomain: true,
-            username: '',
-            password: '',
-            xhrFields: {
-              withCredentials: true
-            },
+            username: 'api',
+            key: 'pubkey-228b87725d50c61dd024e21fb2f5758d',
+            text: 'what???',
             data: {
               key: 'pubkey-228b87725d50c61dd024e21fb2f5758d',
               from: 'info@artisanmemoirs.com',
