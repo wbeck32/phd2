@@ -276,13 +276,14 @@ html {
             div#boldText {
               font-weight: bold;
               margin-bottom: 5px;
+				padding-bottom: 10px;
               font-size: $bold-font-size;
             }
 
             div#bolderText {
               font-weight: bold;
               margin-bottom: 10px 0 5px 0;
-			  padding-bottom: 10px;
+			  padding-bottom: 20px;
               font-size: $bolder-font-size;
 
             }
