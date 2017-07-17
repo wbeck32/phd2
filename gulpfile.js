@@ -7,7 +7,8 @@ var gulp = require('gulp'),
   sourcemaps   = require('gulp-sourcemaps'),
   concat = require('gulp-concat'),
   watch = require("gulp-watch-sass"),
-  autoprefixer = require('autoprefixer');
+  autoprefixer = require('autoprefixer'),
+  less = require('gulp-less');
 
 
 gulp.task('default', function() {
@@ -21,12 +22,22 @@ gulp.task('sass', function () {
     .pipe(sass())
     .pipe(postcss([ autoprefixer({ browsers: ['last 2 version'] }) ]))
     .pipe(sourcemaps.write())
-    .pipe(minifycss())
+    // .pipe(minifycss())
     .pipe(gulp.dest('public/css'))
     .pipe(livereload());
 });
 
-gulp.task('start',['sass'],function(){
+// Compiles LESS > CSS
+gulp.task('build-less', function(){
+    return gulp.src('build/less/bootstrap.less')
+        .pipe(less())
+        .pipe(gulp.dest('public/css'))
+        .pipe(livereload());
+});
+
+
+gulp.task('start',['sass', 'build-less'],function(){
   livereload.listen();
-  gulp.watch('build/scss/*.scss', ['sass']);
+  gulp.watch('build/less/*.less', ['sass', 'build-less']);
+  gulp.watch('build/scss/*.scss', ['sass', 'build-less']);
 });
