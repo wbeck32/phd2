@@ -10,7 +10,9 @@ var gulp = require('gulp'),
   autoprefixer = require('autoprefixer'),
   mocha = require('gulp-mocha'),
   less = require('gulp-less'),
-  jshint = require('gulp-jshint');
+  jshint = require('gulp-jshint'),
+  browserSync = require('browser-sync')
+  .create();
 
 gulp.task('default', function () {
   gulp.start('start');
@@ -54,6 +56,11 @@ gulp.task('updateHTML', function () {
     .pipe(livereload());
 });
 
+gulp.task('reload', function () {
+  // return gulp.src(['public/*', 'build/*'])
+  //   .pipe(livereload('public/index.html'));
+})
+
 // Lint Tasks
 gulp.task('lint', function () {
   return gulp.src(['build/js/*.js'])
@@ -72,10 +79,22 @@ gulp.task('test', ['lint'], function () {
 
 gulp.task('watch', function () {
   livereload.listen();
-  gulp.watch('build/js/*.js', ['buildJs']);
-  gulp.watch('build/less/*.less', ['build-less']);
-  gulp.watch('build/scss/*.scss', ['sass']);
-  gulp.watch('public/index.html', ['updateHTML']);
+  gulp.watch('build/js/*.js', ['buildJs'])
+    .on('change', browserSync.reload);
+  gulp.watch('build/less/*.less', ['build-less', 'reload']);
+  gulp.watch('build/scss/*.scss', ['sass', 'reload']);
+  gulp.watch('public/index.html', ['updateHTML', 'reload']);
+});
+
+gulp.task('start', ['watch'], function () {
+  browserSync.init({
+    server: {
+      baseDir: "public",
+      directory: true,
+      port: 3000
+
+    }
+  });
 });
 
 gulp.task('start', ['watch'], function () {});

@@ -6,6 +6,7 @@
   "devDependencies": {
     "assert": "^1.4.1",
     "autoprefixer": "^7.1.2",
+    "browser-sync": "^2.18.12",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.7.0",
     "gulp-concat": "^2.6.1",

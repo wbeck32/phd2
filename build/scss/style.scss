@@ -284,17 +284,21 @@ html {
               width: 45%;
               vertical-align: center;
               text-align: left;
-
-              img {
-                text-align: center;
-              }
-
-              #left {
+              //background-color: lightgoldenrodyellow;
+              &.left {
                 float: left;
+                //border: 3px red solid;
+                margin: 5px;
               }
 
               #right {
                 float: right;
+                //border: 3px yellow solid;
+                margin: 5px;
+              }
+              @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+                background-color: pink;
+                display: inline-table;
               }
             }
           }
