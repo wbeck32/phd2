@@ -8,7 +8,6 @@ var gulp = require('gulp'),
   concat = require('gulp-concat'),
   watch = require("gulp-watch-sass"),
   autoprefixer = require('autoprefixer'),
-  mocha = require('gulp-mocha'),
   less = require('gulp-less'),
   jshint = require('gulp-jshint'),
   browserSync = require('browser-sync')
@@ -41,7 +40,7 @@ gulp.task('build-less', function () {
     .pipe(livereload());
 });
 
-gulp.task('buildJs', ['test'], function () {
+gulp.task('buildJs', function () {
   return gulp.src('build/js/*.js')
     .pipe(sourcemaps.init())
     .pipe(concat('main.js'))
@@ -68,14 +67,6 @@ gulp.task('lint', function () {
     .pipe(jshint.reporter('default'));
 });
 
-gulp.task('test', ['lint'], function () {
-  gulp.src('tests/*.js')
-    .pipe(mocha({
-      reporter: 'spec',
-      clearRequireCache: true,
-      ignoreLeaks: true
-    }));
-});
 
 gulp.task('watch', function () {
   livereload.listen();

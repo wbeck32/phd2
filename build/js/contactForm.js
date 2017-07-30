@@ -108,33 +108,27 @@ $(document).ready(function() {
     visibility: 'visible',
     display: 'block'
   });
-});
 
-$('form')
-  .on('submit', (event) => {
-  var mailObject = {};
-  mailObject = $('form')
-    .serializeArray();
-  console.log(mailObject);
-  // $('form').load('./js/mailgun-curl.js', function() {
-  //   console.log('loaded!');
-  // });
+
+// $('form').on('submit', (event) => {
+//   let mailObject = $('form').serializeArray();
+  let mailObject = {
+    email: "webeck@gmail.com",
+    text: "whadda ya know"
+  }
+
+  // console.log('mailObj: ',mailObject);
 
   $.post({
-    url: '../send.php'
+    url: 'send.php',
     // crossDomain: true,
     // username: 'api',
     // key: 'pubkey-228b87725d50c61dd024e21fb2f5758d',
     // text: 'what???',
-    // data: {
-    //   key: 'pubkey-228b87725d50c61dd024e21fb2f5758d',
-    //   from: 'info@artisanmemoirs.com',
-    //   to: 'webeck@gmail.com',
-    //   text: mailObject
-    // }
+    data: mailObject
   })
-    .done(function(data) {
-      console.log('done: ', data);
+    .done(function(res) {
+      console.log('done: ', res);
     })
     .fail(function(err) {
       console.log('error: ', err);
@@ -142,4 +136,5 @@ $('form')
     .always(function() {
       console.log('finished');
     });
-});
+    });
+
