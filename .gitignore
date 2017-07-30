@@ -7,3 +7,5 @@ build/scss/*.old
 public/index2.html
 public/css/styletemp.css
 .vscode
+.jsbeautifyrc
+.eslintrc

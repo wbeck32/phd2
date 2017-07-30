@@ -109,16 +109,17 @@ $(document).ready(function() {
     display: 'block'
   });
 });
-$('form').on('submit', function(event) {
+
+$('form')
+  .on('submit', (event) => {
   var mailObject = {};
-  mailObject = $('form').serializeArray();
+  mailObject = $('form')
+    .serializeArray();
   console.log(mailObject);
   // $('form').load('./js/mailgun-curl.js', function() {
   //   console.log('loaded!');
   // });
 
-  // $('form');
-  // event.preventDefault();
   $.post({
     url: '../send.php'
     // crossDomain: true,

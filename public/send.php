@@ -1,5 +1,6 @@
 <!-- http://www.phpfunctionalism.com/functions/simple-php-mailgun-api-example/ -->
 <!-- Permissions of 0644 needed -->
+<!-- update with new API key -->
 <?php
 echo '<p>Hello World</p>';
 send_mailgun('webeck@gmail.com');
@@ -7,7 +8,7 @@ function send_mailgun($email){
 
 	$config = array();
 
-	$config['api_key'] = "key-6672503b42e8a71573ece4741a5f2884";
+	$config['api_key'] = "pubkey-228b87725d50c61dd024e21fb2f5758d";
 
 	$config['api_url'] = "https://api.mailgun.net/v3/mg.perfectdaybreak.com/messages";
 
