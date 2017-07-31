@@ -9,6 +9,7 @@ $('form').on('submit', (event) => {
     dataType: "json",
     data: mailObject
   })
+
     .done(function(res) {
       // console.log('done: ', res);
   })
