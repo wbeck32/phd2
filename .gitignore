@@ -6,4 +6,8 @@ node_modules
 build/scss/*.old
 public/index2.html
 public/css/styletemp.css
+public/css/style.css
+public/js/main.js
+.eslintrc
+.jsbeautifyrc
 
