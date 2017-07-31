@@ -125,19 +125,3 @@ function scrollToProductSection(selector) {
       // console.log('success!')
     });
 }
-
-$('#shareRoundIcons')
-  .jsSocials({
-    shares: ['email', 'twitter', 'facebook', 'linkedin', 'messenger'],
-    url: 'http://artisanmemoirs.com',
-    text: 'text to share',
-    showLabel: false,
-    showCount: false,
-    shareIn: 'popup',
-
-    on: {
-      click: function (e) {},
-      mouseenter: function (e) {},
-      mouseleave: function (e) {}
-    }
-  });
