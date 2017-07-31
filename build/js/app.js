@@ -126,33 +126,3 @@ function scrollToProductSection(selector) {
     });
 }
 
-function require(script) {
-  $.ajax({
-    url: 'jsSocials.js',
-    dataType: "script",
-    async: false, // <-- This is the key
-    success: function () {
-      // all g  ood...
-
-      $('#shareRoundIcons')
-        .jsSocials({
-          shares: ['email', 'twitter', 'facebook', 'linkedin', 'messenger'],
-          url: 'http://artisanmemoirs.com',
-          text: 'text to share',
-          showLabel: false,
-          showCount: false,
-          shareIn: 'popup',
-
-          on: {
-            click: function (e) {},
-            mouseenter: function (e) {},
-            mouseleave: function (e) {}
-          }
-        });
-
-    },
-    error: function () {
-      throw new Error("Could not load script " + script);
-    }
-  });
-}
