@@ -10,4 +10,6 @@ public/css/style.css
 public/js/main.js
 .eslintrc
 .jsbeautifyrc
+.vscode
+data/var.php
 

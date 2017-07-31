@@ -3,9 +3,8 @@ let mailObject = {};
 $('form').on('submit', (event) => {
   event.preventDefault();
   mailObject = $('form').serializeArray();
-console.log(mailObject);
 
-$.post({
+  $.post({
     url: "send.php",
     dataType: "json",
     data: mailObject

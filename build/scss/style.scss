@@ -19,11 +19,13 @@ $bolder-font-size: 20px;
 $sm-breakpoint: 320px; //min 320px max 767px
 $md-breakpoint: 768px; //min 768px
 
+
+
 html {
   font-family: "Helvetica Neue", Arial, sans-serif;
   height: 101vh;
   //force slide always present
-  //background-image: url("../../public/images/White-Paper-Texture-Background-520x390.jpg");
+  background-image: url("../../public/images/White-Paper-Texture-Background-520x390.jpg");
   //background-repeat: repeat repeat;
   body {
     min-width: 320px;
@@ -31,11 +33,12 @@ html {
     font-family: "Helvetica Neue",Arial,sans-serif;
     height: 100vh;
     background-image: url("../images/White-Paper-Texture-Background-520x390.jpg");
+
     background-repeat: repeat repeat;
 
     a {
       //put styles for non-sliding-out a tags here
-      background: transparent;
+      background-color: transparent;
 
       &.sliding-middle-out {
         display: inline-block;
@@ -54,45 +57,44 @@ html {
 
         &:hover:after {
           width: 100%;
-          background: transparent;
+          //background-color: blue;
         }
       }
     }
 
     p {
       color: $black;
-      //line-height: 20px;
+      //line-height: 2px;
       margin-bottom: 8px;
       //line-height: 1.1em;
     }
 
-    img {
-      margin: 0 auto;
-    }
-
     nav {
-      // does not work.  Goal to change rollover background
-      // &.li.a:hover {
-      //   text-decoration: none;
-      //   background: transparent;
-      // }
-      .navbar.navbar-fixed-top {
+      //does not work.  Goal to change rollover background
+      &.li.a:hover {
+        text-decoration: none;
+        background-color: #d3d;
+      }
+
+      &.navbar.navbar-fixed-top {
         margin: 0;
-        background-color: $light-grey;
+        //background-color: $light-grey;
         padding: 0 12px;
         //transparency: 0.5;
         //opacity: 0.5;
-        div.navbar-header {
+        .link {}
+
+        .navbar-header {
           .responsive-img {
             padding-top: 10px;
           }
 
-          .navbar-toggle {
+          button.navbar-toggle {
             .collapsed {
               margin: 0;
               padding: 6px 0;
 
-              span {
+              span.glyphicon {
                 font-size: 30px;
               }
             }
@@ -105,31 +107,31 @@ html {
           }
         }
 
-        div#collapsedMenu.collapse.navbar-collapse.navbar-right {
+        .navbar-collapse#collapsedMenu {
           color: $black;
 
+          &:focus,
           &:hover {
             color: $dark-grey;
-          }
 
-          a:focus {
-            text-decoration: none;
-            background: transparent;
-          }
-
-          ul {
-            li {
-              letter-spacing: 2px;
-              font-size: 0.7em;
+            a:focus {
+              text-decoration: none;
+              background-color: #d3d;
             }
           }
 
-          ul.nav.navbar-nav {
-            border: 1px solid green;
-
+          ul.navbar-nav {
             li {
-              .dropdown.open {
-                border: 1 px solid red;
+              letter-spacing: 2px;
+              font-size: 0.7em;
+
+              a.sliding-middle-out {}
+            }
+
+            ul.dropdown-menu {
+              li {
+                letter-spacing: 2px;
+                font-size: 0.7em;
               }
             }
           }
@@ -155,8 +157,8 @@ html {
       overflow: hidden;
       clear: both;
       font-size: 0.8em;
-      letter-spacing: 0;
-      line-height: 180%;
+      letter-spacing: 0.1em;
+      line-height: 140%;
 
       .responsiveHeader {
         .labelbox {
@@ -199,18 +201,18 @@ html {
 
       section.center {
         text-align: center;
-        //border: 3px solid red;
+        border: 3px solid red;
       }
 
       section.allsections {
-        border-radius: 20px 20px 20px 20px;
+        border-radius: 0 0 20px 20px;
         visibility: hidden;
         position: relative;
         display: none;
         background-color: $peach;
         opacity: 1;
         @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-          //border: 2px solid red;
+          border: 2px solid red;
         }
 
         &#contact {
@@ -227,7 +229,7 @@ html {
             padding: 20px;
             color: #fff;
             font-size: 2rem;
-            letter-spacing: 0.4em;
+            letter-spacing: 1.3;
             border-radius: 0 0 20px 20px;
 
             a {
@@ -271,40 +273,32 @@ html {
             div#boldText {
               font-weight: bold;
               margin-bottom: 5px;
-              padding-bottom: 10px;
               font-size: $bold-font-size;
             }
 
             div#bolderText {
               font-weight: bold;
               margin-bottom: 10px 0 5px 0;
-              padding-bottom: 20px;
               font-size: $bolder-font-size;
             }
 
             span {
               display: inline-block;
-              width: 47%;
+              width: 45%;
               vertical-align: center;
               text-align: left;
- 				//background-color: lightgoldenrodyellow;
-
+              //background-color: lightgoldenrodyellow;
               &.left {
                 float: left;
-				//border: 3px red solid;
-				  margin: 5px;
+                //border: 3px red solid;
+                margin: 5px;
+              }
 
-			  }
-
-              &.right {
+              #right {
                 float: right;
-				  //border: 3px yellow solid;
-				  margin: 5px;
-
-			  }
-
-
-
+                //border: 3px yellow solid;
+                margin: 5px;
+              }
               @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
                 background-color: pink;
                 display: inline-table;
@@ -316,23 +310,22 @@ html {
     }
 
     nav.navbar-fixed-bottom {
-      height: 85px;
+      height: 75px;
       padding: 10px;
       background-color: $light-grey;
       border-radius: 0;
       @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-        height: 175px;
+        height: 200px;
       }
 
       .row {
         padding: 0;
         position: relative;
 
-        div {
+        span {
           display: inline-block;
           @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-            //display: inline-block;
-            //background-color:orange;
+            display: block;
           }
 
           &.footerTxt {
@@ -353,16 +346,13 @@ html {
           &#shareRoundIcons.jssocials {
             position: relative;
             float: right;
-            bottom: -50px;
+            bottom: 45px;
             right: 30px;
             @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-              float: right;
-              right: 30px;
-              margin-bottom: 16px;
-              //display: block;
-              //bottom: 50px;
-              // left: 15px;
-              //background-color:yellow;
+              float: left;
+              display: block;
+              bottom: 20px;
+              left: 15px;
             }
 
             div.jssocials-shares {
@@ -372,7 +362,6 @@ html {
                 position: relative;
                 bottom: 50px;
                 right: 30px;
-                //background-color:purple;
               }
 
               div.jssocials-share {
