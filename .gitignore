@@ -9,3 +9,6 @@ public/css/styletemp.css
 .vscode
 .jsbeautifyrc
 .eslintrc
+var.php
+public/css
+public/js
