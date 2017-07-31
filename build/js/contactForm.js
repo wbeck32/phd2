@@ -18,4 +18,5 @@ $('form').on('submit', (event) => {
     .always(function() {
       // console.log('finished');
     });
+
   });
