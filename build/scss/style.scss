@@ -19,16 +19,17 @@ $bolder-font-size: 20px;
 $sm-breakpoint: 320px; //min 320px max 767px
 $md-breakpoint: 768px; //min 768px
 
+
 html {
     font-family: "Helvetica Neue", Arial, sans-serif;
     height: 101vh; //force slide always present
-    background-image: url("../../public/images/White-Paper-Texture-Background-520x390.jpg"); //background-repeat: repeat repeat;
+    background-image: url("../images/White-Paper-Texture-Background-520x390.jpg"); //background-repeat: repeat repeat;
     body {
         min-width: 320px;
         font-size: $base-font-size;
         font-family: "Helvetica Neue", Arial, sans-serif;
         height: 100vh;
-        background-image: url("../../public/images/paperBackground.jpg");
+        background-image: url("../images/paperBackground.jpg");
         background-repeat: repeat repeat;
         a {
             //put styles for non-sliding-out a tags here
