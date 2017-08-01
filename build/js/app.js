@@ -30,6 +30,7 @@ $('ul.nav.navbar-nav li a')
   .click(function () {
     var m = $(this)
       .attr('href');
+      console.log(m);
     if (m == '#moretop') {
       var dropdownChoice = $(this)
         .find('ul li a')
@@ -45,7 +46,7 @@ $('ul.nav.navbar-nav li a')
     } else if (m == '#home') {
       $('#collapsedMenu.in')
         .removeClass('in');
-      $('section.allsections')
+      $('section')
         .css({ 'visibility': 'hidden', 'display': 'none' });
       $('div.pageBody div.responsiveHeader')
         .css({ 'visibility': 'visible', 'display': 'block' });
@@ -60,12 +61,12 @@ $('ul.nav.navbar-nav li a')
         .removeClass('in');
       $('.responsiveHeader')
         .css({ 'visibility': 'hidden', 'display': 'none' });
-      $('section.allsections')
+      $('section')
         .not(m)
         .css({ 'visibility': 'hidden', 'display': 'none' });
-      $('section' + m + '.allsections')
+      $('section' + m)
         .css({ 'display': 'block', 'visibility': 'visible' });
-      $('section' + m + '.allsections')
+      $('section' + m)
         .animate({
           scrollTop: 0
         }, 'slow', function () {
@@ -108,15 +109,15 @@ function scrollToProductSection(selector) {
   console.log(selector);
   $('.responsiveHeader')
     .css({ 'visibility': 'hidden', 'display': 'none' });
-  $('section.allsections')
+  $('section')
     .not(selector)
     .css({ 'visibility': 'hidden', 'display': 'none' });
-  $('section#products.allsections')
+  $('section#products.container-fluid')
     .css({ 'visibility': 'visible', 'display': 'block' });
   $('div.product')
     .not(selector)
     .css({ 'visibility': 'hidden', 'display': 'none' });
-  $('div' + selector + '.product')
+  $('section' + selector + '.container-fluid.product')
     .css({ 'visibility': 'visible', 'display': 'block' });
   $('#products')
     .animate({
