@@ -38,30 +38,84 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <!-- hamburger icon -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsed-menu" aria-expanded="false">
+                        <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </button>
+                <!-- end of hamburger icon -->
 
-    <nav class="navbar navbar-fixed-top container-fluid" id="home">
+                <!-- beginning of brand logo -->
+                <a class="navbar-brand" href="#home">
+                    <img class="responsive-img" alt="Artisan Memoirs" src="images/artisanmemoirs220wide.png">
+                </a>
+                <!-- end of brand logo -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="collapsed-menu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#product3" class="link sliding-middle-out" id="product1">Voice</a></li>
+                            <li><a href="#product2" class="link sliding-middle-out" id="product2">Reminiscience</a></li>
+                            <li><a href="#product1" class="link sliding-middle-out" id="product3">Family History</a></li>
+                            <li><a href="#product4" class="link sliding-middle-out" id="product4">A la carte</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="link sliding-middle-out" href="#value">Value</a></li>
+                    <li><a class="link sliding-middle-out" href="#aboutus">About</a></li>
+                    <li href="#moretop" class="dropdown" id="moretop">
+                        <a href="#moretop" class="dropdown-toggle sliding-middle-out" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#page01" class="link sliding-middle-out" id="page01">Write Your Own</a></li>
+                            <li><a href="#page02" class="link sliding-middle-out" id="page02">Begin Today</a></li>
+                            <li><a href="#page03" class="link sliding-middle-out" id="page03">The Journey</a></li>
+                            <li><a href="#page04" class="link sliding-middle-out" id="page04">Story of Pets</a></li>
+                            <li><a href="#page05" class="link sliding-middle-out" id="page05">Another</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact" class="link sliding-middle-out" id="contact">Contact</a></li>
+
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+
+    <!-- old nav -->
+    <!-- <nav class="navbar navbar-fixed-top container-fluid" id="home">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
+    <!-- <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsedMenu" aria-expanded="false">
              <span class="glyphicon glyphicon-menu-hamburger"></span>
         </button>
 
             <a class="navbar-brand" href="#home">
-       <img class="responsive-img" alt="Artisan Memoirs" src="images/artisanmemoirs220wide.png">
-        </a>
+    <img class="responsive-img" alt="Artisan Memoirs" src="images/artisanmemoirs220wide.png">
+</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right" id="collapsedMenu">
+    <!-- <div class="collapse navbar-collapse navbar-right" id="collapsedMenu">
 
             <ul class="nav navbar-nav">
 
-                <li class="active"><a class="link sliding-middle-out" href="#home">Home</a></li>
+                <li class="active"><a class="link sliding-middle-out" href="#home">Home</a></li> -->
 
-                <!--<li><a class="link" href="#products">Products</a></li>-->
+    <!--<li><a class="link" href="#products">Products</a></li>-->
 
 
-                <li href="#products" class="dropdown" id="products">
+    <!-- <li href="#products" class="dropdown" id="products">
 
                     <a class="dropdown-toggle sliding-middle-out" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
 
@@ -81,11 +135,11 @@
 
                 <li><a class="link sliding-middle-out" href="#value">Value</a></li>
 
-                <!--<li><a href="#" class="link sliding-middle-out" id="process">Process</a></li>-->
+                <li><a href="#" class="link sliding-middle-out" id="process">Process</a></li> -->
 
-                <!--<li><a href="#" class="link sliding-middle-out" id="pricing">Pricing</a></li>-->
+    <!--<li><a href="#" class="link sliding-middle-out" id="pricing">Pricing</a></li>-->
 
-                <li><a class="link sliding-middle-out" href="#aboutus">About</a></li>
+    <!-- <li><a class="link sliding-middle-out" href="#aboutus">About</a></li>
 
                 <li href="#moretop" class="dropdown" id="moretop">
                     <a href="#moretop" class="dropdown-toggle sliding-middle-out" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>
@@ -100,9 +154,8 @@
                 <li><a href="#contact" class="link sliding-middle-out" id="contact">Contact</a></li>
             </ul>
         </div>
-        <!-- /.navbar-collapse -->
-    </nav>
-
+    </nav>  -->
+    <!-- end of old nav  -->
     <div class="pageBody">
 
         <div class="responsiveHeader container">
