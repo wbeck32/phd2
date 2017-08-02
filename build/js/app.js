@@ -27,7 +27,7 @@ $('.footerTxt.col-md-4.col-sm-3 p').click(function() {
 
 $('ul.nav.navbar-nav li a').click(function() {
   var m = $(this).attr('href');
-  console.log(m);
+  // console.log(m);
   if (m == '#moretop') {
     var dropdownChoice = $(this).find('ul li a').attr('href');
     $('section' + dropdownChoice).animate(
@@ -107,7 +107,7 @@ $('.product .sectionheader a').click(function() {
 });
 
 function scrollToProductSection(selector) {
-  console.log(selector);
+  // console.log(selector);
   $('.responsiveHeader').css({ visibility: 'hidden', display: 'none' });
   $('section').not(selector).css({ visibility: 'hidden', display: 'none' });
   $('section#products.container-fluid').css({
