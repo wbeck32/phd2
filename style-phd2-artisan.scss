@@ -1,0 +1,442 @@
+$textbackground: #c2edea;
+$sectionbackground: #f7f4d7;
+$navbar: #936b1e;
+$sectionmarker: #936b1e;
+$subsectionmarker: #8d956c;
+$linkcolor: #000;
+$linkhover: red;
+$titlebackground: #936b1e;
+$sectionheader: #27b6c4; // palette
+$peach: #ffdab9;
+$dark-grey: #7a8b8b;
+$light-grey: #eeeeee;
+$burnt-orange: #daa520; //goldenrod
+$white: #fff;
+$black: #000;
+$base-font-size: 16px;
+$bold-font-size: 18px;
+$bolder-font-size: 20px;
+$sm-breakpoint: 0px; //min 320px max 767px
+$md-breakpoint: 768px; //min 768px
+
+html {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  height: 101vh;
+  min-width: 320px;
+
+  //force slide always present
+  //background-image: url("../../public/images/White-Paper-Texture-Background-520x390.jpg");
+  //background-repeat: repeat repeat;
+  body {
+    min-width: 320px;
+    font-size: $base-font-size;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    height: 100vh;
+    background-image: url("../images/White-Paper-Texture-Background-520x390.jpg");
+    background-repeat: repeat repeat;
+
+    a {
+      //put styles for non-sliding-out a tags here
+      background: transparent;
+
+      &.sliding-middle-out {
+        display: inline-block;
+        position: relative;
+        padding-bottom: 3px;
+
+        &:after {
+          content: "";
+          display: block;
+          margin: auto;
+          height: 1px;
+          width: 0;
+          background: transparent;
+          transition: width 0.5s ease, background-color 0.5s ease;
+        }
+
+        &:hover:after {
+          width: 100%;
+          background: transparent;
+        }
+      }
+    }
+
+    p {
+      color: $black;
+      //line-height: 20px;
+      margin-bottom: 8px;
+      //line-height: 1.1em;
+    }
+
+    img {
+      margin: 0 auto;
+    }
+
+    nav {
+      min-width: 320px;
+
+      background-color: white;
+      background-image: url("../../public/images/White-Paper-Texture-Background-520x390.jpg");
+
+      // does not work.  Goal to change rollover background
+      // &.li.a:hover {
+      //   text-decoration: none;
+      //   background: transparent;
+      // }
+      .navbar.navbar-fixed-top {
+        margin: 0;
+        background-color: $light-grey;
+
+        padding: 0 12px;
+        //transparency: 0.5;
+        //opacity: 1;
+        div.navbar-header {
+          .responsive-img {
+            padding-top: 10px;
+          }
+
+          .navbar-toggle {
+            .collapsed {
+              margin: 0;
+              padding: 6px 0;
+
+              span {
+                font-size: 30px;
+              }
+            }
+          }
+
+          a.navbar-brand {
+            padding: 0 15px;
+
+            img {
+            }
+          }
+        }
+
+        div#collapsedMenu.collapse.navbar-collapse.navbar-right {
+          color: $black;
+
+          &:hover {
+            color: $dark-grey;
+          }
+
+          a:focus {
+            text-decoration: none;
+            background: transparent;
+          }
+
+          ul {
+            li {
+              letter-spacing: 2px;
+              font-size: 0.7em;
+            }
+          }
+
+          ul.nav.navbar-nav {
+            border: 1px solid green;
+
+            li {
+              .dropdown.open {
+                border: 1 px solid red;
+              }
+            }
+          }
+
+          form.navbar-left {
+            .form-group {
+            }
+          }
+
+          ul.navbar-right {
+            li {
+              ul.dropdown-menu {
+                li {
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    div.pageBody {
+      padding: 10vh 25px 100px;
+      height: auto;
+      overflow: hidden;
+      clear: both;
+      font-size: 0.8em;
+      letter-spacing: 0;
+      line-height: 180%;
+
+      .responsiveHeader {
+        .labelbox {
+          width: 200px;
+          background-color: yellow;
+          text-align: center;
+        }
+        background-color: transparent;
+        visibility: visible;
+
+        div.row {
+          margin: 10px;
+          height: 80%;
+
+          .col-md-12 {
+            .logoSpace {
+              float: none;
+
+              img {
+              }
+            }
+          }
+
+          .col-xs-3 {
+            font-size: 11px;
+
+            a.link {
+              img {
+                padding-top: 5px;
+              }
+            }
+          }
+
+          .col-md-4 {
+            padding-top: 5px;
+            text-align: center;
+          }
+
+          a {
+          }
+        }
+      }
+
+      section.center {
+        text-align: center;
+        //border: 3px solid red;
+      }
+
+      section.allsections {
+        margin-top: 40px;
+        border: 2px solid blue;
+
+        border-radius: 20px 20px 20px 20px;
+        visibility: hidden;
+        position: relative;
+        display: none;
+        background-color: $peach;
+        opacity: 1;
+        @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+          border: 2px solid red;
+        }
+
+        &#contact {
+          form.form-horizontal {
+            margin-bottom: 0;
+            padding: 35px 65px 15px 35px;
+            .contactinfo {
+              background-color: blue;
+            }
+          }
+        }
+
+        .product {
+          .sectionheader {
+            opacity: 1;
+            background-color: #94bcd6;
+            padding: 20px;
+            color: #fff;
+            font-size: 2rem;
+            letter-spacing: 0.4em;
+            border-radius: 0 0 20px 20px;
+
+            a {
+              float: right;
+              text-decoration: none;
+              font-size: 0.7em;
+              letter-spacing: 2px;
+            }
+          }
+        }
+
+        .title {
+          border-radius: 20px 20px 0 0;
+          opacity: 1;
+          color: #fff;
+          text-align: center;
+          background-color: $burnt-orange;
+          font-size: 21px;
+          padding: 10px 0;
+        }
+
+        .flexcontainer {
+          opacity: 1;
+          justify-content: center;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          width: 99%;
+          padding: 1.8rem;
+          margin: 0 auto;
+
+          .mycard {
+            display: inline-flex;
+            border: 1px solid #000;
+            padding: 10px;
+            margin: 20px;
+            border-radius: 10px;
+            background-color: $light-grey;
+            opacity: 1;
+
+            div#boldText {
+              font-weight: bold;
+              margin-bottom: 5px;
+              padding-bottom: 10px;
+              font-size: $bold-font-size;
+            }
+
+            div#bolderText {
+              font-weight: bold;
+              margin-bottom: 10px 0 5px 0;
+              padding-bottom: 20px;
+              font-size: $bolder-font-size;
+            }
+
+            span {
+              display: inline-block;
+              width: 47%;
+              vertical-align: center;
+              text-align: left;
+              //background-color: lightgoldenrodyellow;
+
+              &.left {
+                float: left;
+                //border: 3px red solid;
+                margin: 5px;
+              }
+
+              &.right {
+                float: right;
+                //border: 3px yellow solid;
+                margin: 5px;
+              }
+
+              &.sectioncontent {
+                //float: right;
+                border: 5px yellow solid;
+                margin: 5px;
+                margin: 0 auto;
+              }
+
+              @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+                background-color: pink;
+                display: inline-table;
+                width: 99%;
+                flex-direction: column;
+
+                .right {
+                  margin: 0px;
+                }
+
+                &.left {
+                  margin: 0px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    nav.navbar-fixed-bottom {
+      height: 80px;
+      padding: 10px;
+      background-color: $light-grey;
+      border-radius: 0;
+      @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+        height: 85px;
+      }
+
+      .row {
+        padding: 0;
+        position: relative;
+
+        div {
+          display: inline-block;
+          @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+            //display: inline-block;
+            //background-color:orange;
+          }
+
+          &.footerTxt {
+            font-size: 0.7em;
+            color: $black;
+            letter-spacing: 2px;
+            line-height: 6px;
+            margin: 0 15px 0 10px;
+            font-weight: 500;
+            @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+              margin-bottom: 16px;
+              background-color: cornflowerblue;
+            }
+
+            @media (max-width: $sm-breakpoint) {
+              margin-bottom: 16px;
+              background-color: yellow;
+            }
+
+            &.col-md-4 {
+            }
+
+            &.col-lg-4 {
+            }
+          }
+
+          &#shareRoundIcons.jssocials {
+            position: relative;
+            float: right;
+            //bottom: -50px;
+            right: 30px;
+            @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+              float: right;
+              right: 30px;
+              margin-bottom: 16px;
+              //display: block;
+              //bottom: 50px;
+              // left: 15px;
+              //background-color:yellow;
+            }
+
+            div.jssocials-shares {
+              margin: 1em 0.2em 0.2em 0;
+              @media screen and (min-width: $md-breakpoint) {
+                margin: 0;
+                position: relative;
+                bottom: 50px;
+                right: 30px;
+                //background-color:purple;
+              }
+
+              div.jssocials-share {
+                width: 15px;
+                margin: 5px 10px;
+
+                a.jssocials-share-link {
+                  padding: 0.2em 0.3em;
+
+                  i.jssocials-share-logo {
+                    font-size: 1em;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+}
+@media (min-width: $md-breakpoint) {
+}
