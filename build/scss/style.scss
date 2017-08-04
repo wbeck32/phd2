@@ -47,7 +47,6 @@ html {
                     width: 100%; //background-color: blue;
                 }
             }
-
         }
         p {
             color: $black; //line-height: 2px;
@@ -55,7 +54,6 @@ html {
         }
         h2 {
             font-size: 1.75rem;
-
         }
         h3 {
             font-size: 1.5rem;
@@ -65,7 +63,6 @@ html {
             &.li.a:hover {
                 text-decoration: none;
                 background-color: #d3d;
-
             }
             &.navbar.navbar-fixed-top {
                 margin: 0; //background-color: $light-grey;
@@ -129,7 +126,7 @@ html {
             }
         }
         div.pageBody {
-            padding: 10vh 25px 100px;
+            padding: 10px 25px;
             height: auto;
             overflow: hidden;
             clear: both;
@@ -217,12 +214,10 @@ html {
                     }
                 }
             }
-            &.contact {
-                form.form-horizontal {
-                    margin-bottom: 0;
-                    padding: 35px 65px 15px 35px;
-                }
-            }
+            section#contact {
+                form {
+                  padding: 15px;
+             } }
             nav.navbar.navbar-default.navbar-fixed-bottom {
                 height: 75px;
                 padding: 10px;
@@ -295,7 +290,6 @@ html {
                     }
                 }
             }
-
         }
     }
 }
