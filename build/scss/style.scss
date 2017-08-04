@@ -1,12 +1,3 @@
-$textbackground: #c2edea;
-$sectionbackground: #f7f4d7;
-$navbar: #936b1e;
-$sectionmarker: #936b1e;
-$subsectionmarker: #8d956c;
-$linkcolor: #000;
-$linkhover: red;
-$titlebackground: #936b1e;
-$sectionheader: #27b6c4; // palette
 $peach: #ffdab9;
 $dark-grey: #7a8b8b;
 $light-grey: #eeeeee;
@@ -14,8 +5,6 @@ $burnt-orange: #daa520; //goldenrod
 $white: #fff;
 $black: #000;
 $base-font-size: 16px;
-$bold-font-size: 18px;
-$bolder-font-size: 20px;
 $sm-breakpoint: 320px; //min 320px max 767px
 $md-breakpoint: 768px; //min 768px
 html {
@@ -27,6 +16,7 @@ html {
         background-image: url("../images/White-Paper-Texture-Background-520x390.jpg");
         background-repeat: repeat repeat;
         padding-bottom: 70px;
+        color: $black;
         a {
             //put styles for non-sliding-out a tags here
             background-color: transparent;
@@ -49,14 +39,17 @@ html {
             }
         }
         p {
-            color: $black; //line-height: 2px;
             margin-bottom: 8px; //line-height: 1.1em;
+            color: $black;
+            font-size: 1.5rem;
         }
         h2 {
-            font-size: 1.75rem;
+            color: $black;
+            font-size: 2.5rem;
         }
         h3 {
-            font-size: 1.5rem;
+            color: $black;
+            font-size: 2rem;
         }
         nav {
             //does not work.  Goal to change rollover background
@@ -216,8 +209,9 @@ html {
             }
             section#contact {
                 form {
-                  padding: 15px;
-             } }
+                    padding: 15px;
+                }
+            }
             nav.navbar.navbar-default.navbar-fixed-bottom {
                 height: 75px;
                 padding: 10px;
