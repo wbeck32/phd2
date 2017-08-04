@@ -181,7 +181,7 @@ html {
         //     border: 2px solid red;
         // }
         div.title {
-          border-radius: 20px 20px 0 0;
+          border-radius: 15px 15px 15px 15px;
           opacity: 1;
           color: #fff;
           text-align: center;
@@ -190,14 +190,14 @@ html {
           padding: 10px 0;
         }
         div.row {
-          border: 2px solid orange;
+          //border: 2px solid orange;
           div.title {
-            border: 2px solid red;
-            border-radius: 20px 20px 0 0;
+            //border: 2px solid red;
+            border-radius: 15px 15px 15px 15px;
             opacity: 1;
             color: #fff;
             text-align: center;
-            background-color: $burnt-orange;
+            background-color: gray;
             font-size: 1.75rem;
             padding: 10px 0;
           }
@@ -206,7 +206,7 @@ html {
           }
 
           div.smallsquare{
-            width: 200px;
+            width: 400px;
             height: 200px;
             display: inline-block;
             padding: 20px;
@@ -222,7 +222,7 @@ html {
           }
         }
         &#products {
-          border: 2px solid red;
+          //border: 0px solid red;
           display: none;
           visibility: hidden;
         }
@@ -230,7 +230,7 @@ html {
           .sectionheader {
             opacity: 1;
             //background-color: #94bcd6;
-            background-color: #0000ff;
+            background-color: #666666;
 
             padding: 20px;
             color: #fff;
@@ -260,7 +260,7 @@ html {
           .col-sm-4 {
             border: 2px solid pink;
             &#shareRoundIcons {
-              border: 2px solid orange;
+              //border: 2px solid orange;
               float: left;
               div.jssocials-shares {
                 margin: 1em 0.2em 0.2em 0; //   @media screen and (min-width: $md-breakpoint) {
