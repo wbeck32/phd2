@@ -15,31 +15,34 @@ html {
         font-family: "Helvetica Neue", Arial, sans-serif;
         background-image: url("../images/White-Paper-Texture-Background-520x390.jpg");
         background-repeat: repeat repeat;
-        padding-bottom: 70px;
+        padding-bottom: 90px;
         color: $black;
+        @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+           padding-bottom: 150px;
+        }
         a {
-            //put styles for non-sliding-out a tags here
-            background-color: transparent;
-            &.sliding-middle-out {
+            .sliding-middle-out {
                 display: inline-block;
-                position: relative;
+                text-decoration: none;
+                color: #fff;
                 padding-bottom: 3px;
-                &:after {
-                    content: "";
-                    display: block;
-                    margin: auto;
-                    height: 1px;
-                    width: 0;
-                    background: transparent;
-                    transition: width 0.5s ease, background-color 0.5s ease;
-                }
-                &:hover:after {
-                    width: 100%; //background-color: blue;
-                }
+            }
+            .sliding-middle-out:after {
+                content: '';
+                display: block;
+                margin: auto;
+                height: 3px;
+                width: 0px;
+                background: transparent;
+                transition: width .5s ease, background-color .5s ease;
+            }
+            .sliding-middle-out:hover:after {
+                width: 100%;
+                background: #fff;
             }
         }
         p {
-            margin-bottom: 8px; //line-height: 1.1em;
+            margin-bottom: 8px;
             color: $black;
             font-size: 1.5rem;
         }
@@ -51,74 +54,7 @@ html {
             color: $black;
             font-size: 2rem;
         }
-        nav {
-            //does not work.  Goal to change rollover background
-            &.li.a:hover {
-                text-decoration: none;
-                background-color: #d3d;
-            }
-            &.navbar.navbar-fixed-top {
-                margin: 0; //background-color: $light-grey;
-                padding: 0 12px; //transparency: 0.5;
-                background-image: url("../../public/images/White-Paper-Texture-Background-520x390.jpg"); //opacity: 0.5;
-                .link {}
-                .navbar-header {
-                    .responsive-img {
-                        padding-top: 10px;
-                    }
-                    button.navbar-toggle {
-                        .collapsed {
-                            margin: 0;
-                            padding: 6px 0;
-                            span.glyphicon {
-                                font-size: 30px;
-                            }
-                        }
-                    }
-                    a.navbar-brand {
-                        padding: 0 15px;
-                        img {}
-                    }
-                }
-                .navbar-collapse#collapsedMenu {
-                    color: $black;
-                    &:focus,
-                    &:hover {
-                        color: $dark-grey;
-                        a:focus {
-                            text-decoration: none;
-                            background-color: #d3d;
-                        }
-                    }
-                    ul.navbar-nav {
-                        li {
-                            letter-spacing: 2px;
-                            font-size: 0.7em;
-                        }
-                        a.link.sliding-middle-out {
-                            border: 1px solid red;
-                        }
-                        ul.dropdown-menu {
-                            li {
-                                letter-spacing: 2px;
-                                font-size: 0.7em;
-                            }
-                        }
-                    }
-                    form.navbar-left {
-                        .form-group {}
-                    }
-                    ul.navbar-right {
-                        li {
-                            ul.dropdown-menu {
-                                li {}
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        div.pageBody {
+        .pageBody {
             padding: 10px 25px;
             height: auto;
             overflow: hidden;
@@ -212,76 +148,17 @@ html {
                     padding: 15px;
                 }
             }
-            nav.navbar.navbar-default.navbar-fixed-bottom {
-                height: 75px;
-                padding: 10px;
-                background-color: $light-grey;
-                border-radius: 0;
-                div.container-fluid {
-                    div.row {
-                        padding: 0;
-                        position: relative; // border: 1px solid red;
-                        .col-sm-4 {
-                            // border: 2px solid pink;
-                            &#shareRoundIcons {
-                                // border: 2px solid orange;
-                                float: left;
-                                div.jssocials-shares {
-                                    margin: 1em 0.2em 0.2em 0; //   @media screen and (min-width: $md-breakpoint) {
-                                    //     margin: 0;
-                                    //     position: relative;
-                                    //     bottom: 50px;
-                                    //     right: 30px;
-                                    //   }
-                                }
-                            } //   &.footerTxt {
-                            //     font-size: 0.7em;
-                            //     color: $black;
-                            //     letter-spacing: 2px;
-                            //     margin: 0 15px 0 10px;
-                            //     font-weight: 500;
-                            //     //   @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-                            //     //     margin-bottom: 16px;
-                            //     //   }
-                            //     &.col-md-4 {
-                            //       border: 1px solid red;
-                            //     }
-                            //     &.col-lg-4 {
-                            //       border: 1px solid green;
-                            //     }
-                            //   }
-                        } //   &#shareRoundIcons.jssocials {
-                        //     position: relative;
-                        //     float: right;
-                        //     bottom: 45px;
-                        //     right: 30px;
-                        //     //   @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-                        //     //     float: left;
-                        //     //     display: block;
-                        //     //     bottom: 20px;
-                        //     //     left: 15px;
-                        //     //   }
-                        //     // div.jssocials-shares {
-                        //     //   margin: 1em 0.2em 0.2em 0;
-                        //     //   // @media screen and (min-width: $md-breakpoint) {
-                        //     //   //   margin: 0;
-                        //     //   //   position: relative;
-                        //     //   //   bottom: 50px;
-                        //     //   //   right: 30px;
-                        //     //   // }
-                        //     // //   div.jssocials-share {
-                        //     // //     width: 15px;
-                        //     // //     margin: 5px 10px;
-                        //     // //     a.jssocials-share-link {
-                        //     // //       padding: 0.2em 0.3em;
-                        //     // //       i.jssocials-share-logo {
-                        //     // //         font-size: 1em;
-                        //     // //       }
-                        //     // //     }
-                        //     // //   }
-                        //     // }
-                        //   }
+        }
+        .navbar-fixed-bottom {
+            padding: 15px;
+            .col-sm-4 {
+                p {
+                    @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+                        font-size: 1rem;
                     }
+                }
+                &.jssocials {
+                    font-size: 1rem;
                 }
             }
         }
