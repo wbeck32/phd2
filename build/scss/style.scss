@@ -150,7 +150,7 @@ html {
       font-size: 0.8em;
       letter-spacing: 0.1em;
       .responsiveHeader {
-        background-color: $white;
+        background-color: transparent;
         visibility: visible;
         div.row {
           margin-bottom: 20px;
@@ -265,7 +265,7 @@ html {
           position: relative;
           border: 1px solid red;
           .col-sm-4 {
-            border: 2px solid pink;
+            border: 2px solid blue;
             &#shareRoundIcons {
               //border: 2px solid orange;
               float: left;
@@ -277,7 +277,18 @@ html {
                 //     right: 30px;
                 //   }
               }
-            } //   &.footerTxt {
+            }
+
+            &.footerTxt {
+              font-size: 0.7em;
+              color: $black;
+              letter-spacing: 2px;
+              line-height: 10px;
+            }
+
+
+
+            //   &.footerTxt {
             //     font-size: 0.7em;
             //     color: $black;
             //     letter-spacing: 2px;
