@@ -1,3 +1,12 @@
+$textbackground: #c2edea;
+$sectionbackground: #f7f4d7;
+$navbar: #936b1e;
+$sectionmarker: #936b1e;
+$subsectionmarker: #8d956c;
+$linkcolor: #000;
+$linkhover: red;
+$titlebackground: #936b1e;
+$sectionheader: #27b6c4; // palette
 $peach: #ffdab9;
 $dark-grey: #7a8b8b;
 $light-grey: #eeeeee;
@@ -38,6 +47,7 @@ html {
                     width: 100%; //background-color: blue;
                 }
             }
+
         }
         p {
             color: $black; //line-height: 2px;
@@ -45,6 +55,7 @@ html {
         }
         h2 {
             font-size: 1.75rem;
+
         }
         h3 {
             font-size: 1.5rem;
@@ -54,6 +65,7 @@ html {
             &.li.a:hover {
                 text-decoration: none;
                 background-color: #d3d;
+
             }
             &.navbar.navbar-fixed-top {
                 margin: 0; //background-color: $light-grey;
@@ -283,6 +295,7 @@ html {
                     }
                 }
             }
+
         }
     }
 }
