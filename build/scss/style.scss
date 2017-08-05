@@ -119,6 +119,13 @@ html {
                 .row .title {
                     border-radius: 0;
                 }
+                a {
+                    text-decoration: none;
+                     ::after {
+                        font-family: 'Glyphicons Halflings';
+                        content: "\e092";
+                    }
+                }
             }
             section.products {
                 color: $white;
