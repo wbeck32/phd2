@@ -27,9 +27,10 @@ $('.footerTxt.col-md-4.col-sm-3 p').click(function() {
 
 $('ul.nav.navbar-nav li a').click(function() {
   var m = $(this).attr('href');
-  // console.log(m);
   if (m == '#moretop') {
-    var dropdownChoice = $(this).find('ul li a').attr('href');
+    var dropdownChoice = $(this)
+    .find('ul li a')
+    .attr('href');
     $('section' + dropdownChoice).animate(
       {
         scrollTop: 0
@@ -45,6 +46,7 @@ $('ul.nav.navbar-nav li a').click(function() {
     m == '#product3' ||
     m == '#product4'
   ) {
+    console.log('product: ', this.scrollTop);
     scrollToProductSection(m);
   } else if (m == '#home') {
     $('#collapsedMenu.in').removeClass('in');
@@ -110,7 +112,7 @@ function scrollToProductSection(selector) {
   // console.log(selector);
   $('.responsiveHeader').css({ visibility: 'hidden', display: 'none' });
   $('section').not(selector).css({ visibility: 'hidden', display: 'none' });
-  $('section#products.container-fluid').css({
+  $('section.products').css({
     visibility: 'visible',
     display: 'block'
   });
