@@ -1,18 +1,3 @@
-$textbackground: #c2edea;
-$sectionbackground: #f7f4d7;
-$navbar: #936b1e;
-//$sectionmarker: #936b1e;
-$sectionmarker: gray;
-//$subsectionmarker: #8d956c;
-$subsectionmarker: lightgray;
-
-$linkcolor: #000;
-$linkhover: red;
-$titlebackground: #936b1e;
-$titlebackground: #936b1e;
-//$sectionheader: #27b6c4; // palette
-$sectionheader: #333333; // palette
-
 $peach: #ffdab9;
 $dark-grey: #7a8b8b;
 $light-grey: #eeeeee;
@@ -25,322 +10,160 @@ $bolder-font-size: 20px;
 $sm-breakpoint: 320px; //min 320px max 767px
 $md-breakpoint: 768px; //min 768px
 html {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  height: 100vh; //force slide always present
-  body {
-    min-width: 320px;
-    font-size: $base-font-size;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    height: 100vh;
-    background-image: url("../images/White-Paper-Texture-Background-520x390.jpg");
-    background-repeat: repeat repeat;
-    padding-bottom: 70px;
-    a {
-      //put styles for non-sliding-out a tags here
-      background-color: transparent;
-      &.sliding-middle-out {
-        display: inline-block;
-        position: relative;
-        padding-bottom: 3px;
-        &:after {
-          content: "";
-          display: block;
-          margin: auto;
-          height: 1px;
-          width: 0;
-          background: transparent;
-          transition: width 0.5s ease, background-color 0.5s ease;
-        }
-        &:hover:after {
-          width: 100%; //background-color: blue;
-        }
-      }
-    }
-    p {
-      color: $black; //line-height: 2px;
-      margin-bottom: 8px; //line-height: 1.1em;
-    }
-    h2 {
-      font-size: 1.75rem;
-    }
-    h3 {
-      font-size: 1.5rem;
-    }
-    nav {
-      background-image: url("../../public/images/White-Paper-Texture-Background-520x390.jpg");
-
-
-      //does not work.  Goal to change rollover background
-      &.li.a:hover {
-        text-decoration: none;
-        background-color: #d3d;
-
-      }
-      &.navbar.navbar-fixed-top {
-        margin: 0; //background-color: $light-grey;
-        padding: 0 12px; //transparency: 0.5;
-
-        //opacity: 0.5;
-        .link {
-        }
-        .navbar-header {
-          .responsive-img {
-            padding-top: 10px;
-          }
-          button.navbar-toggle {
-            .collapsed {
-              margin: 0;
-              padding: 6px 0;
-              span.glyphicon {
-                font-size: 30px;
-              }
+    height: 100%; //force slide always present
+    body {
+        min-width: 320px;
+        font-size: $base-font-size;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        background-image: url("../images/White-Paper-Texture-Background-520x390.jpg");
+        background-repeat: repeat repeat;
+        padding-bottom: 70px;
+        a {
+            .sliding-middle-out {
+                display: inline-block;
+                text-decoration: none;
+                color: #fff;
+                padding-bottom: 3px;
             }
-          }
-          a.navbar-brand {
-            padding: 0 15px;
-            img {
+            .sliding-middle-out:after {
+                content: '';
+                display: block;
+                margin: auto;
+                height: 3px;
+                width: 0px;
+                background: transparent;
+                transition: width .5s ease, background-color .5s ease;
             }
-          }
+            .sliding-middle-out:hover:after {
+                width: 100%;
+                background: #fff;
+            }
         }
-        .navbar-collapse#collapsedMenu {
-          color: $black;
-
-          &:focus,
-          &:hover {
-            color: $dark-grey;
-            a:focus {
-              text-decoration: none;
-              background-color: #d3d;
-            }
-          }
-          ul.navbar-nav {
-            li {
-              letter-spacing: 2px;
-              font-size: 0.7em;
-              a.sliding-middle-out {
-              }
-            }
-            ul.dropdown-menu {
-              li {
-                letter-spacing: 2px;
-                font-size: 0.7em;
-              }
-            }
-          }
-          form.navbar-left {
-            .form-group {
-            }
-          }
-          ul.navbar-right {
-            li {
-              ul.dropdown-menu {
-                li {
-                }
-              }
-            }
-          }
+        p {
+            margin-bottom: 8px;
+            color: $black;
+            font-size: 1.5rem;
         }
-      }
-    }
-    div.pageBody {
-      padding: 10vh 25px 100px;
-      height: auto;
-      overflow: hidden;
-      clear: both;
-      font-size: 0.8em;
-      letter-spacing: 0.1em;
-      .responsiveHeader {
-        background-color: transparent;
-        visibility: visible;
-        div.row {
-          margin-bottom: 20px;
-          height: 80%;
-          .col-md-12 {
-            .logoSpace {
-              float: none;
-              img {
-              }
-            }
-          }
-          .col-xs-3 {
-            font-size: 11px;
-            a.link {
-              img {
-                padding-top: 5px;
-              }
-            }
-          }
-          .col-md-4 {
-            text-align: center;
-          }
-          a {
-          }
+        h2 {
+            color: $black;
+            font-size: 2.5rem;
         }
-      }
-      section.container-fluid {
-        border-radius: 20px; //
-        visibility: hidden; //these should be the defaults and controlled in app.js
-        display: none;
-        position: relative;
-        background-color: $peach;
-        opacity: 1; // @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-        //     border: 2px solid red;
-        // }
-        div.title {
-          border-radius: 15px 15px 15px 15px;
-          opacity: 1;
-          color: #fff;
-          text-align: center;
-          //background-color: $dark-grey;
-          background-color: darkred;
-          font-size: 21px;
-          padding: 10px 0;
-        }
-        div.row {
-          //border: 2px solid orange;
-          div.title {
-            //border: 2px solid red;
-            border-radius: 15px 15px 15px 15px;
-            opacity: 1;
-            color: #fff;
-            text-align: center;
-            //background-color: gray;
-            font-size: 1.75rem;
-            padding: 10px 0;
-          }
-          div.col-sm-6 {
-            padding: 20px;
-          }
-
-          div.smallsquare{
-            width: 400px;
-            height: 200px;
-            display: inline-block;
-            padding: 20px;
-          }
-
-        }
-        &#contact {
-          display: none;
-          visibility: hidden;
-          form.form-horizontal {
-            margin-bottom: 0;
-            padding: 35px 65px 15px 35px;
-          }
-        }
-        &#products {
-          //border: 0px solid red;
-          display: none;
-          visibility: hidden;
-        }
-        .product {
-          .sectionheader {
-            opacity: 1;
-            background-color: #94bcd6;
-            //background-color: #000000;
-
-            padding: 20px;
-            color: #fff;
+        h3 {
+            color: $black;
             font-size: 2rem;
-            letter-spacing: 1.3;
-            border-radius: 20px;
-            a {
-              float: right;
-              text-decoration: none;
-              font-size: 0.7em;
-              letter-spacing: 2px;
-            }
-          }
         }
-      }
-    }
-    nav.navbar.navbar-default.navbar-fixed-bottom {
-      height: 75px;
-      padding: 10px;
-      background-color: $light-grey;
-      border-radius: 0;
-      div.container-fluid {
-        div.row {
-          padding: 0;
-          position: relative;
-          border: 1px solid red;
-          .col-sm-4 {
-            border: 2px solid blue;
-            &#shareRoundIcons {
-              //border: 2px solid orange;
-              float: left;
-              div.jssocials-shares {
-                margin: 1em 0.2em 0.2em 0; //   @media screen and (min-width: $md-breakpoint) {
-                //     margin: 0;
-                //     position: relative;
-                //     bottom: 50px;
-                //     right: 30px;
-                //   }
-              }
+        .pageBody {
+            padding: 10vh 25px 100px;
+            height: auto;
+            overflow: hidden;
+            clear: both;
+            font-size: 0.8em;
+            letter-spacing: 0.1em;
+            .responsiveHeader {
+                background-color: transparent;
+                visibility: visible;
+                div.row {
+                    margin-bottom: 20px;
+                    height: 80%;
+                    .col-md-12 {
+                        .logoSpace {
+                            float: none;
+                            img {}
+                        }
+                    }
+                    .col-xs-3 {
+                        font-size: 11px;
+                        a.link {
+                            img {
+                                padding-top: 5px;
+                            }
+                        }
+                    }
+                    .col-md-4 {
+                        text-align: center;
+                    }
+                    a {}
+                }
             }
-
-            &.footerTxt {
-              font-size: 0.7em;
-              color: $black;
-              letter-spacing: 2px;
-              line-height: 10px;
+                        section {
+                border-radius: 20px;
+                display: none;
+                visibility: hidden;
+                .row {
+                    opacity: 1;
+                    color: #fff;
+                    font-size: 2rem;
+                    border-radius: 20px;
+                    background-color: $peach;
+                    .title {
+                        color: #fff;
+                        background-color: $burnt-orange;
+                        padding: 20px;
+                        letter-spacing: 0.4em;
+                        font-size: 2rem;
+                        border-radius: 20px 20px 0 0;
+                    }
+                    .col-sm-6 {
+                        padding: 20px;
+                        background-color: $peach;
+                        border-radius: 0 0 20px 20px;
+                    }
+                }
             }
-
-
-
-            //   &.footerTxt {
-            //     font-size: 0.7em;
-            //     color: $black;
-            //     letter-spacing: 2px;
-            //     margin: 0 15px 0 10px;
-            //     font-weight: 500;
-            //     //   @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-            //     //     margin-bottom: 16px;
-            //     //   }
-            //     &.col-md-4 {
-            //       border: 1px solid red;
-            //     }
-            //     &.col-lg-4 {
-            //       border: 1px solid green;
-            //     }
-            //   }
-          } //   &#shareRoundIcons.jssocials {
-          //     position: relative;
-          //     float: right;
-          //     bottom: 45px;
-          //     right: 30px;
-          //     //   @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-          //     //     float: left;
-          //     //     display: block;
-          //     //     bottom: 20px;
-          //     //     left: 15px;
-          //     //   }
-          //     // div.jssocials-shares {
-          //     //   margin: 1em 0.2em 0.2em 0;
-          //     //   // @media screen and (min-width: $md-breakpoint) {
-          //     //   //   margin: 0;
-          //     //   //   position: relative;
-          //     //   //   bottom: 50px;
-          //     //   //   right: 30px;
-          //     //   // }
-          //     // //   div.jssocials-share {
-          //     // //     width: 15px;
-          //     // //     margin: 5px 10px;
-          //     // //     a.jssocials-share-link {
-          //     // //       padding: 0.2em 0.3em;
-          //     // //       i.jssocials-share-logo {
-          //     // //         font-size: 1em;
-          //     // //       }
-          //     // //     }
-          //     // //   }
-          //     // }
-          //   }
+            section.product {
+                .row .title {
+                    border-radius: 0;
+                }
+            }
+            section.products {
+                opacity: 1;
+                color: #fff;
+                font-size: 2rem;
+                border-radius: 20px;
+                background-color: $peach;
+                .row {
+                    opacity: 1;
+                    color: #fff;
+                    font-size: 2rem;
+                    border-radius: 20px;
+                    background-color: $peach;
+                    .title {
+                        background-color: #94bcd6;
+                        padding: 20px;
+                        letter-spacing: 0.4em;
+                        font-size: 2rem;
+                        a {
+                            float: right;
+                            text-decoration: none;
+                            font-size: 0.7em;
+                            letter-spacing: 2px;
+                        }
+                    }
+                }
+            }
+            section#contact {
+                form {
+                    padding: 15px;
+                }
+            }
         }
-      }
+        .navbar-fixed-bottom {
+                   padding: 15px;
+            .col-sm-4 {
+                p {
+                    @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+                        font-size: 1rem;
+                    }
+                }
+                &.jssocials {
+                    font-size: 1rem;
+                }
+            }
+
+        }
     }
-  }
 }
-@media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-}
-@media (min-width: $md-breakpoint) {
-}
+
+@media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {}
+
+@media (min-width: $md-breakpoint) {}
