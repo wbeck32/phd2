@@ -1,7 +1,8 @@
-$peach: #ffdab9;
+$section-background: #ffdab9;
+$section-title: darkred;
+$products-title: #94bcd6;
 $dark-grey: #7a8b8b;
 $light-grey: #eeeeee;
-$burnt-orange: #daa520; //goldenrod
 $white: #fff;
 $black: #000;
 $base-font-size: 16px;
@@ -15,16 +16,15 @@ html {
         font-family: "Helvetica Neue", Arial, sans-serif;
         background-image: url("../images/White-Paper-Texture-Background-520x390.jpg");
         background-repeat: repeat repeat;
-        padding-bottom: 90px;
+        padding: 90px 0;
         color: $black;
         @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-           padding-bottom: 150px;
+            padding-bottom: 150px;
         }
         a {
             .sliding-middle-out {
                 display: inline-block;
-                text-decoration: none;
-                color: #fff;
+                color: $white;
                 padding-bottom: 3px;
             }
             .sliding-middle-out:after {
@@ -38,7 +38,7 @@ html {
             }
             .sliding-middle-out:hover:after {
                 width: 100%;
-                background: #fff;
+                background-color: blue;
             }
         }
         p {
@@ -55,10 +55,12 @@ html {
             font-size: 2rem;
         }
         .pageBody {
-            padding: 10px 25px;
-            height: auto;
-            overflow: hidden;
-            clear: both;
+            padding: 0 25px 60px;
+            @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+                padding-bottom: 0;
+            }
+            height: 100%;
+            overflow: scroll;
             font-size: 0.8em;
             letter-spacing: 0.1em;
             .responsiveHeader {
@@ -87,27 +89,28 @@ html {
                     a {}
                 }
             }
-            section {
+            section.container-fluid {
                 border-radius: 20px;
                 display: none;
                 visibility: hidden;
                 .row {
                     opacity: 1;
-                    color: #fff;
+                    color: $white;
                     font-size: 2rem;
                     border-radius: 20px;
-                    background-color: $peach;
+                    background-color: $section-background;
                     .title {
-                        color: #fff;
-                        background-color: $burnt-orange;
-                        padding: 20px;
+                        color: $white;
+                        background-color: $section-title;
+                        padding: 10px 0;
                         letter-spacing: 0.4em;
                         font-size: 2rem;
-                        border-radius: 20px 20px 0 0;
+                        border-radius: 15px 15px 0 0;
+                        text-align: center;
                     }
                     .col-sm-6 {
                         padding: 20px;
-                        background-color: $peach;
+                        background-color: $section-background;
                         border-radius: 0 0 20px 20px;
                     }
                 }
@@ -118,19 +121,18 @@ html {
                 }
             }
             section.products {
-                opacity: 1;
-                color: #fff;
+                color: $white;
                 font-size: 2rem;
                 border-radius: 20px;
-                background-color: $peach;
+                background-color: $section-background;
                 .row {
                     opacity: 1;
-                    color: #fff;
+                    color: $white;
                     font-size: 2rem;
-                    border-radius: 20px;
-                    background-color: $peach;
+                    border-radius: 20px 20px 0 0;
+                    background-color: $section-background;
                     .title {
-                        background-color: #94bcd6;
+                        background-color: $products-title;
                         padding: 20px;
                         letter-spacing: 0.4em;
                         font-size: 2rem;
