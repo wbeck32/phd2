@@ -1,7 +1,8 @@
-$peach: #ffdab9;
+$section-background: #ffdab9;
+$section-title: darkred;
+$products-title: #94bcd6;
 $dark-grey: #7a8b8b;
 $light-grey: #eeeeee;
-$burnt-orange: #daa520; //goldenrod
 $white: #fff;
 $black: #000;
 $base-font-size: 16px;
@@ -23,7 +24,7 @@ html {
         a {
             .sliding-middle-out {
                 display: inline-block;
-                color: #fff;
+                color: $white;
                 padding-bottom: 3px;
             }
             .sliding-middle-out:after {
@@ -60,7 +61,6 @@ html {
             }
             height: 100%;
             overflow: scroll;
-            clear: both;
             font-size: 0.8em;
             letter-spacing: 0.1em;
             .responsiveHeader {
@@ -95,13 +95,13 @@ html {
                 visibility: hidden;
                 .row {
                     opacity: 1;
-                    color: #fff;
+                    color: $white;
                     font-size: 2rem;
                     border-radius: 20px;
-                    background-color: $peach;
+                    background-color: $section-background;
                     .title {
-                        color: #fff;
-                        background-color: darkred;
+                        color: $white;
+                        background-color: $section-title;
                         padding: 10px 0;
                         letter-spacing: 0.4em;
                         font-size: 2rem;
@@ -110,7 +110,7 @@ html {
                     }
                     .col-sm-6 {
                         padding: 20px;
-                        background-color: $peach;
+                        background-color: $section-background;
                         border-radius: 0 0 20px 20px;
                     }
                 }
@@ -121,18 +121,18 @@ html {
                 }
             }
             section.products {
-                color: #fff;
+                color: $white;
                 font-size: 2rem;
                 border-radius: 20px;
-                background-color: $peach;
+                background-color: $section-background;
                 .row {
                     opacity: 1;
-                    color: #fff;
+                    color: $white;
                     font-size: 2rem;
                     border-radius: 20px 20px 0 0;
-                    background-color: $peach;
+                    background-color: $section-background;
                     .title {
-                        background-color: #94bcd6;
+                        background-color: $products-title;
                         padding: 20px;
                         letter-spacing: 0.4em;
                         font-size: 2rem;
