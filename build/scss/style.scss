@@ -15,11 +15,10 @@ html {
         font-family: "Helvetica Neue", Arial, sans-serif;
         background-image: url("../images/White-Paper-Texture-Background-520x390.jpg");
         background-repeat: repeat repeat;
-        padding-bottom: 90px;
+        padding: 90px 0;
         color: $black;
-        height: 100%;
         @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-           padding-bottom: 150px;
+            padding-bottom: 150px;
         }
         a {
             .sliding-middle-out {
@@ -55,9 +54,12 @@ html {
             font-size: 2rem;
         }
         .pageBody {
-            padding: 40px 25px 40px;
-            height: auto;
-            overflow: hidden;
+            padding: 0 25px 60px;
+            @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+                padding-bottom: 0;
+            }
+            height: 100%;
+            overflow: scroll;
             clear: both;
             font-size: 0.8em;
             letter-spacing: 0.1em;
@@ -103,7 +105,7 @@ html {
                         padding: 10px 0;
                         letter-spacing: 0.4em;
                         font-size: 2rem;
-                        border-radius: 15px;
+                        border-radius: 15px 15px 0 0;
                         text-align: center;
                     }
                     .col-sm-6 {
@@ -119,8 +121,6 @@ html {
                 }
             }
             section.products {
-
-                opacity: 1;
                 color: #fff;
                 font-size: 2rem;
                 border-radius: 20px;
@@ -129,7 +129,7 @@ html {
                     opacity: 1;
                     color: #fff;
                     font-size: 2rem;
-                    border-radius: 20px;
+                    border-radius: 20px 20px 0 0;
                     background-color: $peach;
                     .title {
                         background-color: #94bcd6;
