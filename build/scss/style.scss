@@ -11,7 +11,7 @@ $md-breakpoint: 768px; //min 768px
 html {
     height: 100%;
     body {
-        height: 100%;
+        height: 100vh;
         min-width: 320px;
         font-size: $base-font-size;
         font-family: "Helvetica Neue", Arial, sans-serif;
@@ -51,8 +51,15 @@ html {
             color: $black;
             font-size: 2rem;
         }
-        .navbar {
-            margin: 0;
+        .navbar-default .navbar-nav {
+            // border: 1px solid red;
+            li>a {
+                // border: 1px solid blue;
+                // text-decoration: underline;
+                &:hover {
+                    // background-color: yellow;
+                }
+            }
         }
         .pageBody {
             padding: 65px 25px 135px 25px;
