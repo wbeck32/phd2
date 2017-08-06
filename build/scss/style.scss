@@ -45,19 +45,21 @@ html {
             height: 2px;
             width: 0px;
             background: transparent;
-            transition: width .5s ease, background-color .5s ease;
+            transition: width .25s ease, background-color .25s ease;
         }
         .sliding-middle-out:hover:after {
             width: 100%;
-            background-color:$section-title;
+            background-color: $section-title;
         }
-        .navbar-default .navbar-nav {
-            // border: 1px solid red;
-            li>a {
-                // border: 1px solid blue;
-                // text-decoration: underline;
-                &:hover {
-                    background-color:transparent;
+        .navbar-default {
+            background-color: $white;
+            .navbar-default .navbar-nav {
+                li>a {
+                    // border: 1px solid blue;
+                    // text-decoration: underline;
+                    &:hover {
+                        background-color: transparent;
+                    }
                 }
             }
         }
