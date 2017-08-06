@@ -1,198 +1,181 @@
-$section-background: #ffdab9;
-$section-title: darkred;
-$products-title: #94bcd6;
-$dark-grey: #7a8b8b;
-$light-grey: #eeeeee;
-$white: #fff;
-$black: #000;
-$base-font-size: 16px;
-$sm-breakpoint: 320px; //min 320px max 767px
-$md-breakpoint: 768px; //min 768px
-html {
-    height: 100%;
-    body {
-        height: 100vh;
-        min-width: 320px;
-        font-size: $base-font-size;
-        font-family: "Helvetica Neue", Arial, sans-serif;
-        background-image: url("../images/White-Paper-Texture-Background-520x390.jpg");
-        background-repeat: repeat repeat;
-        color: $black;
-        a {
-            text-decoration: none;
-        }
-        p {
-            margin-bottom: 8px;
+    $section-background: #ffdab9;
+    $section-title: darkred;
+    $products-title: #94bcd6;
+    $dark-grey: #7a8b8b;
+    $light-grey: #eeeeee;
+    $white: #fff;
+    $black: #000;
+    $base-font-size: 16px;
+    $sm-breakpoint: 320px; //min 320px max 767px
+    $md-breakpoint: 768px; //min 768px
+    html {
+        height: 100%;
+        body {
+            height: 100vh;
+            min-width: 320px;
+            font-size: $base-font-size;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            background-image: url("../images/White-Paper-Texture-Background-520x390.jpg");
+            background-repeat: repeat repeat;
             color: $black;
-            font-size: 1.5rem;
-        }
-        h2 {
-            color: $black;
-            font-size: 2.5rem;
-        }
-        h3 {
-            color: $black;
-            font-size: 2rem;
-        }
-        .sliding-middle-out {
-            display: inline-block;
-            padding-bottom: 3px;
-        }
-        .sliding-middle-out:after {
-            content: '';
-            display: block;
-            margin: auto;
-            height: 2px;
-            width: 0px;
-            background: transparent;
-            transition: width .25s ease, background-color .25s ease;
-        }
-        .sliding-middle-out:hover:after {
-            width: 100%;
-            background-color: $section-title;
-        }
-        .navbar-default {
-            background-color: $white;
-            .navbar-default .navbar-nav {
-                li>a {
-                    // border: 1px solid blue;
-                    // text-decoration: underline;
-                    &:hover {
-                        background-color: transparent;
-                    }
-                }
+            a {
+                text-decoration: none;
             }
-        }
-        .pageBody {
-            padding: 65px 25px 135px 25px;
-            @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-                padding: 65px 25px 115px 25px;
+            p {
+                margin-bottom: 8px;
+                color: $black;
+                font-size: 1.5rem;
             }
-            height: 100%;
-            overflow: scroll;
-            font-size: 0.8em;
-            letter-spacing: 0.1em;
-            .responsiveHeader {
+            h2 {
+                color: $black;
+                font-size: 2.5rem;
+            }
+            h3 {
+                color: $black;
+                font-size: 2rem;
+            }
+            .sliding-middle-out {
+                display: inline-block;
+                padding-bottom: 3px;
+            }
+            .sliding-middle-out:after {
+                content: '';
+                display: block;
+                margin: auto;
+                height: 2px;
+                width: 0px;
+                background: transparent;
+                transition: width .25s ease, background-color .25s ease;
+            }
+            .sliding-middle-out:hover:after {
+                width: 100%;
+                background-color: $section-title;
+            }
+            .navbar-default {
                 background-color: $white;
-                div.row {
-                    margin-bottom: 20px;
-                    height: 80%;
-                    .col-md-12 {
-                        .logoSpace {
-                            float: none;
-                            img {}
+                .navbar-default .navbar-nav {
+                    li>a {
+                        // border: 1px solid blue;
+                        // text-decoration: underline;
+                        &:hover {
+                            background-color: transparent;
                         }
                     }
-                    .col-xs-3 {
-                        font-size: 11px;
-                        a.link {
-                            img {
-                                padding-top: 5px;
-                            }
-                        }
-                    }
-                    .col-md-4 {
-                        text-align: center;
-                    }
-                    a {}
                 }
             }
-            section {
-                border-radius: 20px;
-                display: none;
-                .row {
-                    opacity: 1;
+            .pageBody {
+                padding: 65px 25px 135px 25px;
+                @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+                    padding: 65px 25px 115px 25px;
+                }
+                height: 100%;
+                overflow: scroll;
+                font-size: 0.8em;
+                letter-spacing: 0.1em;
+                .responsiveHeader {
+                    background-color: $white;
+                }
+                section {
+                    border-radius: 20px;
+                    display: none;
+                    .row {
+                        opacity: 1;
+                        color: $white;
+                        font-size: 2rem;
+                        border-radius: 20px;
+                        background-color: $section-background;
+                        .title {
+                            color: $white;
+                            background-color: $section-title;
+                            padding: 10px 0;
+                            letter-spacing: 0.4em;
+                            font-size: 2rem;
+                            border-radius: 15px 15px 0 0;
+                            text-align: center;
+                        }
+                        .col-sm-6 {
+                            padding: 20px;
+                            background-color: $section-background;
+                            border-radius: 0 0 20px 20px;
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+                .information {}
+                .product {
+                    .row {
+                        @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+                            top: 0px;
+                        }
+                        .title {
+                            border-radius: 0;
+                        }
+                    }
+                    a {
+                        text-decoration: none;
+                         ::after {
+                            font-family: 'Glyphicons Halflings';
+                            content: "\e092";
+                        }
+                    }
+                }
+                .products {
                     color: $white;
                     font-size: 2rem;
                     border-radius: 20px;
                     background-color: $section-background;
-                    .title {
+                    .row {
+                        @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+                            top: 0px;
+                        }
                         color: $white;
-                        background-color: $section-title;
-                        padding: 10px 0;
-                        letter-spacing: 0.4em;
                         font-size: 2rem;
-                        border-radius: 15px 15px 0 0;
-                        text-align: center;
-                    }
-                    .col-sm-6 {
-                        padding: 20px;
+                        border-radius: 20px 20px 0 0;
                         background-color: $section-background;
-                        border-radius: 0 0 20px 20px;
+                        .title {
+                            background-color: $products-title;
+                            padding: 20px;
+                            letter-spacing: 0.4em;
+                            font-size: 2rem;
+                            a {
+                                float: right;
+                                text-decoration: none;
+                                font-size: 0.7em;
+                                letter-spacing: 2px;
+                            }
+                        }
+                    }
+                }
+                section#contact {
+                    form {
+                        padding: 15px;
                     }
                 }
             }
-            .information {}
-            .product {
-                .row {
-                    @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-                        top: 0px;
-                    }
-                    .title {
-                        border-radius: 0;
-                    }
+            .navbar-fixed-bottom {
+                padding: 15px;
+                max-height: 120px;
+                @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+                    max-height: 100px;
                 }
-                a {
-                    text-decoration: none;
-                     ::after {
-                        font-family: 'Glyphicons Halflings';
-                        content: "\e092";
+                .col-sm-4 {
+                    p {
+                        font-size: 1.5rem;
+                        @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+                            font-size: 1.25rem;
+                        }
                     }
-                }
-            }
-            .products {
-                color: $white;
-                font-size: 2rem;
-                border-radius: 20px;
-                background-color: $section-background;
-                .row {
-                    @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-                        top: 0px;
-                    }
-                    color: $white;
-                    font-size: 2rem;
-                    border-radius: 20px 20px 0 0;
-                    background-color: $section-background;
-                    .title {
-                        background-color: $products-title;
-                        padding: 20px;
-                        letter-spacing: 0.4em;
-                        font-size: 2rem;
-                        a {
-                            float: right;
-                            text-decoration: none;
-                            font-size: 0.7em;
-                            letter-spacing: 2px;
+                    &.jssocials {
+                        font-size: 1rem;
+                        @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+                            font-size: .75rem;
                         }
                     }
                 }
             }
-            section#contact {
-                form {
-                    padding: 15px;
-                }
-            }
-        }
-        .navbar-fixed-bottom {
-            padding: 15px;
-            height: 120px;
-            @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-                height: 100px;
-            }
-            .col-sm-4 {
-                p {
-                    @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-                        font-size: 1rem;
-                    }
-                }
-                &.jssocials {
-                    font-size: 1rem;
-                }
-            }
         }
     }
-}
 
-@media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {}
+    @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {}
 
-@media (min-width: $md-breakpoint) {}
+    @media (min-width: $md-breakpoint) {}
