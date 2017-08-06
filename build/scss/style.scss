@@ -11,15 +11,16 @@ $md-breakpoint: 768px; //min 768px
 html {
     height: 100%;
     body {
+        height: 100%;
+        padding: 70px 0 90px 0;
         min-width: 320px;
         font-size: $base-font-size;
         font-family: "Helvetica Neue", Arial, sans-serif;
         background-image: url("../images/White-Paper-Texture-Background-520x390.jpg");
         background-repeat: repeat repeat;
-        padding: 90px 0;
         color: $black;
         @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-            padding-bottom: 150px;
+            padding: 90px 0 150px 0;
         }
         a {
             .sliding-middle-out {
@@ -55,9 +56,9 @@ html {
             font-size: 2rem;
         }
         .pageBody {
-            padding: 0 25px 60px;
+            padding: 0 25px 90px;
             @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-                padding-bottom: 0;
+                padding-bottom: 70px;
             }
             height: 100%;
             overflow: scroll;
@@ -65,7 +66,6 @@ html {
             letter-spacing: 0.1em;
             .responsiveHeader {
                 background-color: $white;
-                visibility: visible;
                 div.row {
                     margin-bottom: 20px;
                     height: 80%;
@@ -92,13 +92,16 @@ html {
             section {
                 border-radius: 20px;
                 display: none;
-                visibility: hidden;
                 .row {
                     opacity: 1;
                     color: $white;
                     font-size: 2rem;
                     border-radius: 20px;
                     background-color: $section-background;
+                    position: relative;
+                    @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+                        top: 70px;
+                    }
                     .title {
                         color: $white;
                         background-color: $section-title;
@@ -114,47 +117,54 @@ html {
                         border-radius: 0 0 20px 20px;
                     }
                 }
-                &.product {
-                    .row .title {
+            }
+            .product {
+                .row {
+                    @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+                        top: 0px;
+                    }
+                    .title {
                         border-radius: 0;
                     }
-                    a {
-                        text-decoration: none;
-                         ::after {
-                            font-family: 'Glyphicons Halflings';
-                            content: "\e092";
-                        }
+                }
+                a {
+                    text-decoration: none;
+                     ::after {
+                        font-family: 'Glyphicons Halflings';
+                        content: "\e092";
                     }
                 }
-                &.products {
+            }
+            .products {
+                color: $white;
+                font-size: 2rem;
+                border-radius: 20px;
+                background-color: $section-background;
+                .row {
+                    @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+                        top: 0px;
+                    }
                     color: $white;
                     font-size: 2rem;
-                    border-radius: 20px;
+                    border-radius: 20px 20px 0 0;
                     background-color: $section-background;
-                    .row {
-                        opacity: 1;
-                        color: $white;
+                    .title {
+                        background-color: $products-title;
+                        padding: 20px;
+                        letter-spacing: 0.4em;
                         font-size: 2rem;
-                        border-radius: 20px 20px 0 0;
-                        background-color: $section-background;
-                        .title {
-                            background-color: $products-title;
-                            padding: 20px;
-                            letter-spacing: 0.4em;
-                            font-size: 2rem;
-                            a {
-                                float: right;
-                                text-decoration: none;
-                                font-size: 0.7em;
-                                letter-spacing: 2px;
-                            }
+                        a {
+                            float: right;
+                            text-decoration: none;
+                            font-size: 0.7em;
+                            letter-spacing: 2px;
                         }
                     }
                 }
-                &#contact {
-                    form {
-                        padding: 15px;
-                    }
+            }
+            section#contact {
+                form {
+                    padding: 15px;
                 }
             }
         }
