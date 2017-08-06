@@ -12,16 +12,12 @@ html {
     height: 100%;
     body {
         height: 100%;
-        padding: 70px 0 90px 0;
         min-width: 320px;
         font-size: $base-font-size;
         font-family: "Helvetica Neue", Arial, sans-serif;
         background-image: url("../images/White-Paper-Texture-Background-520x390.jpg");
         background-repeat: repeat repeat;
         color: $black;
-        @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-            padding: 90px 0 150px 0;
-        }
         a {
             .sliding-middle-out {
                 display: inline-block;
@@ -55,10 +51,13 @@ html {
             color: $black;
             font-size: 2rem;
         }
+        .navbar {
+            margin: 0;
+        }
         .pageBody {
-            padding: 0 25px 90px;
+            padding: 65px 25px 135px 25px;
             @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-                padding-bottom: 70px;
+                padding: 65px 25px 115px 25px;
             }
             height: 100%;
             overflow: scroll;
@@ -98,10 +97,6 @@ html {
                     font-size: 2rem;
                     border-radius: 20px;
                     background-color: $section-background;
-                    position: relative;
-                    @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
-                        top: 70px;
-                    }
                     .title {
                         color: $white;
                         background-color: $section-title;
@@ -118,6 +113,7 @@ html {
                     }
                 }
             }
+            .information {}
             .product {
                 .row {
                     @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
@@ -129,7 +125,7 @@ html {
                 }
                 a {
                     text-decoration: none;
-                     ::after {
+                    ::after {
                         font-family: 'Glyphicons Halflings';
                         content: "\e092";
                     }
@@ -170,6 +166,10 @@ html {
         }
         .navbar-fixed-bottom {
             padding: 15px;
+            height: 120px;
+            @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
+                height: 100px;
+            }
             .col-sm-4 {
                 p {
                     @media (min-width: $sm-breakpoint) and (max-width: $md-breakpoint) {
