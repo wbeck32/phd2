@@ -89,7 +89,7 @@ html {
                     a {}
                 }
             }
-            section.container-fluid {
+            section {
                 border-radius: 20px;
                 display: none;
                 visibility: hidden;
@@ -114,47 +114,47 @@ html {
                         border-radius: 0 0 20px 20px;
                     }
                 }
-            }
-            section.product {
-                .row .title {
-                    border-radius: 0;
-                }
-                a {
-                    text-decoration: none;
-                     ::after {
-                        font-family: 'Glyphicons Halflings';
-                        content:"\e092";
+                &.product {
+                    .row .title {
+                        border-radius: 0;
                     }
-                }
-            }
-            section.products {
-                color: $white;
-                font-size: 2rem;
-                border-radius: 20px;
-                background-color: $section-background;
-                .row {
-                    opacity: 1;
-                    color: $white;
-                    font-size: 2rem;
-                    border-radius: 20px 20px 0 0;
-                    background-color: $section-background;
-                    .title {
-                        background-color: $products-title;
-                        padding: 20px;
-                        letter-spacing: 0.4em;
-                        font-size: 2rem;
-                        a {
-                            float: right;
-                            text-decoration: none;
-                            font-size: 0.7em;
-                            letter-spacing: 2px;
+                    a {
+                        text-decoration: none;
+                         ::after {
+                            font-family: 'Glyphicons Halflings';
+                            content: "\e092";
                         }
                     }
                 }
-            }
-            section#contact {
-                form {
-                    padding: 15px;
+                &.products {
+                    color: $white;
+                    font-size: 2rem;
+                    border-radius: 20px;
+                    background-color: $section-background;
+                    .row {
+                        opacity: 1;
+                        color: $white;
+                        font-size: 2rem;
+                        border-radius: 20px 20px 0 0;
+                        background-color: $section-background;
+                        .title {
+                            background-color: $products-title;
+                            padding: 20px;
+                            letter-spacing: 0.4em;
+                            font-size: 2rem;
+                            a {
+                                float: right;
+                                text-decoration: none;
+                                font-size: 0.7em;
+                                letter-spacing: 2px;
+                            }
+                        }
+                    }
+                }
+                &#contact {
+                    form {
+                        padding: 15px;
+                    }
                 }
             }
         }
